@@ -1,0 +1,15 @@
+// -- GLOBAL FONT SETTINGS -- //
+
+$font-size-base: 10;
+
+html {
+  @include fontSizeVw($font-size-base, $font-size-base, $font-size-base);
+}
+
+// Fonts \\
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

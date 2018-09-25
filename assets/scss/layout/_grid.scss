@@ -1,0 +1,22 @@
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 100%;
+  position: relative;
+  max-width: 100%;
+  background: $white;
+  transition: all 0.2s linear;
+}
+
+a img {
+  border: none;
+  outline: none;
+}
+
+.clearfix::before, .clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}

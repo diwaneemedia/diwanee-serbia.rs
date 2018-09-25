@@ -1,0 +1,72 @@
+.footer {
+  @include marginTop(73,54,75);
+  text-align: center;
+
+  &__img {
+    margin: 0 auto;
+    width: 31%;
+
+    @include breakpoint(tabletOnly) {
+      width: 22%;
+      margin-bottom: 3vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 9%;
+      margin-bottom: 2.6vw;
+    }
+  }
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;   
+    margin: 8vw 0;
+
+    @include breakpoint(tabletOnly) {
+      margin: 1.6vw 0;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin: 2.3vw 0;
+    }
+
+    & li {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 4vw;
+
+      @include breakpoint(tabletAndDesktop) {
+        display: inline-block;
+        margin-right: 3.5vw;
+        margin-bottom: 0;
+      }
+
+      @include breakpoint(desktopOnly) {
+        margin-right: 1.5vw;
+      }
+
+      &:last-child {
+        @include breakpoint(tabletAndDesktop) {
+          margin-right: 0;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $gray;
+        @include fontSize(20,10,10);
+        @include letterSpacing(50,50,50);
+
+        @include breakpoint(desktopOnly) {
+
+        }
+      }
+    }
+  }
+}
+
+.footer--404 {
+  @include marginTop(70,130,120);
+}

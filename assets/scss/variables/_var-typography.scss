@@ -3,13 +3,25 @@
 $font-size-base: 10;
 
 html {
-  @include fontSizeVw($font-size-base, $font-size-base, $font-size-base);
+  @include fontSizeVw($font-size-base, $font-size-base);
 }
 
 // Fonts \\
 
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  @include fontSizeVw(0, 32);
+  letter-spacing: 0.2rem;
+  color: $rouge;
+  font-weight: 600;
+}
+
+p {
+  @include fontSizeVw(0, 27);
+  line-height: 1.63;
 }

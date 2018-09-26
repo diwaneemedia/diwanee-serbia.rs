@@ -1,0 +1,14 @@
+// Viewport Font Size for HTML
+
+@mixin fontSizeVw($fs-phone, $fs-desktop) {
+  
+  font-size: #{$fs-desktop}px;
+
+  @include breakpoint(phone) {
+    font-size: calcVw($fs-phone, $site-mob-design);
+  }
+
+  @include breakpoint(desktop) {
+    font-size: calcVw($fs-desktop, $site-desk-design);
+  }
+}

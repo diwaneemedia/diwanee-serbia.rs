@@ -1,26 +1,26 @@
 <template>
-  <div>
+  <main>
 
-    <!-- Vasyly Game -->
-    <h1 class="title">
-      we are building the future of digital media
-    </h1>
-    <logo class="vue-logo" />
-    <!-- Ende -->
+    <VasilyGame />
 
     <About />
 
-  </div>
+    <Brands />
+
+  </main>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
+import VasilyGame from "~/components/Game/VasilyGame.vue";
 import About from "~/components/About/About.vue";
+import Brands from "~/components/Brands/Brands.vue";
 
 export default {
   components: {
-    Logo,
-    About
+    VasilyGame,
+    About,
+    Brands
   }
 };
 </script>

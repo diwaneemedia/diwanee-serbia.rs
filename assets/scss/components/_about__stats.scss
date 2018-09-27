@@ -1,0 +1,24 @@
+.about__stats__items {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(4, 24rem);
+  grid-column-gap: 6.4rem;
+}
+
+.about__stats-numbers {
+
+  max-width: 18rem;
+
+  &-title {
+    color: $rouge;
+    @include fontSizeVw(0, 71);
+    font-weight: 600;
+    line-height: 1.9;
+  }
+
+  &-content {
+    color: $black;
+    @include fontSizeVw(0, 28);
+    line-height: 1.21;
+  }
+}

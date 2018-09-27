@@ -48,6 +48,7 @@
       </section>
 
       <section class="about__jumbotron">
+
         <h2 class="about__jumbotron-title">
           — DIGITAL BIG - THINKERS
         </h2>
@@ -55,6 +56,37 @@
 
           Our most prized technological accomplishment is a modern media stack platform, named Harmony, created with a lot of passion and knowledge. The platform was built from ground up, for digital-native authoring, publishing, advertising and distribution. We made Harmony the core of our business, so that we could distribute content to our readers on any device and on any platform.
         </p>
+
+      </section>
+
+      <section class="about__stats">
+
+        <h2 class="about__stats-title">
+          — OUR AUDIENCE
+        </h2>
+
+        <div class="about__stats__items">
+          <app-stats-numbers>
+            <h3 slot="numbers">6.</h3>
+            <p slot="text">Media Brands</p>
+          </app-stats-numbers>
+
+          <app-stats-numbers>
+            <h3 slot="numbers">8.</h3>
+            <p slot="text">Milion Monthly Unique Users</p>
+          </app-stats-numbers>
+
+          <app-stats-numbers>
+            <h3 slot="numbers">29.</h3>
+            <p slot="text">Milion Page Views</p>
+          </app-stats-numbers>
+
+          <app-stats-numbers>
+            <h3 slot="numbers">38.</h3>
+            <p slot="text">Milion Fans Across Social Channels</p>
+          </app-stats-numbers>
+        </div>
+
       </section>
 
     </article>
@@ -64,10 +96,12 @@
 
 <script>
 import Logo from "~/components/Logo.vue";
+import AppStatsNumbers from "~/components/AppStatsNumbers.vue";
 
 export default {
   components: {
-    Logo
+    Logo,
+    AppStatsNumbers
   }
 };
 </script>

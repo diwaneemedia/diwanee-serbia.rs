@@ -1,13 +1,36 @@
 <template>
   <article class="game">
-    <h1>
-      Vasily's playground
-    </h1>
+
+    <div id="gameContainer" />
+
+
+
   </article>
 </template>
 
 <script>
-export default {};
+
+    export default {
+
+        mounted (){
+             // require(['@/assets/js/UnityLoader.js'], this.UnityLoaderReady);
+            // var gameInstance = UnityLoader.instantiate("gameContainer", "Build/pong5.json");
+            // console.log("ex");
+            this.UnityLoaderReady();
+        },
+        methods:{
+            UnityLoaderReady(){
+                window.gameInstance = UnityLoader.instantiate("gameContainer", ["Build/pong6.json"]);
+            }
+        },
+        head: {
+            script: [
+                { src:"Build/UnityLoader.js"}
+            ]
+        }
+    };
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -15,5 +38,10 @@ export default {};
   height: 20rem;
   text-align: center;
   background: pink;
+}
+#gameContainer {
+    width: 1152px;
+    height: 549px;
+    margin: auto;
 }
 </style>

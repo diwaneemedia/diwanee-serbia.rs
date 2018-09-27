@@ -25,7 +25,8 @@ module.exports = {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
-    }]
+    }],
+
   },
 
   /*
@@ -77,6 +78,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+  },
+    // vendor:['~/assets/js/UnityLoader.js'],
   }
 }

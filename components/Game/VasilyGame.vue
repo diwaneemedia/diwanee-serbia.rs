@@ -20,7 +20,7 @@
         },
         methods:{
             UnityLoaderReady(){
-                window.gameInstance = UnityLoader.instantiate("gameContainer", ["Build/pong6.json"]);
+                window.gameInstance = UnityLoader.instantiate("gameContainer", ["Build/pong7.json"]);
             }
         },
         head: {

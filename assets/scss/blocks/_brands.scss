@@ -1,0 +1,21 @@
+.brands {
+
+  margin-bottom: 14.3rem;
+
+  &-title {
+    margin-bottom: 5rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  &__card {
+    @include fontSizeVw(0,27);
+    line-height: 1.63;
+    margin: auto;
+    text-align: center;
+  }
+}

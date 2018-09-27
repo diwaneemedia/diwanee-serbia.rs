@@ -7,6 +7,8 @@
 
     <Brands />
 
+    <Jobs />
+
   </main>
 </template>
 
@@ -15,12 +17,14 @@ import Logo from "~/components/Logo.vue";
 import VasilyGame from "~/components/Game/VasilyGame.vue";
 import About from "~/components/About/About.vue";
 import Brands from "~/components/Brands/Brands.vue";
+import Jobs from "~/components/Jobs/Jobs.vue";
 
 export default {
   components: {
     VasilyGame,
     About,
-    Brands
+    Brands,
+    Jobs
   }
 };
 </script>

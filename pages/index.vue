@@ -1,9 +1,11 @@
 <template>
   <div>
+    
+    <Navigation />
 
+    <VasilyGame />
+    
     <div class="container">
-
-      <VasilyGame />
 
       <About />
 
@@ -25,7 +27,7 @@
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
+import Navigation from "~/components/Navigation.vue";
 import VasilyGame from "~/components/Game/VasilyGame.vue";
 import About from "~/components/About/About.vue";
 import Brands from "~/components/Brands/Brands.vue";
@@ -35,6 +37,7 @@ import Footer from "~/components/Footer/Footer.vue";
 
 export default {
   components: {
+    Navigation,
     VasilyGame,
     About,
     Brands,

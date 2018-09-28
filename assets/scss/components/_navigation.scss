@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 13.2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
 
   &__links {
     &-item {

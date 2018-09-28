@@ -20,7 +20,7 @@
         },
         methods:{
             UnityLoaderReady(){
-                window.gameInstance = UnityLoader.instantiate("gameContainer", ["Build/pong7.json"]);
+                window.gameInstance = UnityLoader.instantiate("gameContainer", ["Build/pong8.json"]);
             }
         },
         head: {
@@ -40,8 +40,18 @@
   background: pink;
 }
 #gameContainer {
-    width: 1152px;
-    height: 549px;
+    // width: 1152px;
+    // height: 549px;
     margin: auto;
+    height: 50vw !important;
+    width: 100vw !important;
+    position: relative;
+    top:0;
+    z-index: -1;
+    left:0;
+
+}
+#canvas {
+
 }
 </style>

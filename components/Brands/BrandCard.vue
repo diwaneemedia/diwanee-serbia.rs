@@ -6,7 +6,9 @@
       :src="data" 
       alt="pic">
       
-    <h3 v-else> With all our brands we have over 38 million fans across social channels.
+    <h3
+      v-else 
+      class="brands__card-text"> With all our brands we have over 38 million fans across social channels.
     </h3>
 
   </div>

@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <main class="homepage">
     <Navigation />
     <nuxt />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~assets/scss/master.scss";
-.container {
+.homepage {
   margin-top: 6.4rem;
 }
 </style>

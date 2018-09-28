@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  &-copyright {
+    color: $warm-gray;
+    font-size: 1.2rem;
+  }
+
+  &__social {
+
+    display: flex;
+
+    &__btn {
+      width: 3.2rem;
+      height: 3.2rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__facebook {
+      background-image: url("~static/images/facebook.svg");
+      background-size: 20%;
+    }
+
+    &__twitter {
+      background-image: url("~static/images/twitter.svg");
+      background-size: 30%;
+    }
+
+    &__google {
+      background-image: url("~static/images/google.svg");
+      background-size: 40%;
+    }
+  }
+}

@@ -1,15 +1,27 @@
 <template>
-  <main>
+  <div>
 
-    <VasilyGame />
+    <div class="container">
 
-    <About />
+      <VasilyGame />
 
-    <Brands />
+      <About />
+
+      <Brands />
+
+    </div>
 
     <Jobs />
 
-  </main>
+    <div class="container">
+
+      <Contact />
+
+      <Footer />
+
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -18,13 +30,17 @@ import VasilyGame from "~/components/Game/VasilyGame.vue";
 import About from "~/components/About/About.vue";
 import Brands from "~/components/Brands/Brands.vue";
 import Jobs from "~/components/Jobs/Jobs.vue";
+import Contact from "~/components/Contact/Contact.vue";
+import Footer from "~/components/Footer/Footer.vue";
 
 export default {
   components: {
     VasilyGame,
     About,
     Brands,
-    Jobs
+    Jobs,
+    Contact,
+    Footer
   }
 };
 </script>
@@ -45,11 +61,3 @@ export default {
   margin: 10rem 0 13rem 40%;
 }
 </style>
-
-      <!-- <nuxt-link 
-        tag="div" 
-        to="/jobs/">
-        <h1>
-          Jobs Page
-        </h1>
-      </nuxt-link> -->

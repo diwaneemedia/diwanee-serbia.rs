@@ -1,11 +1,9 @@
 .about__jumbotron {
-  box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.03);
   padding: 4rem 0;
   margin-bottom: 18rem;
 
   @include breakpoint(desktop) {
     padding: 8.6rem 7.2rem 8.6rem 6.8rem;
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.13);
     margin-bottom: 16.7rem;
   }
 

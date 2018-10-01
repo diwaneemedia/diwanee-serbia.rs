@@ -1,5 +1,5 @@
 <template>
-  <nav role="container navigation">
+  <nav role="navigation">
     <div class="container navigation">
 
       <div class="navigation__logo">

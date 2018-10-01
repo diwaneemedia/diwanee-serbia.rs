@@ -14,10 +14,10 @@
     </div>
 
     <Jobs />
+    
+    <Contact />
 
     <div class="container">
-
-      <Contact />
 
       <Footer />
 

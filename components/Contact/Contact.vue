@@ -1,15 +1,19 @@
 <template>
   <article class="contact">
 
-    <h2 class="contact-title">
-      WHERE ARE WE 
-    </h2>
+    <div class="container">
 
-    <div class="contact__cards">
-      <contact-card 
-        v-for="(card,index) in cards"
-        :data="card"
-        :key="index" />
+      <h2 class="contact-title">
+        WHERE ARE WE 
+      </h2>
+
+      <div class="contact__cards">
+        <contact-card 
+          v-for="(card,index) in cards"
+          :data="card"
+          :key="index" />
+      </div>
+      
     </div>
 
   </article>

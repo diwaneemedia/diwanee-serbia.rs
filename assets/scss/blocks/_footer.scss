@@ -11,41 +11,32 @@
     margin-bottom: 5rem;
     align-items: center;
   }
-
+  
   &-copyright {
     font-size: 1.2rem;
   }
-
+  
   &__social {
     display: flex;
     margin: 0 auto;
+    cursor: pointer;
 
     &__btn {
       @include breakpoint(phone) {
         margin: 3.1rem 0.75rem 4rem;
       }
+      margin: 0 0.75rem;
+      padding: 1rem;
       width: 3.2rem;
       height: 3.2rem;
       border: solid 1px $pinkish-gray;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
     }
 
     &__facebook {
-      background-image: url("~static/images/facebook.svg");
-      background-size: 20%;
-      color: red;
-    }
-
-    &__twitter {
-      background-image: url("~static/images/twitter.svg");
-      background-size: 30%;
-    }
-
-    &__google {
-      background-image: url("~static/images/google.svg");
-      background-size: 40%;
+      svg {
+        width: 0.4rem;
+        height: 0.9rem;
+      }
     }
   }
 }

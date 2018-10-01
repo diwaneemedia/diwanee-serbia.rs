@@ -13,7 +13,7 @@ export default {
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong9.json"
+        "Build/pong10.json"
       ]);
     }
   },
@@ -27,19 +27,18 @@ export default {
 * {
   height: 20rem;
   text-align: center;
-  background: pink;
 }
 #gameContainer {
-  // width: 1152px;
-  // height: 549px;
-  // max-width: 1152px;
+  width: 1152px;
+  height: 549px;
+  max-width: 1152px;
   margin: 0 auto !important;
-  height: 40vw !important;
-  width: 100vw !important;
+  // height: 40vw !important;
+  // width: 100vw !important;
   position: relative;
-  top: 0;
+  // top: 0;
   z-index: 1;
-  left: 0;
+  // left: 0;
 }
 #canvas {
     width: 1152px !important;

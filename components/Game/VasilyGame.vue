@@ -13,7 +13,7 @@ export default {
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong8.json"
+        "Build/pong9.json"
       ]);
     }
   },
@@ -32,8 +32,9 @@ export default {
 #gameContainer {
   // width: 1152px;
   // height: 549px;
-  margin: auto;
-  height: 50vw !important;
+  // max-width: 1152px;
+  margin: 0 auto !important;
+  height: 40vw !important;
   width: 100vw !important;
   position: relative;
   top: 0;
@@ -41,5 +42,7 @@ export default {
   left: 0;
 }
 #canvas {
+    width: 1152px !important;
+    height: 549px !important;
 }
 </style>

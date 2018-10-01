@@ -62,17 +62,17 @@
         </about-cards>
 
         <about-cards>
-          <template slot="numbers">8.</template>
+          <template slot="numbers">8 <span>million</span></template>
           <template slot="text">Milion Monthly Unique Users</template>
         </about-cards>
 
         <about-cards>
-          <template slot="numbers">29.</template>
+          <template slot="numbers">29 <span>million</span> </template>
           <template slot="text">Milion Page Views</template>
         </about-cards>
 
         <about-cards>
-          <template slot="numbers">38.</template>
+          <template slot="numbers">38 <span>million</span></template>
           <template slot="text">Milion Fans Across Social Channels</template>
         </about-cards>
       </div>

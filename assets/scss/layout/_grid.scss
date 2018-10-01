@@ -19,7 +19,7 @@ body {
   width: 33.5rem;
 
   @include breakpoint(desktop) {
-    max-width: 114.0rem;
+    width: 114.0rem;
   }
 }
 

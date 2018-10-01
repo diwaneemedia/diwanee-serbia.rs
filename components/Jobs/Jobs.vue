@@ -36,7 +36,7 @@ export default {
       jobList: [
         { name: "PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP" },
         { name: "JUNIOR PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP" },
-        { name: "WEB DESIGNER", hash: "#PHP #SQL #GIT #OOP" }
+        { name: "WEB DESIGNER", hash: "#Sketch #XD #Zeplin #Illustrator" }
       ]
     };
   }

@@ -1,23 +1,44 @@
 .jobs__list__offer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3.3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 0rem;
+  padding: 3.3rem 0;
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.jobs__list--underlay:nth-child(odd) {
+  border-bottom: dashed 1px #c7c7c7;
+  border-top: dashed 1px #c7c7c7;
+}
+
+
+.col--left {
+  @include breakpoint(phone) {
+    margin-bottom: 3.2rem;
   }
 
-  .jobs__list--underlay:nth-child(odd) {
-    background: $gray;
+  span {
+    font-size: 1.2rem;
+    color: $warm-gray-two;
   }
+}
 
-  .col--left {
-    span {
-      font-size: 1.2rem;
-      color: $rouge;
-    }
+.col--right {
+  border: none;
+  padding: 1.4rem 4.3rem;
+  background-color: $gray;
+  color: $rouge;
+  font-size: 1.4rem;
+
+  a {
+    font-weight: 600;
   }
-  
-  .col--right {
-    padding: 1.4rem 4.3rem;
-    background-color: white;
-    color: red;
-  }
+}

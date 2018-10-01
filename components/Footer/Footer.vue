@@ -1,8 +1,8 @@
 <template>
   <article class="footer">
 
-    <div class="footer__copyright">
-      COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED
+    <div class="back-to-top">
+      <a href="#">BACK TO TOP</a>
     </div>
 
     <!-- img version -->
@@ -40,20 +40,20 @@
 
       <a 
         href="#" 
-        class="btn footer__social__btn footer__social__facebook" />
+        class="footer__social__btn footer__social__facebook" />
 
       <a 
         href="#" 
-        class="btn footer__social__btn footer__social__twitter" />
+        class="footer__social__btn footer__social__twitter" />
 
       <a 
         href="#" 
-        class="btn footer__social__btn footer__social__google" />
+        class="footer__social__btn footer__social__google" />
 
     </div>
 
-    <div class="btn back-to-top">
-      <a href="#"> back to top </a>
+    <div class="footer__copyright">
+      COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED
     </div>
 
   </article>

@@ -68,7 +68,22 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "~assets/scss/master.scss";
+
+.navigation__links--desk {
+  display: none;
+  @include breakpoint(desktop) {
+    display: block;
+  }
+}
+
+.navigation__links--mob {
+  width: 2rem;
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
   
 .hamburger__bar1, .hamburger__bar2, .hamburger__bar3 {
     width: 35px;

@@ -1,14 +1,19 @@
 <template>
-  <div class="brands__card">
+  <div 
+    v-if="data != 'no-pic'" 
+    class="brands__card">
 
-    <img 
-      v-if="data != 'no-pic'" 
-      :src="data" 
+    <img
+      :src="data"
       alt="pic">
-      
-    <h3
-      v-else 
-      class="brands__card-text"> With all our brands we have over 38 million fans across social channels.
+  </div>
+
+  <div 
+    v-else 
+    class="brands__card brands__card-text">
+
+    <h3  
+      class="brands__card-text-content"> With all our brands we have over 38 million fans across social channels.
     </h3>
 
   </div>
@@ -21,8 +26,8 @@ export default {
     data: {
       type: String,
       required: true,
-      default: function () {
-        return { img: 'hello' }
+      default: function() {
+        return { img: "hello" };
       }
     }
   }

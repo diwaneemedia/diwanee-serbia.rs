@@ -2,7 +2,7 @@
   <article class="contact">
 
     <h2 class="contact-title">
-      WHERE ARE WE $
+      WHERE ARE WE 
     </h2>
 
     <div class="contact__cards">
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       cards: [
-        { city: "Dubai", adress: "Office Park, Building Block AUnits A301-A302 Dubai Internet CityT:971 4-434 7147" },
+        { city: "Dubai", adress: "Office Park, Building Block A Units A301-A302 Dubai Internet CityT:971 4-434 7147" },
         { city: "Beirut", adress: "Beirut Digital District/BDD 10752nd and 3rd floor Bechara El Khoury T: 961 1 - 660327F: 961 1 - 660153" },
         { city: "Belgrade", adress: "Office Park, Building Block AUnits A301-A302Dubai InternetityT:971 4-434 7147" }
       ]

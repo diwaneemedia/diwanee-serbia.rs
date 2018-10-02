@@ -4,7 +4,7 @@
     <section class="about__intro">
 
       <h2 class="about__intro-title">
-        — ABOUT DIWANEE
+        <span class="line-title" />ABOUT DIWANEE
       </h2>
 
       <p class="about__intro-content">
@@ -55,26 +55,28 @@
         — OUR AUDIENCE
       </h2>
 
-      <div class="about__stats__items">
-        <about-cards>
+      <div class="about__stats__cards">
+
+        <about-card class="about__stats-card1">
           <template slot="numbers">6.</template>
           <template slot="text">Media Brands</template>
-        </about-cards>
+        </about-card>
 
-        <about-cards>
+        <about-card class="about__stats-card2">
           <template slot="numbers">8 <span>million</span></template>
-          <template slot="text">Milion Monthly Unique Users</template>
-        </about-cards>
+          <template slot="text">Monthly Unique Users</template>
+        </about-card>
 
-        <about-cards>
+        <about-card class="about__stats-card3">
           <template slot="numbers">29 <span>million</span> </template>
-          <template slot="text">Milion Page Views</template>
-        </about-cards>
+          <template slot="text">Page Views</template>
+        </about-card>
 
-        <about-cards>
+        <about-card class="about__stats-card4">
           <template slot="numbers">38 <span>million</span></template>
-          <template slot="text">Milion Fans Across Social Channels</template>
-        </about-cards>
+          <template slot="text">Fans Across Social Channels</template>
+        </about-card>
+
       </div>
 
     </section>
@@ -83,10 +85,10 @@
 </template>
 
 <script>
-import AboutCards from "~/components/About/AboutCards.vue";
+import AboutCard from "~/components/About/AboutCard.vue";
 export default {
   components: {
-    AboutCards
+    AboutCard
   }
 };
 </script>

@@ -7,15 +7,15 @@
 
     <div class="container">
 
-      <About />
+      <About id="about" />
 
       <Brands />
 
     </div>
 
-    <Jobs />
+    <Jobs id="jobs" />
 
-    <Contact />
+    <Contact id="contact" />
 
     <div class="container">
 

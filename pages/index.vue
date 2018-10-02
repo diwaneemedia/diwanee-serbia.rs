@@ -1,10 +1,10 @@
 <template>
   <div>
-    
+
     <Navigation />
 
     <VasilyGame />
-    
+
     <div class="container">
 
       <About />
@@ -14,7 +14,7 @@
     </div>
 
     <Jobs />
-    
+
     <Contact />
 
     <div class="container">

@@ -5,38 +5,14 @@
   text-align: center;
   color: $pinkish-gray;
   margin-bottom: 6.1rem;
-  
+
   @include breakpoint(desktop) {
     flex-direction: row-reverse;
     margin-bottom: 5rem;
     align-items: center;
   }
-  
+
   &-copyright {
     font-size: 1.2rem;
-  }
-  
-  &__social {
-    display: flex;
-    margin: 0 auto;
-    cursor: pointer;
-
-    &__btn {
-      @include breakpoint(phone) {
-        margin: 3.1rem 0.75rem 4rem;
-      }
-      margin: 0 0.75rem;
-      padding: 1rem;
-      width: 3.2rem;
-      height: 3.2rem;
-      border: solid 1px $pinkish-gray;
-    }
-
-    &__facebook {
-      svg {
-        width: 0.4rem;
-        height: 0.9rem;
-      }
-    }
   }
 }

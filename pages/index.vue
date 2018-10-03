@@ -9,7 +9,7 @@
 
       <About id="about" />
 
-      <Brands />
+      <Brands id="brands" />
 
     </div>
 

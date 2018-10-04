@@ -2,14 +2,19 @@
   <article class="brands">
 
     <h2 class="brands-title">
-      — OUR BRANDS
+      OUR BRANDS
     </h2>
 
     <div class="brands__cards">
+
       <brand-card 
-        v-for="(img,index) in brandCards" 
-        :key="index" 
-        :data="img" />
+        v-for="(data,index) in brandCards" 
+        :key="index"
+        :data-image="data.image">
+        <h4 slot="header">{{ data.header }}</h4>
+        <p slot="content">{{ data.content }}</p>
+      </brand-card>
+
     </div>
 
   </article>
@@ -24,12 +29,12 @@ export default {
   data() {
     return {
       brandCards: [
-        "https://picsum.photos/382/?image=10",
-        "https://picsum.photos/382/?image=20",
-        "no-pic",
-        "https://picsum.photos/382/?image=15",
-        "https://picsum.photos/382/?image=45",
-        "https://picsum.photos/382/?image=50"
+        {image: "https://picsum.photos/382/?image=10", header: "Yasmina", content: "An online portal for inspiring sophisticated and discerning Arab women.We deliver the best experiences, tips and advice that match your lifestyle."},
+        {image: "https://picsum.photos/382/?image=20", header: "Second", content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eligendi impedit earum quod blanditiis repudiandae soluta molestiae rerum laborum est?"},
+        {image: "no-pic", },
+        {image: "https://picsum.photos/382/?image=45", header: "Fourth", content: "An online portal for inspiring sophisticated and discerning Arab women.We deliver the best experiences, tips and advice that match your lifestyle."},
+        {image: "https://picsum.photos/382/?image=50", header: "Yasmina", content: "An online portal for inspiring sophisticated and discerning Arab women.We deliver the best experiences, tips and advice that match your lifestyle."},
+        {image: "https://picsum.photos/382/?image=5", header: "Last", content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eligendi impedit earum quod blanditiis repudiandae soluta molestiae rerum laborum est?"}
       ]
     };
   }

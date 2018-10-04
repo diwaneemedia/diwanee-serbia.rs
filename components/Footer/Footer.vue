@@ -2,7 +2,7 @@
   <article class="footer">
 
     <div class="back-to-top">
-      <a href="#">BACK TO TOP</a>
+      <a href="#home">BACK TO TOP</a>
     </div>
 
     <!-- img version -->
@@ -36,7 +36,7 @@
 
     <!-- background version -->
 
-    <Social />
+    <Social style="margin:3.1rem auto 4rem" />
 
     <div class="footer__copyright">
       COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED

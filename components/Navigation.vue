@@ -1,7 +1,8 @@
 <template>
 
   <nav role="navigation">
-    <div class="container navigation">
+    <div  
+      class="container navigation">
 
       <div class="navigation__logo">
         <img
@@ -12,7 +13,7 @@
       <ul 
         :class="{open: sideBarOpen}" 
         class="navigation__links">
-        <li class="navigation__links-item"><a href="#">HOME</a></li>
+        <li class="navigation__links-item"><a href="#home">HOME</a></li>
         <li class="navigation__links-item"><a href="#about">ABOUT</a></li>
         <li class="navigation__links-item"><a href="#brands">OUR BRANDS</a></li>
         <li class="navigation__links-item"><a href="#jobs">JOBS</a></li>
@@ -73,18 +74,19 @@ export default {
 @import "~assets/scss/master.scss";
 
 .navigation {
-  height: 100vh;
   display: flex;
   position: relative;
   justify-content: space-between;
   margin-top: 3.8rem;
   @include breakpoint(desktop) {
+    height: auto;
+    margin-bottom: 5rem;
     align-items: baseline;
   }
 
   &__logo img {
     width: 7rem;
-    height: 1.8rem;
+    // height: 1.8rem;
     @include breakpoint(desktop) {
       width: auto;
       height: auto;
@@ -109,11 +111,13 @@ export default {
 
   &__links {
     @include breakpoint(phone) {
+      background: $white;
+      z-index: 3;
       position: absolute;
       display: flex;
       flex-direction: column;
       height: 90vh;
-      bottom: 0;
+      margin-top: 10vh;
       -webkit-transform: translateX(-120%);
       transform: translateX(-120%);
       transition: all 200ms ease-in;

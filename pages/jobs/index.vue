@@ -78,30 +78,30 @@ export default {};
 
 <style lang='scss' scoped>
 @import "~assets/scss/master.scss";
-.container {
-  height: 100vh;
-}
 .test-cards {
-  width: 80vw;
-  margin: 0 auto;
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat((4, 1fr));
   grid-column-gap: 4rem;
+  @include breakpoint(desktop) {
+    grid-template-columns: repeat((4, 1fr));
+  }
 }
 .test-card {
   border: 5px solid $rouge;
   text-align: center;
   animation: move 4s infinite;
   cursor: pointer;
+  margin-bottom: 2rem;
 
   &-title {
-    font-size: 5rem;
+    @include fontSizeVw(20,45);
     border: 2px solid blue;
     margin-bottom: 15rem;
   }
 
   &-content {
     font-size: 3rem;
+    @include fontSizeVw(16,30);
   }
 }
 

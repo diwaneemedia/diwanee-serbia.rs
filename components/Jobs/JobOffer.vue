@@ -8,11 +8,12 @@
         <span> {{ data.hash }} </span>
       </div>
 
-      <div class="col--right btn">
-        <nuxt-link 
-          to="/jobs/" 
-          tag="a"> VIEW MORE </nuxt-link>
-      </div>
+      <nuxt-link
+        to="/jobs/" 
+        tag="a" 
+        class="col--right btn">
+        VIEW MORE
+      </nuxt-link>
 
     </div>
 

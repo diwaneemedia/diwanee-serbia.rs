@@ -4,7 +4,7 @@
     <div class="container">
 
       <h2 class="jobs-title">
-        — WORK WITH US
+        <span class="line-title" />WORK WITH US
       </h2>
 
       <p class="jobs-content">

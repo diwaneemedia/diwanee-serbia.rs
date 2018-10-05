@@ -40,7 +40,7 @@
     <section class="about__jumbotron">
 
       <h2 class="about__jumbotron-title">
-        — DIGITAL BIG - THINKERS
+        <span class="line-title" />DIGITAL BIG - THINKERS
       </h2>
       <p class="about__jumbotron-content">
 
@@ -52,7 +52,7 @@
     <section class="about__stats">
 
       <h2 class="about__stats-title">
-        — OUR AUDIENCE
+        <span class="line-title" />OUR AUDIENCE
       </h2>
 
       <div class="about__stats__cards">

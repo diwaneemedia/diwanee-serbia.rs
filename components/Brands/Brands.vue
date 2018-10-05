@@ -2,7 +2,7 @@
   <article class="brands">
 
     <h2 class="brands-title">
-      OUR BRANDS
+      <span class="line-title" />OUR BRANDS
     </h2>
 
     <div class="brands__cards">

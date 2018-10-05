@@ -4,7 +4,7 @@
     <div class="container">
 
       <h2 class="contact-title">
-        WHERE ARE WE 
+        <span class="line-title" />WHERE ARE WE 
       </h2>
 
       <div class="contact__cards">

@@ -149,7 +149,7 @@ export default {
           position: absolute;
           width: 100%;
           height: 2px;
-          bottom: 0;
+          bottom: -1px;
           left: 0;
           background-color: $rouge;
           visibility: hidden;

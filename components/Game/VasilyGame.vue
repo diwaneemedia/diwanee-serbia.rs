@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <article id="gameContainer" />
   </div>
 </template>
@@ -8,10 +7,10 @@
 <script>
 export default {
   mounted() {
-    window.UnityFinished = function(){
-      /// Unity finished loading event
-      console.log("Unity Done");
-    }
+    // window.UnityFinished = function() {
+    //   /// Unity finished loading event
+    //   console.log("Unity Done");
+    // };
     this.UnityLoaderReady();
   },
   methods: {
@@ -37,22 +36,12 @@ export default {
   position: relative;
   height: 80vh;
 }
-h3 {
-    font-family: "Geomanist-Bold";
-    font-weight: 700;
-    text-transform: uppercase;
-    color:white;
-    position: absolute;
-    top:20%;
-    width: 100%;
-    font-size:8rem;
-    text-align: center;
-    z-index: 3;
-}
+
 // .canvas__container {
 //     overflow: hidden;
 //
 // }
+
 #gameContainer {
   width: 114rem !important;
   height: 54.3281rem !important;
@@ -68,9 +57,8 @@ h3 {
   // left: 0;
 }
 #canvas {
-    // width: 1152px !important;
-    width: 100%;
-
-    // height: 549px !important;
+  // width: 1152px !important;
+  width: 100%;
+  // height: 549px !important;
 }
 </style>

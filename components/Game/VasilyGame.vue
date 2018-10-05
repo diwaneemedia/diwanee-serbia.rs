@@ -8,15 +8,16 @@
 <script>
 export default {
   mounted() {
-    // require(['@/assets/js/UnityLoader.js'], this.UnityLoaderReady);
-    // var gameInstance = UnityLoader.instantiate("gameContainer", "Build/pong5.json");
-    // console.log("ex");
+    window.UnityFinished = function(){
+      /// Unity finished loading event
+      console.log("Unity Done");
+    }
     this.UnityLoaderReady();
   },
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong2018.json"
+        "Build/pong2018ver2.json"
       ]);
     }
   },

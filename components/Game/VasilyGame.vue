@@ -16,7 +16,7 @@ export default {
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong14.json"
+        "Build/pong2018.json"
       ]);
     }
   },

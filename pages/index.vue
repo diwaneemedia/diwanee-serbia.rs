@@ -3,9 +3,9 @@
 
     <Navigation id="home" />
 
-    <!-- <VasilyGame /> -->
+    <VasilyGame />
 
-    <Animation class="animation" />
+    <!-- <Animation class="animation" /> -->
 
     <div class="container">
 
@@ -30,8 +30,8 @@
 
 <script>
 import Navigation from "~/components/Navigation.vue";
-import Animation from "~/components/Animation.vue";
-// import VasilyGame from "~/components/Game/VasilyGame.vue";
+// import Animation from "~/components/Animation.vue";
+import VasilyGame from "~/components/Game/VasilyGame.vue";
 import About from "~/components/About/About.vue";
 import Brands from "~/components/Brands/Brands.vue";
 import Jobs from "~/components/Jobs/Jobs.vue";
@@ -41,8 +41,8 @@ import Footer from "~/components/Footer/Footer.vue";
 export default {
   components: {
     Navigation,
-    Animation,
-    // VasilyGame,
+    // Animation,
+    VasilyGame,
     About,
     Brands,
     Jobs,

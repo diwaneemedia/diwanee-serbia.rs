@@ -28,7 +28,8 @@
       <div class="about__intro-card about__intro-card--right">
         <div class="about__intro-card__text about__intro-card--right__text">
           <h4>
-            Diwanee partners with YouTube
+            Diwanee was established
+            in 2009
           </h4>
           <p>
             To create the only regional female multi channel network called “Duniati”.
@@ -44,7 +45,10 @@
       </h2>
       <p class="about__jumbotron-content">
 
-        Our most prized technological accomplishment is a modern media stack platform, named Harmony, created with a lot of passion and knowledge. The platform was built from ground up, for digital-native authoring, publishing, advertising and distribution. We made Harmony the core of our business, so that we could distribute content to our readers on any device and on any platform.
+        Our most prized technological accomplishment is a modern media stack platform, named Harmony, created with a
+        lot of passion and knowledge. The platform was built from ground up, for digital-native authoring, publishing,
+        advertising and distribution. We made Harmony the core of our business, so that we could distribute content to
+        our readers on any device and on any platform.
       </p>
 
     </section>
@@ -85,12 +89,13 @@
 </template>
 
 <script>
-import AboutCard from "~/components/About/AboutCard.vue";
-export default {
-  components: {
-    AboutCard
-  }
-};
+  import AboutCard from "~/components/About/AboutCard.vue";
+  export default {
+    components: {
+      AboutCard
+    }
+  };
+
 </script>
 
 <style scoped>

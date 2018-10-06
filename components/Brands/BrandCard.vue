@@ -53,8 +53,8 @@ export default {
       return this.mouseY / this.height;
     },
     cardStyle() {
-      const rX = this.mousePX * 10;
-      const rY = this.mousePY * -10;
+      const rX = this.mousePX * 7;
+      const rY = this.mousePY * -7;
       return {
         transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
       };

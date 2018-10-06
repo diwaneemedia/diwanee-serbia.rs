@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div>
 
     <Navigation id="home" />
 
@@ -70,7 +70,11 @@ export default {
 @import "~assets/scss/master.scss";
 
 .main {
-  max-width: 1440px;
+  max-width: 100%;
+  @include breakpoint(desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 #home {
@@ -84,6 +88,7 @@ export default {
 .title {
   // font-family: "Geomanist-Bold";
   font-weight: 700;
+  @include fontSizeVw(40,80);
   width: 60%;
   margin: 0 auto;
   top: 14.5%;
@@ -93,7 +98,6 @@ export default {
   text-transform: uppercase;
   color: $black;
   position: absolute;
-  font-size: 8rem;
   text-align: center;
   z-index: 2;
 }

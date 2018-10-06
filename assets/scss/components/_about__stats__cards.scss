@@ -1,8 +1,8 @@
 .about__stats {
-  margin-bottom: 9rem;
+  margin-bottom: 11rem;
 
   &-title {
-    margin-bottom: 0.8rem;
+    margin-bottom: 2.9rem;
 
     @include breakpoint(desktop) {
       margin-bottom: 5.4rem;
@@ -26,9 +26,10 @@
   &-card {
     width: 24.7rem;
     height: 23.2rem;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.13);
-    margin: 4.2rem auto;
+    margin: 2.1rem auto;
+    padding-top: 3rem;
     text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.13);
 
     @include breakpoint(desktop) {
       margin: 0;
@@ -59,19 +60,20 @@
     }
 
     &-title {
-      color: $rouge;
       @include fontSizeVw(51, 71);
+      color: $rouge;
       font-weight: 600;
-      line-height: 2.65;
+      line-height: 1.8;
+
+      @include breakpoint(desktop) {
+        line-height: 1.9;
+      }
 
       span {
         font-size: 3.1rem;
         font-weight: 600;
       }
 
-      @include breakpoint(desktop) {
-        line-height: 1.9;
-      }
     }
 
     &-content {

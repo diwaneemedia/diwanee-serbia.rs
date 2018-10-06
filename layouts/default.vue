@@ -17,5 +17,10 @@ export default {
 @import "~assets/scss/master.scss";
 .homepage {
   // margin-top: 6.4rem;
+  width: 100%;
+  @include breakpoint(desktop) {
+    width: 144rem;
+    margin: 0 auto;
+  } 
 }
 </style>

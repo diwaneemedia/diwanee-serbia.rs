@@ -4,8 +4,8 @@
     <div class="jobs__list__offer container">
 
       <div class="col--left">
-        <p> {{ data.name }} </p>
-        <span> {{ data.hash }} </span>
+        <p class="col--left-title" > {{ data.name }} </p>
+        <span class="col--left-hash" > {{ data.hash }} </span>
       </div>
 
       <nuxt-link

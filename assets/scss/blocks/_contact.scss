@@ -1,11 +1,11 @@
 .contact {
   margin-bottom: 12.1rem;
-  background: url("~static/images/contact-background.png");
-  background-size: contain;
+  background-image: url("~static/images/contact-background.png");
   background-position: center;
-  background-position-y: -3.9rem;
-  
+
   @include breakpoint(desktop) {
+    background-size: contain;
+    background-position-y: -3.9rem;
     height: 55rem;
     margin-bottom: 0rem;
   }

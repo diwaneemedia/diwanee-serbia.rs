@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="dataImage != 'no-pic'"
+    v-if="data.image != 'no-pic'"
     ref="card" 
     class="card-wrap"
     @mousemove="handleMouseMove" 
@@ -8,12 +8,13 @@
     @mouseleave="handleMouseLeave" >
     <div 
       :style="cardStyle"
+      :class="data.title"
       class="card">
       <div 
         :style="cardBgImage"
         class="card-bg" />
       <div class="card-info">
-        <slot name="header" />
+        <slot name="logo" />
         <slot name="content" />
       </div>
     </div>
@@ -33,9 +34,13 @@
 <script>
 export default {
   props: {
-    dataImage: {
-      type: String,
-      default: "https://picsum.photos/200/300"
+    data: {
+      type: Object,
+      default: function() {
+        return {
+          default: "https://picsum.photos/200/300"
+        }
+      }
     }
   },
   data: () => ({
@@ -61,7 +66,7 @@ export default {
     },
     cardBgImage() {
       return {
-        backgroundImage: `url(${this.dataImage})`
+        backgroundImage: `url(${this.data.image})`
       }
     }
   },
@@ -135,7 +140,6 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   position: relative;
   width: 100%;
   height: 33rem;
-  background-color: #333;
   overflow: hidden;
   box-shadow:
     rgba(black, 0.3) 0 15px 30px 0;
@@ -146,7 +150,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .card-bg {
-  opacity: 0.5;
+  opacity: 0.2;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -156,7 +160,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-size: cover;
   transition:
     1s $returnEasing,
-    opacity 5s 1s $returnEasing;
+    opacity 3s 1s $returnEasing;
   pointer-events: none;
 }
 
@@ -195,12 +199,47 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 }
 
-.card-info h4 {
-    @include fontSizeVw(30, 40);
-    line-height: 2;
-  text-align: center;
-  font-weight: 700;
-  text-shadow: rgba(black, 0.5) 0 10px 10px;
+// .card-info h4 {
+//     @include fontSizeVw(30, 40);
+//     line-height: 2;
+//   text-align: center;
+//   font-weight: 700;
+//   text-shadow: rgba(black, 0.5) 0 10px 10px;
+// }
+
+.card-logo {
+  margin: 0 auto;
+}
+
+.yasmina {
+  background-color: #543a72;
+  &-logo {
+    width: 21.8rem;
+  }
+}
+.rajil {
+  background-color: $dark;
+  &-logo {
+    width: 12.2rem;
+  }
+}
+.threea2ilati {
+  background-color: $black;
+  &-logo {
+    width: 12.8rem;
+  }
+}
+.aty {
+  background-color: #fcde65;
+  &-logo {
+    width: 21.5rem;
+  }
+}
+.warrini {
+  background-color: #f23a5e;
+  &-logo {
+    width: 17.7rem;
+  }
 }
 
 </style>

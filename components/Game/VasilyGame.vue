@@ -34,7 +34,7 @@ export default {
 }
 .container {
   position: relative;
-  height: 80vh;
+  height: 54rem;
 }
 
 // .canvas__container {

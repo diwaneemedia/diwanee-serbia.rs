@@ -1,5 +1,12 @@
 .about__stats {
   margin-bottom: 11rem;
+  background-image: url("~static/images/about__stats__cards-bg.png"),
+    url("~static/images/about__stats__cards-bg.png");
+  background-size: contain;
+  background-position-x: 35rem, -40rem;
+  background-position-y: -4rem, -20rem;
+  background-repeat: no-repeat, no-repeat;
+
 
   &-title {
     margin-bottom: 2.9rem;
@@ -30,6 +37,55 @@
     padding-top: 3rem;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.13);
+    position: relative;
+    background: $white;
+
+    &1::before,
+    &1::after,
+    &2::before,
+    &2::after,
+    &3::before,
+    &3::after,
+    &4::before,
+    &4::after {
+      content: "+";
+      font-family: serif;
+      font-weight: 100;
+      position: absolute;
+    }
+
+    &1::before,
+    &2::before {
+      color: #f7a33d;
+      font-size: 3rem;
+      top: 4.1rem;
+      left: -4rem;
+    }
+
+    &1::after,
+    &2::after {
+      color: $rouge;
+      font-size: 2rem;
+      bottom: 7.6rem;
+      right: -5rem;
+    }
+
+    &2::before {
+      color: #0b0bf7;
+      font-size: 4rem;
+    }
+
+    &2::after {
+      bottom: -2rem;
+      font-size: 3rem;
+    }
+
+    &4::after {
+      color: #0b0bf7;
+      font-size: 5rem;
+      right: -5rem;
+      top: 5rem;
+    }
 
     @include breakpoint(desktop) {
       margin: 0;

@@ -160,7 +160,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-size: cover;
   transition:
     1s $returnEasing,
-    opacity 3s 1s $returnEasing;
+    opacity 5s 1s $returnEasing;
   pointer-events: none;
 }
 
@@ -208,7 +208,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 // }
 
 .card-logo {
-  margin: 0 auto;
+  margin: 0 auto 5rem;
 }
 
 .yasmina {

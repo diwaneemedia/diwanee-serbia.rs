@@ -5,6 +5,14 @@
 
       <h2 class="contact-title">
         <span class="line-title" />WHERE ARE WE
+        <svg class="contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.384 24">
+          <g id="pointer" transform="translate(-70.574)">
+            <g id="Group_210" data-name="Group 210" transform="translate(70.573)">
+              <path id="Path_47" d="M79.265 0a8.7 8.7 0 0 0-8.692 8.692c0 5.948 7.778 14.68 8.11 15.049a.783.783 0 0 0 1.165 0c.331-.369 8.11-9.1 8.11-15.049A8.7 8.7 0 0 0 79.265 0zm0 13.065a4.373 4.373 0 1 1 4.373-4.373 4.378 4.378 0 0 1-4.373 4.373z"
+                    class="cls-2" data-name="Path 47" transform="translate(-70.573)" />
+            </g>
+          </g>
+        </svg>
       </h2>
 
       <div class="contact__cards">

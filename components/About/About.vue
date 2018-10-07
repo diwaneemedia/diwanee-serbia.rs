@@ -15,7 +15,7 @@
       </p>
 
       <div class="about__intro-card about__intro-card--left">
-        <div class="about__intro-card__text">
+        <div class="about__intro-card__text about__intro-card--left__text">
           <h4>
             Diwanee partners with YouTube
           </h4>

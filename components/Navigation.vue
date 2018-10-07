@@ -13,10 +13,10 @@
       <ul 
         :class="{open: sideBarOpen}" 
         class="navigation__links">
-        <li class="navigation__links-item"><a href="#home">HOME</a></li>
-        <li class="navigation__links-item"><a href="#about">ABOUT</a></li>
-        <li class="navigation__links-item"><a href="#brands">OUR BRANDS</a></li>
-        <li class="navigation__links-item"><a href="#jobs">JOBS</a></li>
+        <li class="navigation__links-item"><nuxt-link tag="a" to="/#home" href="#home">HOME</nuxt-link></li>
+        <li class="navigation__links-item"><nuxt-link tag="a" to="/#about" href="#about">ABOUT</nuxt-link></li>
+        <li class="navigation__links-item"><nuxt-link tag="a" to="/#brands" href="#brands">OUR BRANDS</nuxt-link></li>
+        <li class="navigation__links-item"><nuxt-link tag="a" to="/#jobs" href="#jobs">JOBS</nuxt-link></li>
         <li class="navigation__links-item"><a href="#contact">CONTACT</a></li>
         <p class="navigation__social--text">Follow us</p>
         <Social class="navigation__social" />
@@ -136,7 +136,7 @@ export default {
       padding: 1.6rem 0;
 
       @include breakpoint(desktop) {
-        padding: 0 3.5rem;
+        padding: 0 1.75rem;
         line-height: 2.21;
       }
 

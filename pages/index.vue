@@ -69,20 +69,13 @@ export default {
 <style lang="scss">
 @import "~assets/scss/master.scss";
 
-.main {
-  max-width: 100%;
-  @include breakpoint(desktop) {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
-
 #home {
   margin-bottom: 8rem;
 }
 
 .game-container {
   position: relative;
+  margin-bottom: 10rem;
 }
 
 .title {

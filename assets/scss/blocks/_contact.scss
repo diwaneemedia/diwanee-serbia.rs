@@ -17,4 +17,13 @@
       margin-bottom: 4.9rem;
     }
   }
+
+  &-svg {
+    @include breakpoint(phone) {
+      display: none
+    }
+
+    fill: $rouge;
+    width: 1.8rem;
+  }
 }

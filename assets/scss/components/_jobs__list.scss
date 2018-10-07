@@ -26,12 +26,13 @@
   }
 
   &-title {
-    @include fontSizeVw(18,0);
+    font-size: 1.8rem;
+    font-weight: 600;
     color: $black;
   }
 
   &-hash {
-    @include fontSizeVw(12,0);
+    font-size: 1.2rem;
     color: $warm-gray-two;
    }
 }

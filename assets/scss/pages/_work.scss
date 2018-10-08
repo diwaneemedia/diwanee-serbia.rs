@@ -2,6 +2,10 @@
 
   &-title {
     margin-bottom: 5.6rem;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 7.8rem;
+    }
   }
 
   &-subheadings {
@@ -23,6 +27,7 @@
     font-size: 1.6rem;
     line-height: 1.75;
     margin-bottom: 9.6rem;
+
     @include breakpoint(desktop) {
       width: 64rem;
       margin-bottom: 15.9rem;

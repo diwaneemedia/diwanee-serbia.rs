@@ -39,7 +39,7 @@ export default {
       default: function() {
         return {
           default: "https://picsum.photos/200/300"
-        }
+        };
       }
     }
   },
@@ -48,7 +48,7 @@ export default {
     height: 0,
     mouseX: 0,
     mouseY: 0,
-    mouseLeaveDelay: null,
+    mouseLeaveDelay: null
   }),
   computed: {
     mousePX() {
@@ -67,28 +67,28 @@ export default {
     cardBgImage() {
       return {
         backgroundImage: `url(${this.data.image})`
-      }
+      };
     }
   },
-    updated() {
+  updated() {
     this.width = this.$refs.card.offsetWidth;
     this.height = this.$refs.card.offsetHeight;
   },
   methods: {
     handleMouseMove(e) {
-      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width/2;
-      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height/2;
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
     },
     handleMouseEnter() {
       clearTimeout(this.mouseLeaveDelay);
     },
     handleMouseLeave() {
-      this.mouseLeaveDelay = setTimeout(()=>{
+      this.mouseLeaveDelay = setTimeout(() => {
         this.mouseX = 0;
         this.mouseY = 0;
       }, 500);
     }
-  },
+  }
 };
 </script>
 
@@ -102,7 +102,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transform: perspective(800px);
   transform-style: preserve-3d;
   cursor: pointer;
-  
+
   &:hover {
     .card-info {
       transform: translateY(0);
@@ -110,7 +110,8 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     .card-info p {
       opacity: 1;
     }
-    .card-info, .card-info p {
+    .card-info,
+    .card-info p {
       transition: 0.6s $hoverEasing;
     }
     .card-info:after {
@@ -119,18 +120,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       transform: translateY(0);
     }
     .card-bg {
-      transition: 
-        0.6s $hoverEasing,
-        opacity 5s $hoverEasing;
+      transition: 0.6s $hoverEasing, opacity 5s $hoverEasing;
       opacity: 0.8;
     }
     .card {
-      transition:
-        0.6s $hoverEasing,
-        box-shadow 2s $hoverEasing;
-      box-shadow:
-        rgba(white, 0.2) 0 0 20px 2.5px,
-        rgba(white, 1) 0 0 0 1px,
+      transition: 0.6s $hoverEasing, box-shadow 2s $hoverEasing;
+      box-shadow: rgba(white, 0.2) 0 0 20px 2.5px, rgba(white, 1) 0 0 0 1px,
         rgba(black, 0.3) 0 15px 30px 0;
     }
   }
@@ -141,11 +136,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   width: 100%;
   height: 33rem;
   overflow: hidden;
-  box-shadow:
-    rgba(black, 0.3) 0 15px 30px 0;
+  box-shadow: rgba(black, 0.3) 0 15px 30px 0;
   transition: 1s $returnEasing;
   @include breakpoint(desktop) {
-      height: 38rem;      
+    height: 38rem;
   }
 }
 
@@ -158,9 +152,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition:
-    1s $returnEasing,
-    opacity 5s 1s $returnEasing;
+  transition: 1s $returnEasing, opacity 5s 1s $returnEasing;
   pointer-events: none;
 }
 
@@ -171,7 +163,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   color: #fff;
   transform: translateY(40%);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  
+
   p {
     color: $white;
     opacity: 0;
@@ -179,20 +171,25 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     text-shadow: rgba(black, 1) 0 2px 3px;
     transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  
+
   * {
     position: relative;
     z-index: 1;
   }
-  
+
   &:after {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     z-index: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(#000, 0.6) 100%);
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(#000, 0.6) 100%
+    );
     background-blend-mode: overlay;
     opacity: 0;
     transform: translateY(100%);
@@ -216,31 +213,45 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-color: #543a72;
   &-logo {
     width: 21.8rem;
+    @include breakpoint(desktop) {
+      width: 25.2rem;
+    }
   }
 }
 .rajil {
   background-color: $dark;
   &-logo {
     width: 12.2rem;
+    @include breakpoint(desktop) {
+      width: 14rem;
+    }
   }
 }
 .threea2ilati {
   background-color: $black;
   &-logo {
     width: 12.8rem;
+    @include breakpoint(desktop) {
+      width: 14rem;
+    }
   }
 }
 .aty {
   background-color: #fcde65;
   &-logo {
     width: 21.5rem;
+    @include breakpoint(desktop) {
+      width: 24.7rem;
+    }
   }
 }
 .warrini {
   background-color: #f23a5e;
   &-logo {
     width: 17.7rem;
+    @include breakpoint(desktop) {
+      width: 20.4rem;
+    }
   }
 }
-
 </style>

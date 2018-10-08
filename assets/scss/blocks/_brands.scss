@@ -29,6 +29,7 @@
 
     @include breakpoint(desktop) {
       margin: auto;
+      margin-left: 6.5rem;
       grid-row: auto;
     }
 
@@ -40,6 +41,7 @@
       justify-content: center;
 
       @include breakpoint(desktop) {
+        font-size: 2.7rem;
         width: 30rem;
         line-height: 1.63;
       }

@@ -59,6 +59,7 @@ export default {
 #canvas {
   // width: 1152px !important;
   width: 100%;
+  border: 1px dashed #f3f3f3;
   // height: 549px !important;
 }
 </style>

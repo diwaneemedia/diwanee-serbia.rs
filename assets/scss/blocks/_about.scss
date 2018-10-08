@@ -63,6 +63,9 @@
           @include fontSizeVw(16, 20);
           line-height: 1.4;
           color: $dark;
+          @include breakpoint(desktop) {
+            margin-bottom: 1.8rem;
+          }
         }
 
         p {

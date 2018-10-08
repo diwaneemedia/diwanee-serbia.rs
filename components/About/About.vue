@@ -32,7 +32,7 @@
             in 2009
           </h4>
           <p>
-            To create the only regional female multi channel network called “Duniati”.
+            and operates from Dubai, Beirut and since 2011 from Belgrade. 
           </p>
         </div>
       </div>

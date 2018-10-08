@@ -11,8 +11,4 @@
   @include breakpoint(desktop) {
     font-size: calcVw($fs-desktop, $site-desk-design);
   }
-
-  @media screen and (min-width: 1500px) {
-    font-size: calcVw(10, 800);
-  }
 }

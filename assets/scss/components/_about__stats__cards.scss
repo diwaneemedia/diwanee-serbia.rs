@@ -46,7 +46,6 @@
     &2::after,
     &3::before,
     &3::after,
-    &4::before,
     &4::after {
       content: "+";
       font-family: serif;
@@ -78,6 +77,16 @@
     &2::after {
       bottom: -2rem;
       font-size: 3rem;
+    }
+
+    &3::before {
+      color: #0b0bf7;
+      left: -4rem;
+    }
+
+    &3::after {
+      bottom: -3rem;
+      font-size: 1rem;
     }
 
     &4::after {

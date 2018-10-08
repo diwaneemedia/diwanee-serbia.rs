@@ -84,7 +84,7 @@ export default {
 
 .title {
   font-family: "Geomanist";
-  @include fontSizeVw(40,80);
+  font-size: 4rem;
   width: 70%;
   margin: 0 auto;
   top: 14.5%;
@@ -96,6 +96,9 @@ export default {
   position: absolute;
   text-align: center;
   z-index: 2;
+  @include breakpoint(desktop) {
+    font-size: 8rem;
+  }
 }
 
 .game {
@@ -104,6 +107,9 @@ export default {
 
 .game.loaded {
   opacity: 1;
+  border: 1px dashed $pinkish-gray;
+  z-index: 999;
+  overflow: hidden;
 }
 
 .title.fadeOut {

@@ -129,13 +129,14 @@ export default {
     }
 
     &-item {
-      @include fontSizeVw(26, 14);
+      font-size: 2.6rem;
       color: $dark;
       line-height: 1.19;
       display: inline;
       padding: 1.6rem 0;
 
       @include breakpoint(desktop) {
+        font-size: 1.4rem;
         padding: 0 1.75rem;
         line-height: 2.21;
       }

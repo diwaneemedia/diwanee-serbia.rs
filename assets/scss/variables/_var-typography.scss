@@ -4,19 +4,42 @@ $font-size-base: 10;
 
 html {
   @include fontSizeVw($font-size-base, $font-size-base);
+
+  @media screen and (min-width: 1441px) {
+    font-size: 10px;
+  }
+
   // font-size: 10px;
 }
 
 // Fonts \\
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+@font-face {
+  font-family: 'Poppins';
+  src: url('~assets/font/Poppins-Regular.eot');
+  src: url('~assets/font/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+    url('~assets/font/Poppins-Regular.woff2') format('woff2'),
+    url('~assets/font/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('~assets/font/Poppins-SemiBold.eot');
+  src: url('~assets/font/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('~assets/font/Poppins-SemiBold.woff2') format('woff2'),
+    url('~assets/font/Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Geomanist';
   src: url('~assets/font/Geomanist-Bold.eot');
   src: url('~assets/font/Geomanist-Bold.eot?#iefix') format('embedded-opentype'),
-       url('~assets/font/Geomanist-Bold.woff2') format('woff2'),
-       url('~assets/font/Geomanist-Bold.woff') format('woff');
+    url('~assets/font/Geomanist-Bold.woff2') format('woff2'),
+    url('~assets/font/Geomanist-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -43,18 +66,23 @@ body {
 // Subheadings such as About Diwane, Audience, Jobs...
 
 h2 {
-  @include fontSizeVw(22, 32);
+  font-size: 2.2rem;
   color: $rouge;
   font-weight: 600;
   line-height: 1.3;
+
+  @include breakpoint(desktop) {
+    font-size: 3.2rem;
+  }
 }
 
 p {
-  @include fontSizeVw(20, 27);
   line-height: 1.5;
   color: $dark;
+  font-size: 2rem;
 
   @include breakpoint(desktop) {
+    font-size: 2.7rem;
     line-height: 1.63;
   }
 }

@@ -33,7 +33,7 @@
     }
 
     &-content {
-      @include fontSizeVw(20, 27);
+      font-size: 2rem;
       width: 29.6rem;
       line-height: 1.5;
       display: flex;

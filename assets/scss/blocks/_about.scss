@@ -6,7 +6,7 @@
 
     @include breakpoint(desktop) {
       grid-auto-rows: minmax(100px, auto);
-      grid-template-columns: repeat(4, 24rem);
+      grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 34.6rem 61.6rem;
       grid-column-gap: 6.4rem;
       grid-row-gap: 1.5rem;
@@ -53,25 +53,28 @@
         width: 78%;
         padding: 3rem 2.5rem 3rem 2.8rem;
         position: absolute;
-        bottom: -1px;
+        bottom: -2px;
 
         @include breakpoint(desktop) {
           padding: 3.4rem 7%;
         }
 
         h4 {
-          @include fontSizeVw(16, 20);
+          font-size: 1.6rem;
           line-height: 1.4;
           color: $dark;
           @include breakpoint(desktop) {
             margin-bottom: 1.8rem;
+            font-size: 2rem
           }
         }
 
         p {
-          @include fontSizeVw(0, 16);
           line-height: 1.5;
           color: $warm-gray-two;
+          @include breakpoint(desktop) {
+          font-size: 1.6rem;
+          }
         }
       }
 

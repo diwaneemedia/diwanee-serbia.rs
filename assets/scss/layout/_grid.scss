@@ -28,7 +28,10 @@ body {
   width: 33.5rem;
 
   @include breakpoint(desktop) {
-    width: 114.0rem;
+    width: 114rem;
+  }
+  @media screen and(min-width:1441px) {
+    max-width: 1140px;;
   }
 }
 

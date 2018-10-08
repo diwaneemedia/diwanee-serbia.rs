@@ -2,7 +2,7 @@
 
   &__intro {
     display: grid;
-    margin-bottom: 18rem;
+    margin-bottom: 17.9rem;
 
     @include breakpoint(desktop) {
       grid-auto-rows: minmax(100px, auto);
@@ -50,7 +50,7 @@
 
       &__text {
         background: $white;
-        width: 78%;
+        width: 73%;
         padding: 3rem 2.5rem 3rem 2.8rem;
         position: absolute;
         bottom: -2px;
@@ -63,6 +63,7 @@
           font-size: 1.6rem;
           line-height: 1.4;
           color: $dark;
+
           @include breakpoint(desktop) {
             margin-bottom: 1.8rem;
             font-size: 2rem
@@ -70,10 +71,12 @@
         }
 
         p {
-          line-height: 1.5;
-          color: $warm-gray-two;
+          font-size: 0;
+
           @include breakpoint(desktop) {
-          font-size: 1.6rem;
+            color: $warm-gray-two;
+            line-height: 1.5;
+            font-size: 1.6rem;
           }
         }
       }

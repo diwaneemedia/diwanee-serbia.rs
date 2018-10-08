@@ -76,13 +76,16 @@ export default {
 .game-container {
   position: relative;
   margin-bottom: 10rem;
+  @include breakpoint(desktop) {
+    width: 114rem;
+    margin: 0 auto 10rem;
+  }
 }
 
 .title {
-  // font-family: "Geomanist-Bold";
-  font-weight: 700;
+  font-family: "Geomanist";
   @include fontSizeVw(40,80);
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   top: 14.5%;
   letter-spacing: 0.4rem;

@@ -173,6 +173,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   
   p {
+    color: $white;
     opacity: 0;
     font-size: 1.6rem;
     text-shadow: rgba(black, 1) 0 2px 3px;

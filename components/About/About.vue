@@ -3,7 +3,9 @@
 
     <section class="about__intro">
 
-      <h2 class="about__intro-title">
+      <h2 
+        id="about"
+        class="about__intro-title">
         <span class="line-title" />ABOUT DIWANEE
       </h2>
 

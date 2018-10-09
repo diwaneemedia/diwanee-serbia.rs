@@ -15,7 +15,7 @@
 
     <div class="container">
 
-      <About id="about" />
+      <About />
 
       <Brands id="brands" />
 
@@ -54,6 +54,14 @@ export default {
     Footer
   },
   mounted() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
     window.UnityFinished = function() {
       /// Unity finished loading event
       var element = document.getElementById("game");

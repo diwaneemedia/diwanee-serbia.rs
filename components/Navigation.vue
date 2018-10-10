@@ -110,11 +110,11 @@ export default {
   }
 
   &__links {
+    display: flex;
     @include breakpoint(phone) {
       background: $white;
       z-index: 3;
       position: absolute;
-      display: flex;
       flex-direction: column;
       height: 90vh;
       margin-top: 10vh;

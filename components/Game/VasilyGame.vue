@@ -44,7 +44,7 @@ export default {
 
 #gameContainer {
   width: 114rem !important;
-  height: 54.3281rem !important;
+  height: 54rem !important;
   // max-width: 1152px !important;
   // max-height: 549px !important;
   // margin: 0 auto !important;
@@ -59,7 +59,6 @@ export default {
 #canvas {
   // width: 1152px !important;
   width: 100%;
-  border: 1px dashed #f3f3f3;
   // height: 549px !important;
 }
 </style>

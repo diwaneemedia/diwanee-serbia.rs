@@ -63,6 +63,7 @@ export default {
       let game = document.getElementById("game");
       let title = document.getElementById("title");
       let animation = document.getElementById("animation");
+      document.getElementById("loading-text").classList.add("fadeOut");
       game.classList.add("loaded");
       title.classList.add("fadeOut");
       animation.classList.add("loaded");

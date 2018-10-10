@@ -11,7 +11,7 @@
     <h1 id="title" class="title">
       WE ARE BUILDING THE FUTURE OF DIGITAL MEDIA
     </h1>
-
+    <div id="loading-text" class="loading-text">LOADING <span id="loading-text--no">0%</span></div>
     <VasilyGame id="game" class="game" />
 
   </div>
@@ -37,7 +37,15 @@ export default {
     margin: 0 auto 10rem;
   }
 }
-
+.loading-text {
+  position: absolute;
+  bottom:10px;
+  left:15px;
+  font-family: "Geomanist";
+  z-index: 123412;
+  font-size: 16px;
+  color:#adadad;
+}
 .title {
   font-family: "Geomanist";
   font-size: 4rem;
@@ -51,14 +59,14 @@ export default {
   color: $black;
   position: absolute;
   text-align: center;
-  z-index: 2;
+  z-index: 1001;
   @include breakpoint(desktop) {
     font-size: 8rem;
   }
 }
 
 .game {
-  opacity: 0;
+  opacity: 1;
 }
 
 .game.loaded {
@@ -67,7 +75,7 @@ export default {
   overflow: hidden;
 }
 
-.title.fadeOut {
+.fadeOut {
   opacity: 0;
 }
 

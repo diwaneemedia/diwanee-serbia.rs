@@ -15,6 +15,8 @@
 
     </div>
 
+    <img src="https://picsum.photos/200" alt="myIMg" class=".animate-me">
+
     <Jobs id="jobs" />
 
     <Contact id="contact" />
@@ -30,7 +32,6 @@
 
 <script>
 import Navigation from "~/components/Navigation.vue";
-// import Animation from "~/components/Animation.vue";
 import GameContainer from "~/components/Game/GameContainer.vue";
 import About from "~/components/About/About.vue";
 import Brands from "~/components/Brands/Brands.vue";
@@ -41,7 +42,6 @@ import Footer from "~/components/Footer/Footer.vue";
 export default {
   components: {
     Navigation,
-    // Animation,
     GameContainer,
     About,
     Brands,
@@ -58,6 +58,7 @@ export default {
         });
       });
     });
+
     window.UnityFinished = function() {
       /// Unity finished loading event
       let game = document.getElementById("game");

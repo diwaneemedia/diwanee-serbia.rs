@@ -3,6 +3,8 @@
 
     <div class="container">
 
+      <div class="observer" />
+
       <h2 class="jobs-title">
         <span class="line-title" />WORK WITH US
       </h2>
@@ -15,10 +17,7 @@
     </div>
 
     <div class="jobs__list">
-      <job-offer
-        v-for="(job,index) in jobList"
-        :key="index"
-        :data="job" />
+      <job-offer v-for="(job,index) in jobList" :key="index" :data="job" />
     </div>
 
   </article>
@@ -37,8 +36,21 @@ export default {
         { name: "PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP" },
         { name: "JUNIOR PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP" },
         { name: "WEB DESIGNER", hash: "#Sketch #XD #Zeplin #Illustrator" }
-      ]
+      ],
+      observer: null
     };
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(([entry]) => {
+      if (entry && entry.isIntersecting) {
+        this.$emit("intersect");
+        console.log("Im found");
+      }
+    });
+    this.observer.observe(this.$el);
+  },
+  destroyed() {
+    this.observer.disconnect();
   }
 };
 </script>

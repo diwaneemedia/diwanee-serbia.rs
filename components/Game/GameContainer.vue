@@ -39,12 +39,12 @@ export default {
 }
 .loading-text {
   position: absolute;
-  bottom:10px;
-  left:15px;
+  bottom: 10px;
+  left: 15px;
   font-family: "Geomanist";
   z-index: 123412;
   font-size: 16px;
-  color:#adadad;
+  color: #adadad;
 }
 .title {
   font-family: "Geomanist";
@@ -59,6 +59,7 @@ export default {
   color: $black;
   position: absolute;
   text-align: center;
+  pointer-events: none;
   z-index: 1001;
   @include breakpoint(desktop) {
     font-size: 8rem;
@@ -80,11 +81,11 @@ export default {
 }
 
 #animation {
-  width: 115.5rem;
+  width: 115.9rem;
   height: 56.5rem;
   position: absolute;
   top: 11px;
-  left: -7px;
+  left: -10px;
   right: 0;
   bottom: 0;
   margin: auto;

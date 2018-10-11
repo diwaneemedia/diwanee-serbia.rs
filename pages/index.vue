@@ -7,25 +7,15 @@
 
     <GameContainer />
 
-    <div class="container">
+    <About />
 
-      <About />
-
-      <Brands id="brands" />
-
-    </div>
-
-    <img src="https://picsum.photos/200" alt="myIMg" class=".animate-me">
+    <Brands id="brands" />
 
     <Jobs id="jobs" />
 
     <Contact id="contact" />
 
-    <div class="container">
-
-      <Footer />
-
-    </div>
+    <Footer />
 
   </div>
 </template>

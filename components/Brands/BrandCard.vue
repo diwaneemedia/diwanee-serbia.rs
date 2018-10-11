@@ -1,17 +1,8 @@
 <template>
-  <div 
-    v-if="data.image != 'no-pic'" 
-    ref="card" class="card-wrap" 
-    @mousemove="handleMouseMove" 
-    @mouseenter="handleMouseEnter" 
-    @mouseleave="handleMouseLeave">
-    <div 
-      :style="cardStyle" 
-      :class="data.title" class="card">
-      <div 
-        :style="cardBgImage" 
-        class="card-bg" />
-        
+  <div v-if="data.image != 'no-pic'" ref="card" class="card-wrap" @mousemove="handleMouseMove" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
+    <div :style="cardStyle" :class="data.title" class="card">
+      <div :style="cardBgImage" class="card-bg" />
+
       <div class="card-info">
         <slot name="logo" />
       </div>
@@ -88,7 +79,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~assets/scss/master";
 
 $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
@@ -112,10 +103,8 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
     .card {
       transition: 0.6s $hoverEasing, box-shadow 2s $hoverEasing;
-      box-shadow: 
-        rgba(white, 0.2) 0 0 20px 2.5px,
-        rgba(white, 1) 0 0 0 1px,
-        rgba(0,0,0, 0.2) 0 10px 20px 0;
+      box-shadow: rgba(white, 0.2) 0 0 20px 2.5px, rgba(white, 1) 0 0 0 1px,
+        rgba(0, 0, 0, 0.2) 0 10px 20px 0;
     }
   }
 }
@@ -148,11 +137,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 .card-info {
   padding: 20px;
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 0;
   right: 0;
   color: #fff;
-  transform: translateY(20%);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 

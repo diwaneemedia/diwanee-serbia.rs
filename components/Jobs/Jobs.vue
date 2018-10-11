@@ -3,8 +3,6 @@
 
     <div class="container">
 
-      <div class="observer" />
-
       <h2 class="jobs-title">
         <span class="line-title" />WORK WITH US
       </h2>
@@ -44,7 +42,6 @@ export default {
     this.observer = new IntersectionObserver(([entry]) => {
       if (entry && entry.isIntersecting) {
         this.$emit("intersect");
-        console.log("Im found");
       }
     });
     this.observer.observe(this.$el);

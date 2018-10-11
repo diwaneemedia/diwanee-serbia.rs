@@ -1,16 +1,20 @@
 <template>
   <article class="brands">
 
-    <h2 class="brands-title">
-      <span class="line-title" />OUR BRANDS
-    </h2>
+    <div class="container">
 
-    <div class="brands__cards">
+      <h2 class="brands-title">
+        <span class="line-title" />OUR BRANDS
+      </h2>
 
-      <brand-card v-for="(data,index) in brandCards" :key="index" :data="data">
-        <img slot="logo" :src="data.logo" :class="data.title + '-logo'" class="card-logo">
-        <p slot="content">{{ data.content }}</p>
-      </brand-card>
+      <div class="brands__cards">
+
+        <brand-card v-for="(data,index) in brandCards" :key="index" :data="data">
+          <img slot="logo" :src="data.logo" :class="data.title + '-logo'" class="card-logo">
+          <p slot="content">{{ data.content }}</p>
+        </brand-card>
+
+      </div>
 
     </div>
 

@@ -9,6 +9,17 @@
         <span class="line-title" />ABOUT DIWANEE
       </h2>
 
+      <div class="about__intro-card about__intro-card--left">
+        <div class="about__intro-card__text about__intro-card--left__text">
+          <h4 class="about__intro-card__text-title">
+            Diwanee partners with YouTube
+          </h4>
+          <p class="about__intro-card__text-content">
+            To create the only regional female multi channel network called “Duniati”.
+          </p>
+        </div>
+      </div>
+      
       <p class="about__intro-content">
         Diwanee, is a digital media
         company that specializes in
@@ -16,24 +27,13 @@
         women in the Middle East.
       </p>
 
-      <div class="about__intro-card about__intro-card--left">
-        <div class="about__intro-card__text about__intro-card--left__text">
-          <h4>
-            Diwanee partners with YouTube
-          </h4>
-          <p>
-            To create the only regional female multi channel network called “Duniati”.
-          </p>
-        </div>
-      </div>
-
       <div class="about__intro-card about__intro-card--right">
         <div class="about__intro-card__text about__intro-card--right__text">
-          <h4>
+          <h4 class="about__intro-card__text-title">
             Diwanee was established
             in 2009
           </h4>
-          <p>
+          <p class="about__intro-card__text-content">
             and operates from Dubai, Beirut and since 2011 from Belgrade. 
           </p>
         </div>

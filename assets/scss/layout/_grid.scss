@@ -25,13 +25,15 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 33.5rem;
+  width: 33rem;
 
   @include breakpoint(desktop) {
     width: 114rem;
   }
+
   @media screen and(min-width:1441px) {
-    max-width: 1140px;;
+    max-width: 1140px;
+    ;
   }
 }
 

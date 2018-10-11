@@ -1,31 +1,27 @@
 <template>
-  <div
-    v-if="data.image != 'no-pic'"
-    ref="card" 
-    class="card-wrap"
+  <div 
+    v-if="data.image != 'no-pic'" 
+    ref="card" class="card-wrap" 
     @mousemove="handleMouseMove" 
     @mouseenter="handleMouseEnter" 
-    @mouseleave="handleMouseLeave" >
+    @mouseleave="handleMouseLeave">
     <div 
-      :style="cardStyle"
-      :class="data.title"
-      class="card">
+      :style="cardStyle" 
+      :class="data.title" class="card">
       <div 
-        :style="cardBgImage"
+        :style="cardBgImage" 
         class="card-bg" />
+        
       <div class="card-info">
         <slot name="logo" />
-        <slot name="content" />
       </div>
+
     </div>
   </div>
-  
-  <div 
-    v-else 
-    class="brands__card brands__card-text">
 
-    <h3  
-      class="brands__card-text-content"> With all our brands we have over 38 million fans across social channels.
+  <div v-else class="brands__card brands__card-text">
+
+    <h3 class="brands__card-text-content"> With all our brands we have over 38 million fans across social channels.
     </h3>
 
   </div>
@@ -107,26 +103,19 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     .card-info {
       transform: translateY(0);
     }
-    .card-info p {
-      opacity: 1;
-    }
-    .card-info,
-    .card-info p {
+    .card-info {
       transition: 0.6s $hoverEasing;
-    }
-    .card-info:after {
-      transition: 5s $hoverEasing;
-      opacity: 1;
-      transform: translateY(0);
     }
     .card-bg {
       transition: 0.6s $hoverEasing, opacity 5s $hoverEasing;
-      opacity: 0.8;
+      opacity: 0.9;
     }
     .card {
       transition: 0.6s $hoverEasing, box-shadow 2s $hoverEasing;
-      box-shadow: rgba(white, 0.2) 0 0 20px 2.5px, rgba(white, 1) 0 0 0 1px,
-        rgba(black, 0.3) 0 15px 30px 0;
+      box-shadow: 
+        rgba(white, 0.2) 0 0 20px 2.5px,
+        rgba(white, 1) 0 0 0 1px,
+        rgba(0,0,0, 0.2) 0 10px 20px 0;
     }
   }
 }
@@ -136,7 +125,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   width: 100%;
   height: 33rem;
   overflow: hidden;
-  box-shadow: rgba(black, 0.3) 0 15px 30px 0;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   transition: 1s $returnEasing;
   @include breakpoint(desktop) {
     height: 38rem;
@@ -144,10 +133,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .card-bg {
-  opacity: 0.2;
+  opacity: 0.5;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 101%;
+  height: 101%;
   padding: 20px;
   background-repeat: no-repeat;
   background-position: center;
@@ -159,51 +148,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 .card-info {
   padding: 20px;
   position: absolute;
-  bottom: 0;
+  top: 30%;
+  left: 0;
+  right: 0;
   color: #fff;
-  transform: translateY(40%);
+  transform: translateY(20%);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-
-  p {
-    color: $white;
-    opacity: 0;
-    font-size: 1.6rem;
-    text-shadow: rgba(black, 1) 0 2px 3px;
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  * {
-    position: relative;
-    z-index: 1;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(#000, 0.6) 100%
-    );
-    background-blend-mode: overlay;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 5s 1s $returnEasing;
-  }
 }
-
-// .card-info h4 {
-//     @include fontSizeVw(30, 40);
-//     line-height: 2;
-//   text-align: center;
-//   font-weight: 700;
-//   text-shadow: rgba(black, 0.5) 0 10px 10px;
-// }
 
 .card-logo {
   margin: 0 auto 5rem;

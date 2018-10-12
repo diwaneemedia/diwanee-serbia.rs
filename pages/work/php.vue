@@ -17,7 +17,7 @@
 
         <ul class="work-details-description">
           <li>- More than 2 years’ experience with any of listed PHP framework (Zend framework, Laravel, Symphony,
-            SlimPHP, Yii,Cake PHP)</li>
+          SlimPHP, Yii,Cake PHP)</li>
           <li> - Strong understanding of OOP concepts</li>
           <li>- MySQL</li>
           <li> - Smarty template engine</li>

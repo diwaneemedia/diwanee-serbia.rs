@@ -16,7 +16,7 @@
       WE ARE BUILDING THE <span>FUTURE</span> <br> OF DIGITAL MEDIA
     </h1> -->
 
-    <video class="video" width="1140" height="540" autoplay="true" loop="true">
+    <video class="video" width="101%" autoplay="true" loop="true">
       <source src="~/static/video/game.mp4" type="video/mp4">
     </video>
 
@@ -51,36 +51,16 @@ export default {
   color: #adadad;
 }
 
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.game-container {
+  overflow: hidden;
 }
 
-// .title {
-//   font-family: "Geomanist";
-//   font-size: 4rem;
-//   width: 70%;
-//   margin: 0 auto;
-//   top: 17.5%;
-//   line-height: 94%;
-//   letter-spacing: 0.35rem;
-//   left: 0;
-//   right: 0;
-//   text-transform: uppercase;
-//   color: $black;
-//   position: absolute;
-//   text-align: center;
-//   pointer-events: none;
-//   z-index: 2;
-//   span {
-//     color: #e81d44;
-//   }
-//   @include breakpoint(desktop) {
-//     font-size: 8rem;
-//   }
-// }
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .game {
   opacity: 1;
@@ -145,4 +125,28 @@ export default {
     stroke-dashoffset: 0;
   }
 }
+
+// .title {
+//   font-family: "Geomanist";
+//   font-size: 4rem;
+//   width: 70%;
+//   margin: 0 auto;
+//   top: 17.5%;
+//   line-height: 94%;
+//   letter-spacing: 0.35rem;
+//   left: 0;
+//   right: 0;
+//   text-transform: uppercase;
+//   color: $black;
+//   position: absolute;
+//   text-align: center;
+//   pointer-events: none;
+//   z-index: 2;
+//   span {
+//     color: #e81d44;
+//   }
+//   @include breakpoint(desktop) {
+//     font-size: 8rem;
+//   }
+// }
 </style>

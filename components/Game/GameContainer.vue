@@ -12,9 +12,13 @@
 
     <div id="loading-text" class="loading-text">LOADING <span id="loading-text--no">0%</span></div>
 
-    <h1 id="title" class="title">
+    <!-- <h1 id="title" class="title">
       WE ARE BUILDING THE <span>FUTURE</span> <br> OF DIGITAL MEDIA
-    </h1>
+    </h1> -->
+
+    <video class="video" width="1140" height="540" autoplay="true" loop="true">
+      <source src="~/static/video/game.mp4" type="video/mp4">
+    </video>
 
   </div>
 </template>
@@ -47,29 +51,36 @@ export default {
   color: #adadad;
 }
 
-.title {
-  font-family: "Geomanist";
-  font-size: 4rem;
-  width: 70%;
-  margin: 0 auto;
-  top: 17.5%;
-  line-height: 94%;
-  letter-spacing: 0.35rem;
+.video {
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  text-transform: uppercase;
-  color: $black;
-  position: absolute;
-  text-align: center;
-  pointer-events: none;
-  z-index: 2;
-  span {
-    color: #e81d44;
-  }
-  @include breakpoint(desktop) {
-    font-size: 8rem;
-  }
 }
+
+// .title {
+//   font-family: "Geomanist";
+//   font-size: 4rem;
+//   width: 70%;
+//   margin: 0 auto;
+//   top: 17.5%;
+//   line-height: 94%;
+//   letter-spacing: 0.35rem;
+//   left: 0;
+//   right: 0;
+//   text-transform: uppercase;
+//   color: $black;
+//   position: absolute;
+//   text-align: center;
+//   pointer-events: none;
+//   z-index: 2;
+//   span {
+//     color: #e81d44;
+//   }
+//   @include breakpoint(desktop) {
+//     font-size: 8rem;
+//   }
+// }
 
 .game {
   opacity: 1;

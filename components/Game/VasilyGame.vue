@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <article id="gameContainer" />
+    <div class="start-game" @click="startGame">
+      STARTO GAMEO
+    </div>
   </div>
 </template>
 
@@ -11,13 +14,15 @@ export default {
     //   /// Unity finished loading event
     //   console.log("Unity Done");
     // };
-    this.UnityLoaderReady();
   },
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
         "Build/pong2018ver4.json"
       ]);
+    },
+    startGame() {
+      this.UnityLoaderReady();
     }
   },
   head: {
@@ -37,10 +42,11 @@ export default {
   height: 54rem;
 }
 
-// .canvas__container {
-//     overflow: hidden;
-//
-// }
+.start-game {
+  font-size: 5rem;
+  z-index: 99999999;
+  color: indianred;
+}
 
 #gameContainer {
   width: 114rem !important;
@@ -56,6 +62,7 @@ export default {
   z-index: 1;
   // left: 0;
 }
+
 #canvas {
   // width: 1152px !important;
   width: 100%;

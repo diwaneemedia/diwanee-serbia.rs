@@ -31,9 +31,9 @@ export default {
   data() {
     return {
       jobList: [
-        { name: "PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP" },
-        { name: "JUNIOR PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP" },
-        { name: "WEB DESIGNER", hash: "#Sketch #XD #Zeplin #Illustrator" }
+        { name: "PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP", url: "php" },
+        { name: "JUNIOR PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP", url: "php" },
+        { name: "WEB DESIGNER", hash: "#Sketch #XD #Zeplin #Illustrator", url: "web" }
       ],
       observer: null
     };

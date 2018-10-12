@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="home">
 
-    <Navigation id="home" />
+    <Navigation />
 
     <div class="work-details">
 
@@ -17,7 +17,7 @@
 
         <ul class="work-details-description">
           <li>- More than 2 years’ experience with any of listed PHP framework (Zend framework, Laravel, Symphony,
-          SlimPHP, Yii,Cake PHP)</li>
+            SlimPHP, Yii,Cake PHP)</li>
           <li> - Strong understanding of OOP concepts</li>
           <li>- MySQL</li>
           <li> - Smarty template engine</li>
@@ -94,28 +94,36 @@
 </template>
 
 <script>
-  import Navigation from "~/components/Navigation.vue";
-  import Contact from "~/components/Contact/Contact.vue";
-  import Footer from "~/components/Footer/Footer.vue";
+import Navigation from "~/components/Navigation.vue";
+import Contact from "~/components/Contact/Contact.vue";
+import Footer from "~/components/Footer/Footer.vue";
 
-  export default {
-    components: {
-      Navigation,
-      Contact,
-      Footer
-    }
-  };
-
+export default {
+  components: {
+    Navigation,
+    Contact,
+    Footer
+  },
+  mounted() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-  @import "~assets/scss/master.scss";
+@import "~assets/scss/master.scss";
 
-  #home {
-    margin-bottom: 9.1rem;
-    @include breakpoint(desktop){
-      margin-bottom: 15.7rem;
-    }
+#home {
+  margin-bottom: 9.1rem;
+  @include breakpoint(desktop) {
+    margin-bottom: 15.7rem;
   }
-
+}
 </style>

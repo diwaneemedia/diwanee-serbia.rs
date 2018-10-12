@@ -9,7 +9,7 @@
       </div>
 
       <nuxt-link
-        to="/work/" 
+        :to="'/work/'+ data.url + '/' " 
         tag="a" 
         class="col--right btn">
         VIEW MORE

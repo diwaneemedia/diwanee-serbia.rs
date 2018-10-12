@@ -1,13 +1,17 @@
 <template>
   <div v-if="data.image != 'no-pic'" ref="card" class="card-wrap" @mousemove="handleMouseMove" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
-    <div :style="cardStyle" :class="data.title" class="card">
-      <div :style="cardBgImage" class="card-bg" />
 
-      <div class="card-info">
-        <slot name="logo" />
+    <a :href="data.url">
+
+      <div :style="cardStyle" :class="data.title" class="card">
+        <div :style="cardBgImage" class="card-bg" />
+        <div class="card-info">
+          <slot name="logo" />
+        </div>
       </div>
 
-    </div>
+    </a>
+
   </div>
 
   <div v-else class="brands__card brands__card-text">
@@ -177,7 +181,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
   }
 }
-.aty {
+.atyabtabkha {
   background-color: #fcde65;
   &-logo {
     width: 21.5rem;

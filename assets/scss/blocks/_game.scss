@@ -1,0 +1,9 @@
+.game-container {
+  position: relative;
+  margin-bottom: 10rem;
+
+  @include breakpoint(desktop) {
+    width: 114rem;
+    margin: 0 auto 10rem;
+  }
+}

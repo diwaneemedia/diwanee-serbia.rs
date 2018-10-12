@@ -8,11 +8,13 @@
       <path class="path4" fill="none" d="M 10,540 L10,-10" />
     </svg>
 
-    <h1 id="title" class="title">
-      WE ARE BUILDING THE FUTURE OF DIGITAL MEDIA
-    </h1>
-    <div id="loading-text" class="loading-text">LOADING <span id="loading-text--no">0%</span></div>
     <VasilyGame id="game" class="game" />
+
+    <div id="loading-text" class="loading-text">LOADING <span id="loading-text--no">0%</span></div>
+
+    <h1 id="title" class="title">
+      WE ARE BUILDING THE <span>FUTURE</span> <br> OF DIGITAL MEDIA
+    </h1>
 
   </div>
 </template>
@@ -26,17 +28,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~assets/scss/master";
-
-.game-container {
-  position: relative;
-  margin-bottom: 10rem;
-  @include breakpoint(desktop) {
-    width: 114rem;
-    margin: 0 auto 10rem;
+@include breakpoint(phone) {
+  #loading-text,
+  #gameContainer {
+    display: none;
   }
 }
+
 .loading-text {
   position: absolute;
   bottom: 10px;
@@ -46,13 +46,15 @@ export default {
   font-size: 16px;
   color: #adadad;
 }
+
 .title {
   font-family: "Geomanist";
   font-size: 4rem;
   width: 70%;
   margin: 0 auto;
-  top: 14.5%;
-  letter-spacing: 0.4rem;
+  top: 17.5%;
+  line-height: 94%;
+  letter-spacing: 0.35rem;
   left: 0;
   right: 0;
   text-transform: uppercase;
@@ -60,7 +62,10 @@ export default {
   position: absolute;
   text-align: center;
   pointer-events: none;
-  z-index: 1001;
+  z-index: 2;
+  span {
+    color: #e81d44;
+  }
   @include breakpoint(desktop) {
     font-size: 8rem;
   }

@@ -84,27 +84,28 @@ export default {
 
 $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
 $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+@include breakpoint(desktop) {
+  .card-wrap {
+    transform: perspective(800px);
+    transform-style: preserve-3d;
+    cursor: pointer;
 
-.card-wrap {
-  transform: perspective(800px);
-  transform-style: preserve-3d;
-  cursor: pointer;
+    &:hover {
+      .card-info {
+        transform: translateY(0);
+      }
 
-  &:hover {
-    .card-info {
-      transform: translateY(0);
-    }
-    .card-info {
-      transition: 0.6s $hoverEasing;
-    }
-    .card-bg {
-      transition: 0.6s $hoverEasing, opacity 5s $hoverEasing;
-      opacity: 0.9;
-    }
-    .card {
-      transition: 0.6s $hoverEasing, box-shadow 2s $hoverEasing;
-      box-shadow: rgba(white, 0.2) 0 0 20px 2.5px, rgba(white, 1) 0 0 0 1px,
-        rgba(0, 0, 0, 0.2) 0 10px 20px 0;
+      .card-bg {
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: 0.6s $hoverEasing, opacity 5s $hoverEasing;
+        opacity: 0.9;
+      }
+      .card {
+        -webkit-transition: 0.6s $hoverEasing, box-shadow 2s $hoverEasing;
+        transition: 0.6s $hoverEasing, box-shadow 2s $hoverEasing;
+        box-shadow: rgba(white, 0.2) 0 0 20px 2.5px, rgba(white, 1) 0 0 0 1px,
+          rgba(0, 0, 0, 0.2) 0 10px 20px 0;
+      }
     }
   }
 }
@@ -115,6 +116,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   height: 33rem;
   overflow: hidden;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
   transition: 1s $returnEasing;
   @include breakpoint(desktop) {
     height: 38rem;
@@ -130,6 +132,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: 1s $returnEasing, opacity 5s 1s $returnEasing;
   pointer-events: none;
 }
@@ -141,7 +144,6 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   left: 0;
   right: 0;
   color: #fff;
-  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .card-logo {

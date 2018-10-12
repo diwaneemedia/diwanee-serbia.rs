@@ -68,22 +68,22 @@
 
         <div class="about__stats__cards">
 
-          <about-card class="about__stats-card1" @intersect="intersected">
+          <about-card :class="{ 'animate': visible }" class="about__stats-card1" @intersect="intersected">
             <template slot="numbers">6.</template>
             <template slot="text">Media Brands</template>
           </about-card>
 
-          <about-card :class="{ 'card-animation': visible }" class="about__stats-card2">
+          <about-card :class="{ 'animate': visible }" class="about__stats-card2">
             <template slot="numbers">8 <span>million</span></template>
             <template slot="text">Monthly Unique Users</template>
           </about-card>
 
-          <about-card :class="{ 'card-animation': visible }" class="about__stats-card3">
+          <about-card :class="{ 'animate': visible }" class="about__stats-card3">
             <template slot="numbers">29 <span>million</span> </template>
             <template slot="text">Page Views</template>
           </about-card>
 
-          <about-card :class="{ 'card-animation': visible }" class="about__stats-card4">
+          <about-card :class="{ 'animate': visible }" class="about__stats-card4">
             <template slot="numbers">38 <span>million</span></template>
             <template slot="text">Fans Across Social Channels</template>
           </about-card>
@@ -123,5 +123,49 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.about__stats-card.animate {
+  &::before,
+  &::after {
+    -webkit-animation-name: animate;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: animate;
+    animation-delay: 0.3s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+  }
+}
+
+@-webkit-keyframes animate {
+  25% {
+    transform: scale(0.5);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Standard syntax */
+@keyframes animate {
+  25% {
+    transform: scale(0.5);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

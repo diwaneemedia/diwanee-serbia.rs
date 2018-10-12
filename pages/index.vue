@@ -70,33 +70,4 @@ export default {
 #home {
   margin-bottom: 8rem;
 }
-
-// img {
-//   max-width: 80%;
-//   width: 100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   margin: auto;
-//   opacity: 0;
-//   animation-name: show;
-//   animation-delay: 6s;
-//   animation-duration: 1s;
-//   animation-fill-mode: forwards;
-//   animation-iteration-count: 1;
-//   animation-timing-function: linear;
-// }
-
-// .shitty-anime {
-//   opacity: 1;
-//   position: absolute;
-//   z-index: 9999;
-// }
-
-// .shitty-anime {
-//   opacity: 0;
-//   z-index: 0;
-// }
 </style>

@@ -1,26 +1,19 @@
 <template>
-
   <nav role="navigation">
-    <div  
-      class="container navigation">
 
-      <div class="navigation__logo">
-        <img
-          src="~/static/images/diwanee-logo.png"
-          alt="logo">
+    <div class="container navigation">
+
+      <div class="navigation__logo" />
+
+      <div :class="{ open: sideBarOpen }" class="navigation__links">
+        <nuxt-link class="navigation__links__item" tag="a" to="/#home">Home</nuxt-link>
+        <nuxt-link class="navigation__links__item" tag="a" to="/#about" href="#about">About</nuxt-link>
+        <nuxt-link class="navigation__links__item" tag="a" to="/#brands" href="#brands">Our brands</nuxt-link>
+        <nuxt-link class="navigation__links__item" tag="a" to="/#jobs" href="#jobs">Jobs</nuxt-link>
+        <a class="navigation__links__item" href="#contact">CONTACT</a>
+        <p class="navigation__links__social--text">Follow us</p>
+        <Social class="navigation__links__social" />
       </div>
-
-      <ul 
-        :class="{open: sideBarOpen}" 
-        class="navigation__links">
-        <li class="navigation__links-item"><nuxt-link tag="a" to="/#home" href="#home">HOME</nuxt-link></li>
-        <li class="navigation__links-item"><nuxt-link tag="a" to="/#about" href="#about">ABOUT</nuxt-link></li>
-        <li class="navigation__links-item"><nuxt-link tag="a" to="/#brands" href="#brands">OUR BRANDS</nuxt-link></li>
-        <li class="navigation__links-item"><nuxt-link tag="a" to="/#jobs" href="#jobs">JOBS</nuxt-link></li>
-        <li class="navigation__links-item"><a href="#contact">CONTACT</a></li>
-        <p class="navigation__social--text">Follow us</p>
-        <Social class="navigation__social" />
-      </ul>
 
       <div 
         class="hamburger" 
@@ -36,9 +29,10 @@
           :class="{ change : sideBarOpen }" 
           class="hamburger__bar hamburger__bar3" />
       </div>
-    </div>
-  </nav>
 
+    </div>
+
+  </nav>
 </template>
 
 <script>
@@ -52,16 +46,6 @@ export default {
       sideBarOpen: false
     };
   },
-  mounted() {
-    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //   anchor.addEventListener("click", function(e) {
-    //     e.preventDefault();
-    //     document.querySelector(this.getAttribute("href")).scrollIntoView({
-    //       behavior: "smooth"
-    //     });
-    //   });
-    // });
-  },
   methods: {
     openSidebar() {
       this.sideBarOpen = !this.sideBarOpen;
@@ -74,96 +58,105 @@ export default {
 @import "~assets/scss/master.scss";
 
 .navigation {
+  padding-top: 3.8rem;
   display: flex;
-  position: relative;
   justify-content: space-between;
-  margin-top: 3.8rem;
+  position: relative;
   @include breakpoint(desktop) {
-    height: auto;
     margin-bottom: 5rem;
-    align-items: baseline;
   }
 
-  &__logo img {
-    width: 7rem;
-    // height: 1.8rem;
+  &__logo {
+    background: center / cover no-repeat url("~static/images/diwanee-logo.svg");
+    width: 7.03rem;
+    height: 1.87rem;
     @include breakpoint(desktop) {
-      width: auto;
-      height: auto;
-    }
-  }
-
-  &__social {
-    margin: 0;
-    @include breakpoint(desktop) {
-      display: none;
-    }
-
-    &--text {
-      margin: 10vh 0 1rem;
-      font-size: 1.6rem;
-      line-height: 1.94;
-      @include breakpoint(desktop) {
-        display: none;
-      }
+      width: 10.9rem;
+      height: 2.9rem;
     }
   }
 
   &__links {
     display: flex;
+    background: $white;
+    z-index: 3;
     @include breakpoint(phone) {
-      background: $white;
-      z-index: 3;
       position: absolute;
       flex-direction: column;
-      height: 90vh;
-      margin-top: 10vh;
-      -webkit-transform: translateX(-120%);
-      transform: translateX(-120%);
-      transition: all 200ms ease-in;
-      width: 100%;
-      &.open {
-        -webkit-transform: none;
-        transform: none;
-      }
+      width: 37.5rem;
+      left: -1.4rem;
+      padding-left: 1.4rem;
+      margin-top: 7.2rem;
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    transition: all 200ms ease-in;
+
+    &.open {
+      -webkit-transform: none;
+      transform: none;
     }
 
-    &-item {
+    &__item {
       font-size: 2.6rem;
+      line-height: 1.39;
+      text-transform: uppercase;
+      -webkit-transition: 0.5s;
+      transition: 0.3s;
+      padding-bottom: 1.6rem;
       color: $dark;
-      line-height: 1.19;
-      display: inline;
-      padding: 1.6rem 0;
-
       @include breakpoint(desktop) {
         font-size: 1.4rem;
-        padding: 0 1.75rem;
-        line-height: 2.21;
-      }
-
-      a {
+        margin-left: 1.75rem;
+        padding-bottom: 0;
         position: relative;
-        text-decoration: none;
-
         &:before {
           content: "";
           position: absolute;
           width: 100%;
           height: 2px;
-          bottom: -1px;
-          left: 0;
-          background-color: $rouge;
-          visibility: hidden;
-          -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-          -webkit-transition: all 0.3s ease-in-out 0s;
-          transition: all 0.3s ease-in-out 0s;
+          bottom: 4px;
+          background-color: $pinkish-gray;
         }
 
-        &:hover:before {
-          visibility: visible;
-          -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          bottom: 4px;
+          left: 0;
+          opacity: 0;
+          background-color: $black;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
+
+      &:hover {
+        color: $rouge;
+      }
+    }
+
+    &__social {
+      margin: 0;
+      @include breakpoint(desktop) {
+        display: none;
+      }
+
+      &--text {
+        margin: 9.2rem 0 1.1rem 0;
+        font-size: 1.6rem;
+        line-height: 1.94;
+        @include breakpoint(desktop) {
+          display: none;
         }
       }
     }
@@ -173,6 +166,8 @@ export default {
 // Hamburger animation
 
 .hamburger {
+  position: absolute;
+  right: 0;
   @include breakpoint(desktop) {
     display: none;
   }

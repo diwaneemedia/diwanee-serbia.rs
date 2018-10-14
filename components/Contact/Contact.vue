@@ -16,7 +16,29 @@
       </h2>
 
       <div class="contact__cards">
-        <contact-card v-for="(card,index) in cards" :data="card" :key="index" />
+
+        <contact-card>
+          <template slot="city">Dubai</template>
+          <template slot="adress">Office Park, Building Block A Units A301-A302</template>
+          <template slot="adress2">Dubai Internet City</template>
+          <template slot="phone">T:971 4-434 7147</template>
+        </contact-card>
+
+        <contact-card>
+          <template slot="city">Beirut</template>
+          <template slot="adress">Beirut Digital District/BDD Bechara El Khoury</template>
+          <template slot="adress2">1075 2nd and 3rd floor</template>
+          <template slot="phone">T: 961 1 - 660327</template>
+          <template slot="fax">F: 961 1 - 660153</template>
+        </contact-card>
+
+        <contact-card>
+          <template slot="city">Belgrade</template>
+          <template slot="adress">Resavska 23</template>
+          <template slot="adress2">11000 Belgrade</template>
+          <template slot="phone">T: 381 11 - 3340 117</template>
+        </contact-card>
+
       </div>
 
     </div>
@@ -30,34 +52,7 @@
   export default {
     components: {
       ContactCard
-    },
-    data() {
-      return {
-        cards: [{
-            city: "Dubai",
-            adress: "Office Park, Building Block A Units A301-A302 ",
-            adress2: "Dubai Internet City",
-            phone: "T:971 4-434 7147"
-          },
-          {
-            city: "Beirut",
-            adress: "Beirut Digital District/BDD Bechara El Khoury",
-            adress2: "1075 2nd and 3rd floor",
-            phone: "T: 961 1 - 660327",
-            fax: "F: 961 1 - 660153"
-          },
-          {
-            city: "Belgrade",
-            adress: "Resavska 23",
-            adress2: "11000 Belgrade",
-            phone: "T: 381 11 - 3340 117"
-          }
-        ]
-      }
     }
   };
 
 </script>
-
-<style scoped>
-</style>

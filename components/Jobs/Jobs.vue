@@ -15,7 +15,25 @@
     </div>
 
     <div class="jobs__list">
-      <job-offer v-for="(job,index) in jobList" :key="index" :data="job" />
+
+      <job-offer>
+        <p slot="title" class="col--left-title"> PHP DEVELOPER</p>
+        <span slot="hash" class="col--left-hash">#PHP #SQL #GIT #OOP</span>
+        <nuxt-link slot="url" class="col--right btn" tag="a" to="/work/php/">VIEW MORE </nuxt-link>
+      </job-offer>
+
+      <job-offer>
+        <p slot="title" class="col--left-title">JUNIOR PHP DEVELOPER</p>
+        <span slot="hash" class="col--left-hash">#PHP #SQL #GIT #OOP</span>
+        <nuxt-link slot="url" class="col--right btn" tag="a" to="/work/php/">VIEW MORE </nuxt-link>
+      </job-offer>
+
+      <job-offer>
+        <p slot="title" class="col--left-title">WEB DESIGNER</p>
+        <span slot="hash" class="col--left-hash">#Sketch #XD #Zeplin #Illustrator</span>
+        <nuxt-link slot="url" class="col--right btn" tag="a" to="/work/web/">VIEW MORE </nuxt-link>
+      </job-offer>
+
     </div>
 
   </article>
@@ -27,30 +45,6 @@ import JobOffer from "~/components/Jobs/JobOffer";
 export default {
   components: {
     JobOffer
-  },
-  data() {
-    return {
-      jobList: [
-        { name: "PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP", url: "php" },
-        { name: "JUNIOR PHP DEVELOPER", hash: "#PHP #SQL #GIT #OOP", url: "php" },
-        { name: "WEB DESIGNER", hash: "#Sketch #XD #Zeplin #Illustrator", url: "web" }
-      ],
-      observer: null
-    };
-  },
-  mounted() {
-    this.observer = new IntersectionObserver(([entry]) => {
-      if (entry && entry.isIntersecting) {
-        this.$emit("intersect");
-      }
-    });
-    this.observer.observe(this.$el);
-  },
-  destroyed() {
-    this.observer.disconnect();
   }
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

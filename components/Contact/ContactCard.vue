@@ -1,37 +1,16 @@
 <template>
   <div class="contact__card">
     <h5 class="contact__card-title">
-      {{ data.city }}
+      <slot name="city" />
     </h5>
     <p class="contact__card-content">
-      {{ data.adress }}
+      <slot name="adress"/>
       <br>
-      {{ data.adress2 }}
+      <slot name="adress2"/>
       <br>
-      {{ data.phone }}
+      <slot name="phone"/>
       <br>
-      {{ data.fax }}
+      <slot name="fax"/>
     </p>
   </div>
 </template>
-
-<script>
-  export default {
-    name: "ContactCard",
-    props: {
-      data: {
-        type: Object,
-        required: true,
-        default: function () {
-          return {
-            city: 'Belgrade'
-          }
-        }
-      }
-    }
-  };
-
-</script>
-
-<style scoped>
-</style>

@@ -16,10 +16,6 @@
       WE ARE BUILDING THE <span>FUTURE</span> <br> OF DIGITAL MEDIA
     </h1> -->
 
-    <video class="video" width="101%" autoplay="true" loop="true">
-      <source src="~/static/video/game.mp4" type="video/mp4">
-    </video>
-
   </div>
 </template>
 
@@ -34,6 +30,7 @@ export default {
 
 <style lang="scss">
 @import "~assets/scss/master";
+
 @include breakpoint(phone) {
   #loading-text,
   #gameContainer {
@@ -49,17 +46,6 @@ export default {
   z-index: 123412;
   font-size: 16px;
   color: #adadad;
-}
-
-.game-container {
-  overflow: hidden;
-}
-
-.video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .game {

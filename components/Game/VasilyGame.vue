@@ -1,38 +1,38 @@
 <template>
   <div class="container">
     <article id="gameContainer" />
-    <div :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
+    <!-- <div :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
       {{ gameOptions }}
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      gameStarted: false,
-      gameOptions: "start game"
-    };
-  },
+  // data() {
+  //   return {
+  //     gameStarted: false,
+  //     gameOptions: "Click to load game"
+  //   };
+  // },
   mounted() {
     // window.UnityFinished = function() {
     //   /// Unity finished loading event
     //   console.log("Unity Done");
     // };
   },
-  methods: {
-    UnityLoaderReady() {
-      window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong2018ver5.json"
-      ]);
-    },
-    startGame() {
-      this.UnityLoaderReady();
-      this.gameStarted = true;
-      this.gameOptions = "restart";
-    }
-  },
+  // methods: {
+  //   UnityLoaderReady() {
+  //     window.gameInstance = UnityLoader.instantiate("gameContainer", [
+  //       "Build/pong2018ver5.json"
+  //     ]);
+  //   },
+  //   startGame() {
+  //     this.UnityLoaderReady();
+  //     this.gameStarted = true;
+  //     // this.gameOptions = "restart";
+  //   }
+  // },
   head: {
     script: [{ src: "Build/UnityLoader.js" }]
   }
@@ -41,10 +41,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "~assets/scss/master.scss";
-// * {
-//   height: 20rem;
-//   text-align: center;
-// }
 .container {
   position: relative;
   height: 54rem;

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div id="home">
 
     <Navigation />
 
@@ -23,7 +23,7 @@
 
     <Footer />
 
-  </main>
+  </div>
 </template>
 
 <script>
@@ -36,6 +36,16 @@ export default {
     Navigation,
     Contact,
     Footer
+  },
+  mounted() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
   }
 };
 </script>

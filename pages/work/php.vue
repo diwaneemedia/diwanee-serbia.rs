@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div id="home">
 
     <Navigation />
 
@@ -90,7 +90,7 @@
 
     <Footer />
 
-  </main>
+  </div>
 </template>
 
 <script>

@@ -71,11 +71,10 @@
   }
   &-bg {
     height: 100%;
-    opacity: 0.5;
-    transition: all 1s ease-in-out;
-    // transition: opacity 1s cubic-bezier(.445,.05,.55,.95) 1s;
+    opacity: 0.6;
+    transition: all .6s linear;
     &:hover,&:active {
-      opacity: 1;
+      opacity: 0.9;
     }
   }
 }

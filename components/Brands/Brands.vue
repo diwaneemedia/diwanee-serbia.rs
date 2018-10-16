@@ -72,6 +72,11 @@
   &-bg {
     height: 100%;
     opacity: 0.5;
+    transition: all 1s ease-in-out;
+    // transition: opacity 1s cubic-bezier(.445,.05,.55,.95) 1s;
+    &:hover,&:active {
+      opacity: 1;
+    }
   }
 }
 .card-logo {

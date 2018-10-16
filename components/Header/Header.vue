@@ -49,47 +49,37 @@ export default {
 @import "~assets/scss/master.scss";
 .header {
   position: relative;
-  height: 90vh;
+  height: 92vh;
   overflow: hidden;
   max-height: 70rem;
   margin-bottom: 3rem;
 }
 .video {
   position: absolute;
-  left: -1px;
-  right: -2px;
+  left: 0;
+  right: 0;
   top: 0;
+  z-index: 2;
 }
 
 .start-btn {
-  top: 0;
+  bottom: 11.8%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 10rem;
   z-index: 4;
-  top: 70%;
   text-align: center;
   position: absolute;
-  display: inline-block;
+  display: inline;
   font-weight: bold;
-  padding: 10px 0 10px 10px;
   color: black;
-  background-color: lightgray;
-  text-shadow: -1px -1px black, 1px 1px rgba($color: white, $alpha: 0.5);
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -o-border-radius: 7px;
-  border-radius: 7px;
-  box-shadow: 0 0.2em gray;
-  transition: all 0.3s linear;
+  font-family: "Geomanist";
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
   @include breakpoint(phone) {
     display: none;
-  }
-  cursor: pointer;
-  &:active {
-    box-shadow: none;
-    top: 71%;
   }
 }
 .game-started {

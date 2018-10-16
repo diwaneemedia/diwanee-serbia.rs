@@ -43,7 +43,7 @@ export default {
   bottom: 10px;
   left: 15px;
   font-family: "Geomanist";
-  z-index: 123412;
+  z-index: 2;
   font-size: 16px;
   color: #adadad;
 }

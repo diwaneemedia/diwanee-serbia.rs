@@ -55,8 +55,12 @@ export default {
     top: 0;
     left: 0;
     opacity: 0;
+    background: url("~static/images/modal-bg3.png"), rgba(0, 0, 0, 0.9);
+    background-size: contain;
+    background-repeat: no-repeat;
+    // background-size: cover;
     // display: none;
-    background: rgba(0, 0, 0, 0.9);
+    // background: rgba(0, 0, 0, 0.9);
     // transition: all 0.3s linear;
     &.game-started {
       opacity: 1;

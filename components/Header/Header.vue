@@ -3,13 +3,11 @@
 
     <Navigation />
 
-    <GameContainer />
-
-    <video :class="{'game-started': gameStarted}" class="video" width="100.5%" autoplay loop muted>
+    <video :class="{'game-started': gameStarted}" class="video" width="100%" autoplay loop muted>
       <source src="~/static/video/game.mp4" type="video/mp4">
     </video>
 
-    <div :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
+    <div id="start-btn" :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
       {{ gameOptions }}
     </div>
 
@@ -18,11 +16,11 @@
 
 <script>
 import Navigation from "~/components/Navigation.vue";
-import GameContainer from "~/components/Game/GameContainer.vue";
+// import GameContainer from "~/components/Game/GameContainer.vue";
 export default {
   components: {
-    Navigation,
-    GameContainer
+    Navigation
+    // GameContainer
   },
   data() {
     return {
@@ -30,16 +28,25 @@ export default {
       gameOptions: "Click to load game"
     };
   },
+  mounted() {
+    // Autoplay Code for Phones
+    let video = document.querySelector("video");
+    video.play();
+    console.log("video playing");
+  },
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
         "Build/pong2018ver5.json"
       ]);
+      let loadingText = document.getElementById("loading-text");
+      let gameModal = document.getElementById("game-modal");
+      loadingText.classList.add("game");
+      gameModal.classList.add("game-started");
     },
     startGame() {
       this.UnityLoaderReady();
       this.gameStarted = true;
-      // this.gameOptions = "restart";
     }
   }
 };
@@ -52,14 +59,26 @@ export default {
   height: 92vh;
   overflow: hidden;
   max-height: 70rem;
-  margin-bottom: 3rem;
+  @include breakpoint(desktop) {
+    margin-bottom: 3rem;
+  }
 }
+
 .video {
   position: absolute;
-  left: 0;
+  width: 150vw;
+  top: 20rem;
+  left: -25vw;
   right: 0;
-  top: 0;
   z-index: 2;
+  @include breakpoint(desktop) {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &.game-started {
+    display: none;
+  }
 }
 
 .start-btn {
@@ -81,10 +100,8 @@ export default {
   @include breakpoint(phone) {
     display: none;
   }
-}
-.game-started {
-  // transform: translateY(20rem);
-  // z-index: 9999;
-  display: none;
+  &.game-started {
+    display: none;
+  }
 }
 </style>

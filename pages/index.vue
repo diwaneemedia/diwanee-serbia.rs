@@ -3,6 +3,8 @@
 
     <Header />
 
+    <GameModal />
+
     <About />
 
     <Brands id="brands" />
@@ -19,6 +21,7 @@
 <script>
 import Header from "~/components/Header/Header.vue";
 import About from "~/components/About/About.vue";
+import GameModal from "~/components/Game/GameModal.vue";
 import Brands from "~/components/Brands/Brands.vue";
 import Jobs from "~/components/Jobs/Jobs.vue";
 import Contact from "~/components/Contact/Contact.vue";
@@ -27,6 +30,7 @@ import Footer from "~/components/Footer/Footer.vue";
 export default {
   components: {
     Header,
+    GameModal,
     About,
     Brands,
     Jobs,
@@ -50,11 +54,11 @@ export default {
       /// Unity finished loading event
       let game = document.getElementById("game");
       // let title = document.getElementById("title");
-      let animation = document.getElementById("animation");
+      // let animation = document.getElementById("animation");
       document.getElementById("loading-text").classList.add("fadeOut");
       game.classList.add("loaded");
       // title.classList.add("fadeOut");
-      animation.classList.add("loaded");
+      // animation.classList.add("loaded");
       console.log("Unity Done");
     };
   }

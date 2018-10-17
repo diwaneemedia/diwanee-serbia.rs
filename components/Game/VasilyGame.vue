@@ -9,30 +9,6 @@
 
 <script>
 export default {
-  // data() {
-  //   return {
-  //     gameStarted: false,
-  //     gameOptions: "Click to load game"
-  //   };
-  // },
-  mounted() {
-    // window.UnityFinished = function() {
-    //   /// Unity finished loading event
-    //   console.log("Unity Done");
-    // };
-  },
-  // methods: {
-  //   UnityLoaderReady() {
-  //     window.gameInstance = UnityLoader.instantiate("gameContainer", [
-  //       "Build/pong2018ver5.json"
-  //     ]);
-  //   },
-  //   startGame() {
-  //     this.UnityLoaderReady();
-  //     this.gameStarted = true;
-  //     // this.gameOptions = "restart";
-  //   }
-  // },
   head: {
     script: [{ src: "Build/UnityLoader.js" }]
   }
@@ -47,8 +23,6 @@ export default {
 }
 
 .game-started {
-  // transform: translateY(20rem);
-  // z-index: 9999;
   display: none;
 }
 

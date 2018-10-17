@@ -3,10 +3,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  z-index: 3;
 
   @include breakpoint(desktop) {
     margin-bottom: 5rem;
-    z-index: 3;
   }
 
   &__logo {
@@ -28,9 +28,9 @@
       background: $white;
       position: absolute;
       flex-direction: column;
-      width: 37.5rem;
-      left: -1.4rem;
-      padding-left: 1.4rem;
+      width: 38rem;
+      left: -2.4rem;
+      padding-left: 2.4rem;
       margin-top: 7.2rem;
       -webkit-transform: translateX(-105%);
       transform: translateX(-105%);
@@ -39,7 +39,6 @@
     transition: all 200ms ease-in;
 
     &.open {
-      // -webkit-transform: none;
       transform: none;
     }
 

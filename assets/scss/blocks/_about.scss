@@ -9,9 +9,14 @@
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 6.2rem;
     }
-    
+
     &-title {
       margin-bottom: 4.9rem;
+
+      @include breakpoint(desktop) {
+        grid-row: 1;
+        grid-column: 1;
+      }
     }
 
     &-content {
@@ -20,7 +25,9 @@
 
       @include breakpoint(desktop) {
         grid-row: 1;
-        grid-column: 2;
+        grid-column: 1;
+        // text-align: right;
+        // justify-self: flex-end;
         margin-top: 17.75rem;
         margin-bottom: 1.5rem;
         width: 38.3rem;
@@ -34,6 +41,7 @@
 
       @include breakpoint(desktop) {
         height: 54.4rem;
+        grid-row: 2;
       }
 
       &__text {

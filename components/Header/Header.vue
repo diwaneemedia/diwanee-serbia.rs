@@ -56,18 +56,20 @@ export default {
 @import "~assets/scss/master.scss";
 .header {
   position: relative;
-  height: 92vh;
+  height: 81vh;
   overflow: hidden;
   max-height: 70rem;
   @include breakpoint(desktop) {
     margin-bottom: 3rem;
+    max-height: 77rem;
   }
 }
 
 .video {
   position: absolute;
   width: 150vw;
-  top: 20rem;
+  // top: 20rem;
+  top: 15rem;
   left: -25vw;
   right: 0;
   z-index: 2;

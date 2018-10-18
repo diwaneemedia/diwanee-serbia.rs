@@ -1,9 +1,6 @@
 <template>
   <div class="container">
     <article id="gameContainer" />
-    <!-- <div :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
-      {{ gameOptions }}
-    </div> -->
   </div>
 </template>
 

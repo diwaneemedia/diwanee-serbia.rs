@@ -80,9 +80,11 @@ export default {
         color: $white;
         position: absolute;
         top: -2.81rem;
-        right: 0;
+        right: -0.5rem;
         font-size: 2rem;
         background: none;
+        border: none;
+        font-weight: 100;
       }
     }
   }
@@ -122,79 +124,4 @@ export default {
 .fadeOut {
   opacity: 0;
 }
-
-// #animation {
-//   width: 115.9rem;
-//   height: 56.5rem;
-//   position: absolute;
-//   top: 11px;
-//   left: -10px;
-//   right: 0;
-//   bottom: 0;
-//   margin: auto;
-//   z-index: 1000;
-//   pointer-events: none;
-// }
-
-// #animation.loaded {
-//   path {
-//     stroke-width: 1;
-//     stroke: $rouge;
-//     // stroke: #e2e2e2;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     stroke-dasharray: 1140;
-//     stroke-dashoffset: 1140;
-//     animation-duration: 0.5s;
-//     animation-name: draw;
-//     animation-timing-function: linear;
-
-//     &.path2 {
-//       animation-duration: 0.25s;
-//       animation-delay: 0.5s;
-//       stroke-dasharray: 550;
-//       stroke-dashoffset: 550;
-//     }
-//     &.path3 {
-//       animation-duration: 0.5s;
-//     }
-
-//     &.path4 {
-//       animation-duration: 0.25s;
-//       animation-delay: 0.5s;
-//       stroke-dasharray: 550;
-//       stroke-dashoffset: 550;
-//     }
-//   }
-// }
-
-// @keyframes draw {
-//   to {
-//     stroke-dashoffset: 0;
-//   }
-// }
-
-// .title {
-//   font-family: "Geomanist";
-//   font-size: 4rem;
-//   width: 70%;
-//   margin: 0 auto;
-//   top: 17.5%;
-//   line-height: 94%;
-//   letter-spacing: 0.35rem;
-//   left: 0;
-//   right: 0;
-//   text-transform: uppercase;
-//   color: $black;
-//   position: absolute;
-//   text-align: center;
-//   pointer-events: none;
-//   z-index: 2;
-//   span {
-//     color: #e81d44;
-//   }
-//   @include breakpoint(desktop) {
-//     font-size: 8rem;
-//   }
-// }
 </style>

@@ -5,14 +5,15 @@ const createStore = () => {
     state: () => ({
       counter: 0,
       gameStarted: false,
+      video: {},
     }),
     mutations: {
       increment(state) {
         state.counter++
       },
-      startGame() {
-        $store.state.gameStarted = true;
-      },
+      // startGame() {
+      //   $store.state.gameStarted = false;
+      // },
     }
   })
 }

@@ -7,7 +7,7 @@
 
       <VasilyGame id="game" class="game" />
 
-      <div id="loading-text" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
+      <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
     </div>
   </div>
@@ -25,14 +25,20 @@ export default {
       return this.$store.state.gameStarted;
     }
   },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.gameStarted ? "lock-screen" : ""
+      },
+      htmlAttrs: {
+        class: this.gameStarted ? "lock-screen" : ""
+      }
+    };
+  },
   methods: {
     closeModal() {
-      let gameModal = document.getElementById("game-modal");
-      gameModal.classList.remove("game-started");
-      let startBtn = document.getElementById("start-btn");
-      startBtn.classList.remove("game-started");
-      let video = document.querySelector("video");
-      video.classList.remove("game-started");
+      this.$store.state.gameStarted = false;
+      this.$store.state.video.play();
     }
   }
 };
@@ -40,6 +46,11 @@ export default {
 
 <style lang="scss">
 @import "~assets/scss/master";
+
+.lock-screen {
+  margin: 0;
+  overflow: hidden;
+}
 
 .game-modal {
   display: none;
@@ -56,6 +67,7 @@ export default {
       opacity: 1;
       display: block;
       z-index: 100;
+      overflow: hidden;
     }
 
     .game-modal__wrapper {
@@ -85,9 +97,13 @@ export default {
   font-size: 16px;
   color: #adadad;
   opacity: 0;
+  display: none;
+  &.game-started {
+    opacity: 1;
+    display: block;
+  }
 }
 @include breakpoint(phone) {
-  #loading-text,
   #gameContainer {
     display: none;
   }

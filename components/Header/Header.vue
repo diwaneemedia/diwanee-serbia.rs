@@ -3,7 +3,7 @@
 
     <Navigation />
 
-    <video :class="{'game-started': gameStarted}" class="video" width="100%" autoplay loop muted>
+    <video ref="video" :class="{'game-started': gameStarted}" class="video" width="100%" autoplay loop muted>
       <source src="~/static/video/game.mp4" type="video/mp4">
     </video>
 
@@ -32,8 +32,9 @@ export default {
   },
   mounted() {
     // Autoplay Code for Phones
-    let video = document.querySelector("video");
-    video.play();
+    // this.$refs.video = this.$store.state.video;
+    this.$store.state.video = this.$refs.video;
+    this.$refs.video.play();
     console.log("video playing");
   },
   methods: {
@@ -41,14 +42,11 @@ export default {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
         "Build/pong2018ver5.json"
       ]);
-      let loadingText = document.getElementById("loading-text");
-      let gameModal = document.getElementById("game-modal");
-      loadingText.classList.add("game");
-      gameModal.classList.add("game-started");
     },
     startGame() {
       this.UnityLoaderReady();
-      this.$store.startGame();
+      this.$store.state.gameStarted = true;
+      this.$refs.video.pause();
     }
   }
 };
@@ -77,9 +75,6 @@ export default {
     width: 100%;
     top: 0;
     left: 0;
-  }
-  &.game-started {
-    display: none;
   }
 }
 

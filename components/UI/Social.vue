@@ -6,7 +6,7 @@
         <defs>
           <style>
             .cls-1 {
-            fill: #c7c7c7
+            fill: #7e7e7e
             }
           </style>
         </defs>
@@ -21,7 +21,7 @@
         <defs>
           <style>
             .cls-1 {
-            fill: #c7c7c7
+            fill: #7e7e7e
             }
           </style>
         </defs>
@@ -39,7 +39,7 @@
         <defs>
           <style>
             .cls-1 {
-            fill: #c7c7c7
+            fill: #7e7e7e
             }
           </style>
         </defs>

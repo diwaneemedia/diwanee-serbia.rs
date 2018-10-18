@@ -1,24 +1,13 @@
 <template>
-  <div id="game-modal" class="game-modal">
+  <div id="game-modal" :class="{'game-started': gameStarted}" class="game-modal">
 
     <div class="game-modal__wrapper">
-
-      <!-- <svg id="animation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 540">
-        <path fill="none" d="M 0,0 L1140,0" />
-        <path class="path2" fill="none" d="M 1130,-10 L1130,550" />
-        <path class="path3" fill="none" d="M 1140,530 L0,530" />
-        <path class="path4" fill="none" d="M 10,540 L10,-10" />
-      </svg> -->
 
       <button class="game-modal__wrapper-leave" @click="closeModal">X</button>
 
       <VasilyGame id="game" class="game" />
 
       <div id="loading-text" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
-
-      <!-- <h1 id="title" class="title">
-      WE ARE BUILDING THE <span>FUTURE</span> <br> OF DIGITAL MEDIA
-    </h1> -->
 
     </div>
   </div>
@@ -30,6 +19,11 @@ import VasilyGame from "~/components/Game/VasilyGame.vue";
 export default {
   components: {
     VasilyGame
+  },
+  computed: {
+    gameStarted() {
+      return this.$store.state.gameStarted;
+    }
   },
   methods: {
     closeModal() {
@@ -47,39 +41,37 @@ export default {
 <style lang="scss">
 @import "~assets/scss/master";
 
-@include breakpoint(desktop) {
-  .game-modal {
+.game-modal {
+  display: none;
+  @include breakpoint(desktop) {
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
     opacity: 0;
-    background: url("~static/images/modal-bg3.png"), rgba(0, 0, 0, 0.9);
-    background-size: contain;
-    background-repeat: no-repeat;
-    // background-size: cover;
-    // display: none;
-    // background: rgba(0, 0, 0, 0.9);
-    // transition: all 0.3s linear;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s linear;
     &.game-started {
       opacity: 1;
-      // display: block;
+      display: block;
       z-index: 100;
     }
-  }
-  .game-modal__wrapper {
-    position: relative;
-    top: 20vh;
-    width: 114rem;
-    margin: 0 auto;
 
-    &-leave {
-      color: $rouge;
-      position: absolute;
-      top: -2.81rem;
-      right: 0;
-      font-size: 2rem;
+    .game-modal__wrapper {
+      position: relative;
+      top: 20vh;
+      width: 114rem;
+      margin: 0 auto;
+
+      &-leave {
+        color: $white;
+        position: absolute;
+        top: -2.81rem;
+        right: 0;
+        font-size: 2rem;
+        background: none;
+      }
     }
   }
 }

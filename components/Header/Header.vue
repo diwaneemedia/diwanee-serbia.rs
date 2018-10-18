@@ -16,17 +16,19 @@
 
 <script>
 import Navigation from "~/components/Navigation.vue";
-// import GameContainer from "~/components/Game/GameContainer.vue";
 export default {
   components: {
     Navigation
-    // GameContainer
   },
   data() {
     return {
-      gameStarted: false,
       gameOptions: "Click to load game"
     };
+  },
+  computed: {
+    gameStarted() {
+      return this.$store.state.gameStarted;
+    }
   },
   mounted() {
     // Autoplay Code for Phones
@@ -46,7 +48,7 @@ export default {
     },
     startGame() {
       this.UnityLoaderReady();
-      this.gameStarted = true;
+      this.$store.startGame();
     }
   }
 };

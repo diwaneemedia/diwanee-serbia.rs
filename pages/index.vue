@@ -1,7 +1,7 @@
 <template>
-  <div id="home">
+  <div>
 
-    <Header />
+    <Header id="home"/>
 
     <GameModal />
 

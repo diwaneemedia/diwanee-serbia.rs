@@ -22,7 +22,7 @@
         <nuxt-link slot="url" class="col--right btn" tag="a" to="/work/php/">VIEW MORE </nuxt-link>
       </job-offer>
 
-      <job-offer>
+      <!-- <job-offer>
         <p slot="title" class="col--left-title">JUNIOR PHP DEVELOPER</p>
         <span slot="hash" class="col--left-hash">#PHP #SQL #GIT #OOP</span>
         <nuxt-link slot="url" class="col--right btn" tag="a" to="/work/php/">VIEW MORE </nuxt-link>
@@ -32,7 +32,7 @@
         <p slot="title" class="col--left-title">WEB DESIGNER</p>
         <span slot="hash" class="col--left-hash">#Sketch #XD #Zeplin #Illustrator</span>
         <nuxt-link slot="url" class="col--right btn" tag="a" to="/work/web/">VIEW MORE </nuxt-link>
-      </job-offer>
+      </job-offer> -->
 
     </div>
 

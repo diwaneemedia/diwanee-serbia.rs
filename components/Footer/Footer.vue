@@ -3,7 +3,8 @@
     <article class="footer">
 
       <div class="back-to-top">
-        <a href="#home">BACK TO TOP</a>
+        <a class="back-to-top--btn" href="#home">BACK TO TOP</a>
+        <img class="webedia-logo" src="~/static/images/brands/webedia-logo.svg" alt="webedia">
       </div>
 
       <Social style="margin:3.1rem auto 4rem" />
@@ -11,19 +12,19 @@
       <div class="footer__copyright">
         COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED
       </div>
+
     </article>
   </div>
 </template>
 
 <script>
-  import Social from "~/components/UI/Social";
+import Social from "~/components/UI/Social";
 
-  export default {
-    components: {
-      Social
-    }
-  };
-
+export default {
+  components: {
+    Social
+  }
+};
 </script>
 
 <style scoped>

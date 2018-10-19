@@ -32,9 +32,9 @@ module.exports = {
       {
         ogUrl: "http://www.diwanee-serbia.rs/"
       },
-      {
-        ogImage: "~static/icon.png"
-      },
+      // {
+      //   ogImage: "~static/icon.png"
+      // },
     ],
     link: [{
       rel: 'icon',
@@ -44,31 +44,32 @@ module.exports = {
     noscript: [{
       innerHTML: 'This website requires JavaScript.'
     }],
-    script: [{
-        type: "text/javascript",
-        async: true,
-        src: "//connect.facebook.net/en_US/fbevents.js"
-      },
-      {
-        type: "text/javascript",
-        async: true,
-        src: "https://www.google-analytics.com/analytics.js"
-      },
-      {
-        type: "text/javascript",
-        id: "facebook-jssdk",
-        src: "https://connect.facebook.net/en_US/sdk.js"
-      },
-      {
-        type: "text/javascript",
-        async: true,
-        src: "https://www.googletagmanager.com/gtm.js?id=GTM-5W2CLW"
-      },
-      {
-        type: "text/javascript",
-        async: true,
-        src: "https://connect.facebook.net/signals/config/837271083056525?v=2.8.30&r=stable"
-      },
+    script: [
+      // {
+    //     type: "text/javascript",
+    //     async: true,
+    //     src: "https://connect.facebook.net/en_US/fbevents.js"
+    //   },
+    //   {
+    //     type: "text/javascript",
+    //     async: true,
+    //     src: "https://www.google-analytics.com/analytics.js"
+    //   },
+    //   {
+    //     type: "text/javascript",
+    //     id: "facebook-jssdk",
+    //     src: "https://connect.facebook.net/en_US/sdk.js"
+    //   },
+    //   {
+    //     type: "text/javascript",
+    //     async: true,
+    //     src: "https://www.googletagmanager.com/gtm.js?id=GTM-5W2CLW"
+    //   },
+    //   {
+    //     type: "text/javascript",
+    //     async: true,
+    //     src: "https://connect.facebook.net/signals/config/837271083056525?v=2.8.30&r=stable"
+    //   },
       // {
       //   type: "text/javascript",
       //   content: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date.getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0],j = d.createElement(s),dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src ='//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-5W2CLW');"

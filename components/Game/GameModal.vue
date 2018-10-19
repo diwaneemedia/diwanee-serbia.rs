@@ -10,6 +10,9 @@
       <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
     </div>
+
+    <img class="arcade" src="~static/images/arcade.png" alt="arcade">
+
   </div>
 
 </template>
@@ -61,7 +64,10 @@ export default {
     top: 0;
     left: 0;
     opacity: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: url("~static/images/modal-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     transition: all 0.3s linear;
     &.game-started {
       opacity: 1;
@@ -72,7 +78,7 @@ export default {
 
     .game-modal__wrapper {
       position: relative;
-      top: 20vh;
+      top: 20rem;
       width: 114rem;
       margin: 0 auto;
 
@@ -111,13 +117,24 @@ export default {
   }
 }
 
+.arcade {
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 136.9rem;
+  pointer-events: none;
+}
+img {
+  max-width: initial;
+}
 .game {
   opacity: 1;
 }
 
 .game.loaded {
   opacity: 1;
-  z-index: 999;
+  z-index: 8;
   overflow: hidden;
 }
 

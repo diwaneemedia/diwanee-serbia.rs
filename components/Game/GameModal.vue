@@ -91,6 +91,7 @@ export default {
         background: none;
         border: none;
         font-weight: 100;
+        z-index: 11;
       }
     }
   }

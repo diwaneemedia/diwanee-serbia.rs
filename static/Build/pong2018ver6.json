@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "Diwanee-data-background",
-"dataUrl": "pong2018ver5.data.unityweb",
-"wasmCodeUrl": "pong2018ver5.wasm.code.unityweb",
-"wasmFrameworkUrl": "pong2018ver5.wasm.framework.unityweb",
+"dataUrl": "pong2018ver6.data.unityweb",
+"wasmCodeUrl": "pong2018ver6.wasm.code.unityweb",
+"wasmFrameworkUrl": "pong2018ver6.wasm.framework.unityweb",
 "TOTAL_MEMORY": 50331648,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},

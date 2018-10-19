@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      gameOptions: "Click to load game"
+      gameOptions: "Click to play"
     };
   },
   computed: {

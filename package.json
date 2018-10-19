@@ -1,8 +1,8 @@
 {
-  "name": "Diwanee Serbia",
+  "name": "diwanee-serbia",
   "version": "1.0.0",
   "description": "Digital Media Company",
-  "author": "Wekios",
+  "author": "Diwanee Serbia Team",
   "private": true,
   "scripts": {
     "dev": "nuxt",

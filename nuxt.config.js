@@ -19,7 +19,22 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: pkg.description
-      }
+      },
+      {
+        author: 'Diwanee Serbia Team'
+      },
+      {
+        ogTitle: "Diwanee Serbia"
+      },
+      {
+        ogHost: "http://www.diwanee-serbia.rs/"
+      },
+      {
+        ogUrl: "http://www.diwanee-serbia.rs/"
+      },
+      {
+        ogImage: "~static/icon.png"
+      },
     ],
     link: [{
       rel: 'icon',
@@ -37,7 +52,7 @@ module.exports = {
       {
         type: "text/javascript",
         async: true,
-        src: "http://www.google-analytics.com/analytics.js"
+        src: "https://www.google-analytics.com/analytics.js"
       },
       {
         type: "text/javascript",
@@ -50,23 +65,13 @@ module.exports = {
         src: "//www.googletagmanager.com/gtm.js?id=GTM-5W2CLW"
       },
       {
-        innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'
-        gtm.start ':
-        new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-          '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5W2CLW');`
-      },
-      {
         type: "text/javascript",
         async: true,
         src: "https://connect.facebook.net/signals/config/837271083056525?v=2.8.30&r=stable"
+      },
+      {
+        type: "text/javascript",
+        content: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date.getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0],j = d.createElement(s),dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src ='//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-5W2CLW');"
       }
     ],
   },

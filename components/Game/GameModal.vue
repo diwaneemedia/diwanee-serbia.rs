@@ -97,7 +97,7 @@ export default {
   font-family: "Geomanist";
   z-index: 2;
   font-size: 16px;
-  color: #adadad;
+  color: #db345f;
   opacity: 0;
   display: none;
   &.game-started {

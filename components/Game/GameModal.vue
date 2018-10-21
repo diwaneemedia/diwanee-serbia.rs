@@ -1,5 +1,5 @@
 <template>
-  <div id="game-modal" :class="{'game-started': gameStarted}" class="game-modal">
+  <div id="game-modal" :class="{'game-started': gameStarted}" class="game-modal" @click="pressKey">
 
     <div class="game-modal__wrapper">
 
@@ -11,7 +11,19 @@
 
     </div>
 
-    <img class="arcade" src="~static/images/arcade.png" alt="arcade">
+    <div class="arcade">
+      <div class="arcade__controls">
+        <img class="arcade__controls-stick arcade__controls-stick--left" src="~assets/images/arcade/stick.png" alt="arcade stick">
+        <img class="arcade__controls-stick arcade__controls-stick--center" src="~assets/images/arcade/stick.png" alt="arcade stick">
+        <img class="arcade__controls-stick arcade__controls-stick--right" src="~assets/images/arcade/stick.png" alt="arcade stick">
+        <img 
+          :class="{'pressed': leftClick,}" 
+          class="arcade__controls-button"           
+          src="~assets/images/arcade/btn-pressed--new.jpg" 
+          alt="btn pressed" 
+          @animationend="leftClick = false">
+      </div>
+    </div>
 
   </div>
 
@@ -22,6 +34,11 @@ import VasilyGame from "~/components/Game/VasilyGame.vue";
 export default {
   components: {
     VasilyGame
+  },
+  data() {
+    return {
+      leftClick: false
+    };
   },
   computed: {
     gameStarted() {
@@ -42,6 +59,9 @@ export default {
     closeModal() {
       this.$store.state.gameStarted = false;
       this.$store.state.video.play();
+    },
+    pressKey() {
+      this.leftClick = true;
     }
   }
 };
@@ -78,7 +98,7 @@ export default {
 
     .game-modal__wrapper {
       position: relative;
-      top: 20rem;
+      top: 17rem;
       width: 114rem;
       margin: 0 auto;
 
@@ -97,6 +117,7 @@ export default {
   }
 }
 
+// loading text that shows load bar, doesnt dissappear just gets ran over by z-index of game
 .loading-text {
   position: absolute;
   bottom: 10px;
@@ -111,6 +132,9 @@ export default {
     opacity: 1;
     display: block;
   }
+  &.loaded {
+    display: none;
+  }
 }
 @include breakpoint(phone) {
   #gameContainer {
@@ -118,18 +142,77 @@ export default {
   }
 }
 
+// Arcade div
 .arcade {
   position: absolute;
-  top: -2.5rem;
+  top: -5.5rem;
+  background-image: url("~assets/images/arcade/arcade-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 136.9rem;
+  height: 108rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 136.9rem;
   pointer-events: none;
   z-index: 3;
+
+  // Controls wrapper
+  &__controls {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+
+    // Stick controls!
+    &-stick {
+      position: absolute;
+      top: 79.3rem;
+      left: 48.7rem;
+      width: 6.5rem;
+      &--left {
+        opacity: 0;
+        top: 79.6rem;
+        left: 47rem;
+        transform: rotate(-20deg);
+      }
+      &--center {
+        // opacity: 0;
+      }
+      &--right {
+        opacity: 0;
+        top: 79.6rem;
+        left: 50.2rem;
+        transform: rotate(20deg);
+      }
+    }
+    // button controls
+    &-button {
+      position: absolute;
+      top: 87.2rem;
+      left: 68.3rem;
+      width: 9.2rem;
+      opacity: 0;
+    }
+  }
 }
-img {
-  max-width: initial;
+// Pressed, class that gives opacity
+.pressed {
+  animation: pressed 0.1s;
 }
+
+@keyframes pressed {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .game {
   opacity: 1;
   position: relative;
@@ -139,5 +222,10 @@ img {
   opacity: 1;
   z-index: 3;
   overflow: hidden;
+  pointer-events: all;
+}
+
+img {
+  max-width: initial;
 }
 </style>

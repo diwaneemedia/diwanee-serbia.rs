@@ -4,6 +4,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: () => ({
       counter: 0,
+      sideBarOpen: false,
       gameStarted: false,
       video: {},
     }),

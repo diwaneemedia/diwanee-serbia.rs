@@ -20,13 +20,13 @@
         @click="openSidebar">
 
         <div 
-          :class="{ change : sideBarOpen }" 
+          :class="{ open : sideBarOpen }" 
           class="hamburger__bar hamburger__bar1" />
         <div 
-          :class="{ change : sideBarOpen }" 
+          :class="{ open : sideBarOpen }" 
           class="hamburger__bar hamburger__bar2" />
         <div 
-          :class="{ change : sideBarOpen }" 
+          :class="{ open : sideBarOpen }" 
           class="hamburger__bar hamburger__bar3" />
       </div>
 
@@ -41,14 +41,14 @@ export default {
   components: {
     Social
   },
-  data() {
-    return {
-      sideBarOpen: false
-    };
+  computed: {
+    sideBarOpen() {
+      return this.$store.state.sideBarOpen;
+    }
   },
   methods: {
     openSidebar() {
-      this.sideBarOpen = !this.sideBarOpen;
+      this.$store.state.sideBarOpen = !this.$store.state.sideBarOpen
     }
   }
 };

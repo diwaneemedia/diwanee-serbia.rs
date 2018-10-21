@@ -133,17 +133,17 @@
   transition: 0.4s;
 }
 
-.change.hamburger__bar1 {
+.open.hamburger__bar1 {
   -webkit-transform: rotate(-45deg) translate(-4px, 4px);
   transform: rotate(-45deg) translate(-4px, 4px);
   background-color: $rouge;
 }
 
-.change.hamburger__bar2 {
+.open.hamburger__bar2 {
   opacity: 0;
 }
 
-.change.hamburger__bar3 {
+.open.hamburger__bar3 {
   -webkit-transform: rotate(45deg) translate(-4px, -5px);
   transform: rotate(45deg) translate(-4px, -5px);
   background-color: $rouge;

@@ -1,7 +1,7 @@
 <template>
   <div id="home">
 
-    <Navigation />
+    <Navigation class="php-navigation" />
 
     <div class="work-details">
 
@@ -124,6 +124,13 @@ export default {
   margin-bottom: 9.1rem;
   @include breakpoint(desktop) {
     margin-bottom: 15.7rem;
+  }
+}
+
+.php-navigation {
+  margin-bottom: 16.1rem;
+  @include breakpoint(desktop) {
+    margin-bottom: 9.1rem;
   }
 }
 </style>

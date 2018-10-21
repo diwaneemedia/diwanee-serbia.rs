@@ -25,6 +25,11 @@
       </div>
     </div>
 
+    <audio ref="audioPlayer">
+      <source src="audio/soundtrack.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
   </div>
 
 </template>
@@ -74,6 +79,7 @@ export default {
     },
     pressKey() {
       this.leftClick = true;
+      this.$refs.audioPlayer.play();
     },
     stickDirection(e) {
       if (e.keyCode == 37 || e.keyCode == 65) {

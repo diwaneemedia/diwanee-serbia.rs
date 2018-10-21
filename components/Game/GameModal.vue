@@ -13,13 +13,13 @@
 
     <div class="arcade">
       <div class="arcade__controls">
-        <img class="arcade__controls-stick arcade__controls-stick--left" src="~assets/images/arcade/stick.png" alt="arcade stick">
-        <img class="arcade__controls-stick arcade__controls-stick--center" src="~assets/images/arcade/stick.png" alt="arcade stick">
-        <img class="arcade__controls-stick arcade__controls-stick--right" src="~assets/images/arcade/stick.png" alt="arcade stick">
+        <!-- <img :class="{'move-left': moveLeft}" class="arcade__controls-stick arcade__controls-stick--left" src="~assets/images/arcade/stick.png" alt="arcade stick"> -->
+        <img :class="{'move-left': moveLeft, 'move-right': moveRight }" class="arcade__controls-stick" src="~assets/images/arcade/stick.png" alt="arcade stick">
+        <!-- <img class="arcade__controls-stick arcade__controls-stick--right" src="~assets/images/arcade/stick.png" alt="arcade stick"> -->
         <img 
-          :class="{'pressed': leftClick,}" 
+          :class="{'pressed': leftClick}" 
           class="arcade__controls-button"           
-          src="~assets/images/arcade/btn-pressed--new.jpg" 
+          src="~assets/images/arcade/btn-pressed.png" 
           alt="btn pressed" 
           @animationend="leftClick = false">
       </div>
@@ -37,7 +37,9 @@ export default {
   },
   data() {
     return {
-      leftClick: false
+      leftClick: false,
+      moveLeft: false,
+      moveRight: false
     };
   },
   computed: {
@@ -45,6 +47,16 @@ export default {
       return this.$store.state.gameStarted;
     }
   },
+  // Stick direction listeners
+  mounted() {
+    window.addEventListener("keydown", this.stickDirection);
+    window.addEventListener("keyup", this.clearDirection);
+  },
+  beforeDestroy() {
+    window.removeEventListener("keydown", this.stickDirection);
+    window.removeEventListener("keyup", this.clearDirection);
+  },
+  // Head Atributes to lock scroll when game is on
   head() {
     return {
       bodyAttrs: {
@@ -62,6 +74,18 @@ export default {
     },
     pressKey() {
       this.leftClick = true;
+    },
+    stickDirection(e) {
+      if (e.keyCode == 37 || e.keyCode == 65) {
+        this.moveLeft = true;
+      } else if (e.keyCode == 39 || e.keyCode == 68) {
+        this.moveLeft = false;
+        this.moveRight = true;
+      }
+    },
+    clearDirection() {
+      this.moveLeft = false;
+      this.moveRight = false;
     }
   }
 };
@@ -170,46 +194,55 @@ export default {
       top: 79.3rem;
       left: 48.7rem;
       width: 6.5rem;
-      &--left {
-        opacity: 0;
+      -webkit-user-select: none; /* Chrome all / Safari all */
+      -moz-user-select: none; /* Firefox all */
+      -ms-user-select: none; /* IE 10+ */
+      user-select: none;
+      // &--left {
+      //   opacity: 0;
+      //   top: 79.6rem;
+      //   left: 47rem;
+      //   transform: rotate(-20deg);
+      //   &.move-left {
+      //     opacity: 1;
+      //   }
+      // }
+      &.move-left {
         top: 79.6rem;
         left: 47rem;
         transform: rotate(-20deg);
       }
-      &--center {
-        // opacity: 0;
-      }
-      &--right {
-        opacity: 0;
+      &.move-right {
         top: 79.6rem;
         left: 50.2rem;
         transform: rotate(20deg);
       }
+      // &--right {
+      //   opacity: 0;
+      //   top: 79.6rem;
+      //   left: 50.2rem;
+      //   transform: rotate(20deg);
+      // }
     }
     // button controls
     &-button {
       position: absolute;
-      top: 87.2rem;
+      top: 86.5rem;
       left: 68.3rem;
-      width: 9.2rem;
+      width: 9.9rem;
       opacity: 0;
     }
   }
 }
 // Pressed, class that gives opacity
 .pressed {
-  animation: pressed 0.1s;
+  animation: pressed 0.2s;
 }
 
 @keyframes pressed {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%,
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -225,7 +258,7 @@ export default {
   pointer-events: all;
 }
 
-img {
-  max-width: initial;
-}
+// img {
+//   max-width: initial;
+// }
 </style>

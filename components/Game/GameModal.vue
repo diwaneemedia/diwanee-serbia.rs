@@ -125,21 +125,19 @@ export default {
   transform: translateX(-50%);
   width: 136.9rem;
   pointer-events: none;
+  z-index: 3;
 }
 img {
   max-width: initial;
 }
 .game {
   opacity: 1;
+  position: relative;
 }
 
 .game.loaded {
   opacity: 1;
-  z-index: 8;
+  z-index: 3;
   overflow: hidden;
-}
-
-.fadeOut {
-  opacity: 0;
 }
 </style>

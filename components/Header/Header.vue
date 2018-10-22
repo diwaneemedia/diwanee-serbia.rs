@@ -3,21 +3,18 @@
 
     <Navigation />
 
-    <video
-      ref="video"
-      :class="{'game-started': gameStarted}"
-      class="video"
-      poster="~assets/video/game.gif"
-      width="100%" autoplay loop muted playsinline>
-      <source src="~/static/video/game.mp4" type="video/mp4">
+    <!-- video desk -->
+    <video ref="video" :class="{'game-started': gameStarted}" class="video video--desk" width="100%" autoplay loop muted playsinline>
+      <source src="~/assets/video/game.mp4" type="video/mp4">
     </video>
 
-    <div
-      id="start-btn" 
-      :class="{'game-started': gameStarted}" 
-      class="start-btn" 
-      @click="startGame">
-        {{ gameOptions }}
+    <!-- video mob -->
+    <video ref="video" :class="{'game-started': gameStarted}" class="video video--mob" width="100%" autoplay loop muted playsinline>
+      <source src="~/assets/video/game--mob.mp4" type="video/mp4">
+    </video>
+
+    <div id="start-btn" :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
+      {{ gameOptions }}
     </div>
 
   </header>
@@ -65,7 +62,7 @@ export default {
 @import "~assets/scss/master.scss";
 .header {
   position: relative;
-  height: 81vh;
+  height: 100vh;
   overflow: hidden;
   max-height: 70rem;
   @include breakpoint(desktop) {
@@ -76,16 +73,20 @@ export default {
 
 .video {
   position: absolute;
-  width: 150vw;
-  // top: 20rem;
-  top: 15rem;
-  left: -25vw;
-  right: 0;
+  width: 100%;
+  top: 0;
   z-index: 2;
   @include breakpoint(desktop) {
     width: 100%;
     top: 0;
-    left: 0;
+    &--mob {
+      display: none;
+    }
+  }
+  &--desk {
+    @include breakpoint(phone) {
+      display: none;
+    }
   }
 }
 

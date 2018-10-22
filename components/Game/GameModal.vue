@@ -65,10 +65,10 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: this.gameStarted ? "lock-screen" : ""
+        class: this.gameStarted || this.$store.state.sideBarOpen ? "lock-screen" : ""
       },
       htmlAttrs: {
-        class: this.gameStarted ? "lock-screen" : ""
+        class: this.gameStarted || this.$store.state.sideBarOpen ? "lock-screen" : ""
       }
     };
   },

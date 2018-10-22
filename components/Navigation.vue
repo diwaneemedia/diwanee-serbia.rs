@@ -5,7 +5,7 @@
 
       <div class="navigation__logo" />
 
-      <div :class="{ open: sideBarOpen }" class="navigation__links">
+      <div :class="{ open: sideBarOpen }" class="navigation__links" @click="openSidebar">
         <nuxt-link class="navigation__links__item" tag="a" to="/#home">Home</nuxt-link>
         <nuxt-link class="navigation__links__item" tag="a" to="/#about" href="#about">About</nuxt-link>
         <nuxt-link class="navigation__links__item" tag="a" to="/#brands" href="#brands">Our brands</nuxt-link>

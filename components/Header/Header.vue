@@ -3,12 +3,21 @@
 
     <Navigation />
 
-    <video ref="video" :class="{'game-started': gameStarted}" class="video" width="100%" autoplay loop muted>
+    <video
+      ref="video"
+      :class="{'game-started': gameStarted}"
+      class="video"
+      poster="~assets/video/game.gif"
+      width="100%" autoplay loop muted playsinline>
       <source src="~/static/video/game.mp4" type="video/mp4">
     </video>
 
-    <div id="start-btn" :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
-      {{ gameOptions }}
+    <div
+      id="start-btn" 
+      :class="{'game-started': gameStarted}" 
+      class="start-btn" 
+      @click="startGame">
+        {{ gameOptions }}
     </div>
 
   </header>

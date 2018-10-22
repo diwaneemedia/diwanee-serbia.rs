@@ -114,7 +114,7 @@ export default {
     top: 0;
     left: 0;
     opacity: 0;
-    background: url("~static/images/modal-bg.png");
+    background: url("~assets/images/arcade/modal-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

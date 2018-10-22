@@ -12,14 +12,14 @@
         <a href="https://www.yasmina.com/">
           <div class="brand__card yasmina">
             <div class="brand__card-bg yasmina-bg" />
-            <img class="card-logo yasmina-logo" src="~static/images/brands/yasmina-logo.svg" alt="yasmina logo">
+            <img class="card-logo yasmina-logo" src="~assets/images/brands/yasmina-logo.svg" alt="yasmina logo">
           </div>
         </a>
 
         <a href="https://www.rajil.com/">
           <div class="brand__card rajil">
             <div class="brand__card-bg rajil-bg" />
-            <img class="card-logo rajil-logo" src="~static/images/brands/rajil-logo.svg" alt="rajil logo">
+            <img class="card-logo rajil-logo" src="~assets/images/brands/rajil-logo.svg" alt="rajil logo">
           </div>
         </a>
 
@@ -31,21 +31,21 @@
         <a href="https://www.3a2ilati.com/">
           <div class="brand__card threea2ilati">
             <div class="brand__card-bg threea2ilati-bg" />
-            <img class="card-logo threea2ilati-logo" src="~static/images/brands/3a2ilati-logo.svg" alt="3a2ilati logo">
+            <img class="card-logo threea2ilati-logo" src="~assets/images/brands/3a2ilati-logo.svg" alt="3a2ilati logo">
           </div>
         </a>
 
         <a href="https://www.atyabtabkha.com/">
           <div class="brand__card aty">
             <div class="brand__card-bg aty-bg" />
-            <img class="card-logo aty-logo" src="~static/images/brands/aty-logo.svg" alt="aty logo">
+            <img class="card-logo aty-logo" src="~assets/images/brands/aty-logo.svg" alt="aty logo">
           </div>
         </a>
 
         <a href="https://www.warrini.com/">
           <div class="brand__card warrini">
             <div class="brand__card-bg warrini-bg" />
-            <img class="card-logo warrini-logo" src="~static/images/brands/warrini-logo.svg" alt="warrini logo">
+            <img class="card-logo warrini-logo" src="~assets/images/brands/warrini-logo.svg" alt="warrini logo">
           </div>
         </a>
 
@@ -72,8 +72,9 @@
   &-bg {
     height: 100%;
     opacity: 0.6;
-    transition: all .6s linear;
-    &:hover,&:active {
+    transition: all 0.6s linear;
+    &:hover,
+    &:active {
       opacity: 0.9;
     }
   }
@@ -89,7 +90,7 @@
 .yasmina {
   background-color: #543a72;
   &-bg {
-    background: center / cover url("~static/images/brands/yasmina-bg.jpg");
+    background: center / cover url("~assets/images/brands/yasmina-bg.jpg");
   }
   &-logo {
     width: 21.8rem;
@@ -101,7 +102,7 @@
 .rajil {
   background-color: $dark;
   &-bg {
-    background: center / cover url("~static/images/brands/rajil-bg.jpg");
+    background: center / cover url("~assets/images/brands/rajil-bg.jpg");
   }
   &-logo {
     width: 12.2rem;
@@ -113,7 +114,7 @@
 .threea2ilati {
   background-color: $black;
   &-bg {
-    background: center / cover url("~static/images/brands/3a2ilati-bg.jpg");
+    background: center / cover url("~assets/images/brands/3a2ilati-bg.jpg");
   }
   &-logo {
     width: 12.8rem;
@@ -125,7 +126,7 @@
 .aty {
   background-color: #fcde65;
   &-bg {
-    background: center / cover url("~static/images/brands/aty-bg.jpg");
+    background: center / cover url("~assets/images/brands/aty-bg.jpg");
   }
   &-logo {
     width: 21.5rem;
@@ -137,7 +138,7 @@
 .warrini {
   background-color: #f23a5e;
   &-bg {
-    background: center / cover url("~static/images/brands/warrini-bg.jpg");
+    background: center / cover url("~assets/images/brands/warrini-bg.jpg");
   }
   &-logo {
     width: 17.7rem;

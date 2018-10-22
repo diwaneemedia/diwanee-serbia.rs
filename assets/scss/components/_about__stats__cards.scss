@@ -1,6 +1,6 @@
 .about__stats {
   margin-bottom: 11rem;
-  background-image: url("~static/images/about__stats__cards-bg.png");
+  background-image: url("~assets/images/about__stats__cards-bg.png");
   background-size: cover;
   background-position-x: 16rem;
   background-position-y: -38rem;
@@ -9,7 +9,7 @@
 
   &:before {
     content: "";
-    background-image: url("~static/images/about__stats__cards-bg.png");
+    background-image: url("~assets/images/about__stats__cards-bg.png");
     position: absolute;
     background-size: cover;
     background-position-x: 18rem;

@@ -4,7 +4,7 @@
 
       <div class="back-to-top">
         <a class="back-to-top--btn" href="#home">BACK TO TOP</a>
-        <img class="webedia-logo" src="~/static/images/brands/webedia-logo.svg" alt="webedia">
+        <img class="webedia-logo" src="~assets/images/brands/webedia-logo.svg" alt="webedia">
       </div>
 
       <Social style="margin:3.1rem auto 4rem" />

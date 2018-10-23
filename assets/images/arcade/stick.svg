@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.004 132.146">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f4f50;
+      }
+
+      .cls-2 {
+        fill: #363537;
+      }
+
+      .cls-3 {
+        fill: #1d1d1d;
+      }
+
+      .cls-4, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #b6b5b6;
+      }
+
+      .cls-6 {
+        opacity: 0.119;
+      }
+    </style>
+  </defs>
+  <g id="Group_1734" data-name="Group 1734" transform="translate(17165 -3008.851)">
+    <g id="Group_1729" data-name="Group 1729">
+      <rect id="Rectangle_389" data-name="Rectangle 389" class="cls-4" width="15" height="80" rx="7.5" transform="translate(-17132 3041.997)"/>
+      <g id="Group_1667" data-name="Group 1667" transform="translate(-17317 2308.997)">
+        <circle id="Ellipse_118" data-name="Ellipse 118" class="cls-5" cx="31.5" cy="31.5" r="31.5" transform="translate(161 700)"/>
+        <ellipse id="Ellipse_119" data-name="Ellipse 119" class="cls-4" cx="6" cy="8" rx="6" ry="8" transform="matrix(0.809, 0.588, -0.588, 0.809, 177.404, 708.003)"/>
+        <path id="Path_1091" data-name="Path 1091" class="cls-6" d="M-13501.924-5354.146s16.249,15.348,16.249,31.186-16.249,32.165-16.249,32.165,8.151-1.051,13.924-4.292,6.658-5.123,9.506-8.253c7.437-9.316,6.494-22.66,6.494-22.66s-1.747-11.551-9.747-19.38S-13501.924-5354.146-13501.924-5354.146Z" transform="translate(13696 6054)"/>
+      </g>
+    </g>
+  </g>
+</svg>

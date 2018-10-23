@@ -12,23 +12,48 @@
     </div>
 
     <div class="arcade">
+
       <div class="arcade__controls">
-        <!-- <img :class="{'move-left': moveLeft}" class="arcade__controls-stick arcade__controls-stick--left" src="~assets/images/arcade/stick.png" alt="arcade stick"> -->
-        <img :class="{'move-left': moveLeft, 'move-right': moveRight }" class="arcade__controls-stick" src="~assets/images/arcade/stick.png" alt="arcade stick">
-        <!-- <img class="arcade__controls-stick arcade__controls-stick--right" src="~assets/images/arcade/stick.png" alt="arcade stick"> -->
+
+        <!-- stick controls -->
+
+        <img 
+          class="arcade__controls-stick arcade__controls-stick--base" 
+          src="~assets/images/arcade/stick-base.svg" 
+          alt="arcade stick base">
+
+        <img 
+          :class="{'move-left': moveLeft, 'move-right': moveRight }" 
+          class="arcade__controls-stick" 
+          src="~assets/images/arcade/stick.svg" 
+          alt="arcade stick">
+
+        <!-- button svg NEED TO REFACTOR THIS SHIT ASAP -->
+
+        <img
+          :class="{'pressed': leftClick}"
+          class="arcade__controls-button arcade__controls-button-fire"           
+          src="~assets/images/arcade/fire-btn--pushed.svg" 
+          alt="btn pressed"
+          @animationend="leftClick = false">
+
         <img 
           :class="{'pressed': leftClick}" 
-          class="arcade__controls-button"           
-          src="~assets/images/arcade/btn-pressed.png" 
-          alt="btn pressed" 
+          class="arcade__controls-button arcade__controls-button-bg"
+          src="~assets/images/arcade/fire-btn.svg"
+          alt="btn pressed"
           @animationend="leftClick = false">
-      </div>
-    </div>
+          
+        <!-- passive button -->
+          
+        <img
+          class="arcade__controls-button arcade__controls-button--neutral"           
+          src="~assets/images/arcade/neutral-btn.svg" 
+          alt="btn neutral">
 
-    <!-- <audio ref="audioPlayer">
-      <source src="audio/soundtrack.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio> -->
+      </div>
+
+    </div>
 
   </div>
 
@@ -79,7 +104,6 @@ export default {
     },
     pressKey() {
       this.leftClick = true;
-      // this.$refs.audioPlayer.play();
     },
     stickDirection(e) {
       if (e.keyCode == 37 || e.keyCode == 65) {
@@ -114,7 +138,7 @@ export default {
     top: 0;
     left: 0;
     opacity: 0;
-    background: url("~assets/images/arcade/modal-bg.jpg");
+    background: url("~assets/images/arcade/modal-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -128,7 +152,7 @@ export default {
 
     .game-modal__wrapper {
       position: relative;
-      top: 17rem;
+      top: 21.7rem;
       width: 114rem;
       margin: 0 auto;
 
@@ -175,12 +199,12 @@ export default {
 // Arcade div
 .arcade {
   position: absolute;
-  top: -5.5rem;
+  top: -1rem;
   background-image: url("~assets/images/arcade/arcade-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 136.9rem;
-  height: 108rem;
+  width: 137.4rem;
+  height: 165.1rem;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -197,57 +221,54 @@ export default {
     // Stick controls!
     &-stick {
       position: absolute;
-      top: 79.3rem;
-      left: 48.7rem;
+      top: 79.4rem;
+      left: 50rem;
       width: 6.5rem;
       -webkit-user-select: none; /* Chrome all / Safari all */
       -moz-user-select: none; /* Firefox all */
       -ms-user-select: none; /* IE 10+ */
       user-select: none;
-      // &--left {
-      //   opacity: 0;
-      //   top: 79.6rem;
-      //   left: 47rem;
-      //   transform: rotate(-20deg);
-      //   &.move-left {
-      //     opacity: 1;
-      //   }
-      // }
       &.move-left {
-        top: 79.6rem;
-        left: 47rem;
+        left: 48.8rem;
         transform: rotate(-20deg);
       }
       &.move-right {
-        top: 79.6rem;
-        left: 50.2rem;
+        left: 51.2rem;
         transform: rotate(20deg);
       }
-      // &--right {
-      //   opacity: 0;
-      //   top: 79.6rem;
-      //   left: 50.2rem;
-      //   transform: rotate(20deg);
-      // }
-    }
+      // Position of base of stick
+      &--base {
+        top: 80rem;
+      }
+    }  
+
     // button controls
     &-button {
       position: absolute;
-      top: 86.5rem;
-      left: 68.3rem;
-      width: 9.9rem;
-      opacity: 0;
+      top: 87.5rem;
+      left: 63rem;
+      width: 6.5rem;
+      transition: all 0.2s;
+
+      &-bg.pressed {
+        opacity: 0;
+      }
+      &-fire {
+        top: 88.1rem;
+      }
+      &.pressed {
+        animation: pressed 0.2s;
+      }
+
+      &--neutral {
+        top: 88rem;
+        left: 70rem;
+      }
     }
   }
 }
-// Pressed, class that gives opacity
-.pressed {
-  animation: pressed 0.2s;
-}
-
 @keyframes pressed {
-  0%,
-  100% {
+  0%,100% {
     opacity: 1;
   }
 }

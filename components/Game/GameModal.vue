@@ -11,6 +11,8 @@
       
       <Leaderboard v-show="showLeaderboardOn" class="c-leaderboard" />
 
+      <!-- <YourScore v-show="showLeaderboardOn" class="c-yourscore" /> -->
+
       <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
     </div>
@@ -64,10 +66,12 @@
 <script>
 import VasilyGame from "~/components/Game/VasilyGame.vue";
 import Leaderboard from "~/components/Game/Leaderboard.vue";
+import YourScore from "~/components/Game/YourScore.vue";
 export default {
   components: {
     VasilyGame,
-    Leaderboard
+    Leaderboard,
+    YourScore
   },
   data() {
     return {

@@ -5,7 +5,11 @@
 
       <button class="game-modal__wrapper-leave" @click="closeModal">X</button>
 
-      <VasilyGame id="game" class="game" />
+      <button class="c-leaderboard__btn" @click="showLeaderboard"> {{ leaderboardText }} </button>
+
+      <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
+      
+      <Leaderboard v-show="showLeaderboardOn" class="c-leaderboard" />
 
       <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
@@ -59,20 +63,30 @@
 
 <script>
 import VasilyGame from "~/components/Game/VasilyGame.vue";
+import Leaderboard from "~/components/Game/Leaderboard.vue";
 export default {
   components: {
-    VasilyGame
+    VasilyGame,
+    Leaderboard
   },
   data() {
     return {
       leftClick: false,
       moveLeft: false,
-      moveRight: false
+      moveRight: false,
+      showLeaderboardOn: false,
     };
   },
   computed: {
     gameStarted() {
       return this.$store.state.gameStarted;
+    },
+    leaderboardText() {
+      if(this.showLeaderboardOn) {
+        return "Return to the Game"
+      } else {
+        return "See the Leaderboard"
+      }
     }
   },
   // Stick direction listeners
@@ -99,6 +113,9 @@ export default {
     closeModal() {
       this.$store.state.gameStarted = false;
       this.$store.state.video.play();
+    },
+    showLeaderboard() {
+      this.showLeaderboardOn = !this.showLeaderboardOn;
     },
     pressKey() {
       this.leftClick = true;
@@ -202,13 +219,8 @@ export default {
     display: none;
   }
 }
-@include breakpoint(phone) {
-  #gameContainer {
-    display: none;
-  }
-}
 
-// Arcade div
+// Arcade div and controls for it
 .arcade {
   position: absolute;
   top: -1rem;

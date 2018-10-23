@@ -31,11 +31,9 @@
         <!-- button svg NEED TO REFACTOR THIS SHIT ASAP -->
 
         <img
-          :class="{'pressed': leftClick}"
           class="arcade__controls-button arcade__controls-button-fire"           
           src="~assets/images/arcade/fire-btn--pushed.svg" 
-          alt="btn pressed"
-          @animationend="leftClick = false">
+          alt="btn pressed">
 
         <img 
           :class="{'pressed': leftClick}" 
@@ -43,7 +41,7 @@
           src="~assets/images/arcade/fire-btn.svg"
           alt="btn pressed"
           @animationend="leftClick = false">
-          
+  
         <!-- passive button -->
           
         <img
@@ -262,15 +260,13 @@ export default {
       top: 87.5rem;
       left: 63rem;
       width: 6.5rem;
-      transition: all 0.2s;
 
-      &-bg.pressed {
-        opacity: 0;
-      }
       &-fire {
         top: 88.1rem;
+        fill: red;
       }
-      &.pressed {
+
+      &-bg.pressed {
         animation: pressed 0.2s;
       }
 
@@ -283,7 +279,7 @@ export default {
 }
 @keyframes pressed {
   0%,100% {
-    opacity: 1;
+    opacity: 0.2;
   }
 }
 

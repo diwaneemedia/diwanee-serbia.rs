@@ -49,6 +49,12 @@ export default {
   methods: {
     openSidebar() {
       this.$store.state.sideBarOpen = !this.$store.state.sideBarOpen
+      if(this.$store.state.sideBarOpen) {
+        this.$store.state.videoMob.currentTime = 0;
+        this.$store.state.videoMob.pause();
+      } else {
+        this.$store.state.videoMob.play();
+      }
     }
   }
 };

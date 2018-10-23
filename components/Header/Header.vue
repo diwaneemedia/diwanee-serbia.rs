@@ -4,16 +4,32 @@
     <Navigation />
 
     <!-- video desk -->
-    <video ref="video" :class="{'game-started': gameStarted}" class="video video--desk" width="100%" autoplay loop muted playsinline>
+    <video 
+      ref="video" 
+      :class="{'game-started': gameStarted}" 
+      class="video video--desk" 
+      width="100%" 
+      autoplay loop muted playsinline>
       <source src="~/assets/video/game.mp4" type="video/mp4">
     </video>
 
     <!-- video mob -->
-    <video ref="video" :class="{'game-started': gameStarted}" class="video video--mob" width="100%" autoplay loop muted playsinline>
+    <video 
+      ref="videoMob" 
+      :class="{'game-started': gameStarted}" 
+      class="video video--mob" 
+      width="100%" 
+      poster="video/game--mob.gif" 
+      autoplay loop muted playsinline>
       <source src="~/assets/video/game--mob.mp4" type="video/mp4">
     </video>
-
-    <div id="start-btn" :class="{'game-started': gameStarted}" class="start-btn" @click="startGame">
+    
+    <!-- button for loading game modal -->
+    <div 
+      id="start-btn" 
+      :class="{'game-started': gameStarted}" 
+      class="start-btn" 
+      @click="startGame">
       {{ gameOptions }}
     </div>
 
@@ -40,6 +56,7 @@ export default {
     // Autoplay Code for Phones
     // this.$refs.video = this.$store.state.video;
     this.$store.state.video = this.$refs.video;
+    this.$store.state.videoMob = this.$refs.videoMob;
     this.$refs.video.play();
     console.log("video playing");
   },

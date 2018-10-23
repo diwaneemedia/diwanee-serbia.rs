@@ -7,6 +7,7 @@ const createStore = () => {
       sideBarOpen: false,
       gameStarted: false,
       video: {},
+      videoMob: {}
     }),
     mutations: {
       increment(state) {

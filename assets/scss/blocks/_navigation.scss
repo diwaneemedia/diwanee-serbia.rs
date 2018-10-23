@@ -148,3 +148,14 @@
   transform: rotate(45deg) translate(-4px, -5px);
   background-color: $rouge;
 }
+
+.navigation__links--mob {
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+.navigation__links--desk {
+  @include breakpoint(phone) {
+    display: none;
+  }
+}

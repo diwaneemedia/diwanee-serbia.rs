@@ -132,6 +132,10 @@ export default {
 .game-modal {
   display: none;
   @include breakpoint(desktop) {
+    @media screen and (max-width: 1440px) {
+      top: -18rem;
+      height: calc(100vh + 18rem);
+      }
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -151,6 +155,9 @@ export default {
     }
 
     .game-modal__wrapper {
+      @media screen and (max-width: 1440px) {
+        top: 21.6rem;
+      }
       position: relative;
       top: 21.7rem;
       width: 114rem;
@@ -159,13 +166,20 @@ export default {
       &-leave {
         color: $white;
         position: absolute;
-        top: -2.81rem;
-        right: -0.5rem;
+        top: -17rem;
+        right: -33rem;
         font-size: 2rem;
         background: none;
         border: none;
         font-weight: 100;
-        z-index: 11;
+        z-index: 10;
+        padding: 2.5rem 3rem;
+        background: rgba($color: white, $alpha: 0.3);
+        @media screen and (max-width: 1440px) {
+        padding: 1rem 2rem;
+        top: -2.81rem;
+        right: -5rem;
+        }
       }
     }
   }

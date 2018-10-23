@@ -5,7 +5,17 @@
 
       <div class="navigation__logo" />
 
-      <div :class="{ open: sideBarOpen }" class="navigation__links" @click="openSidebar">
+      <div :class="{ open: sideBarOpen }" class="navigation__links navigation__links--mob" @click="openSidebar">
+        <nuxt-link class="navigation__links__item" tag="a" to="/#home">Home</nuxt-link>
+        <nuxt-link class="navigation__links__item" tag="a" to="/#about" href="#about">About</nuxt-link>
+        <nuxt-link class="navigation__links__item" tag="a" to="/#brands" href="#brands">Our brands</nuxt-link>
+        <nuxt-link class="navigation__links__item" tag="a" to="/#jobs" href="#jobs">Jobs</nuxt-link>
+        <a class="navigation__links__item" href="#contact">CONTACT</a>
+        <p class="navigation__links__social--text">Follow us</p>
+        <Social class="navigation__links__social" />
+      </div>
+
+      <div class="navigation__links navigation__links--desk">
         <nuxt-link class="navigation__links__item" tag="a" to="/#home">Home</nuxt-link>
         <nuxt-link class="navigation__links__item" tag="a" to="/#about" href="#about">About</nuxt-link>
         <nuxt-link class="navigation__links__item" tag="a" to="/#brands" href="#brands">Our brands</nuxt-link>

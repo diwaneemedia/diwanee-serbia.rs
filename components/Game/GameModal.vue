@@ -7,11 +7,13 @@
 
       <button class="c-leaderboard__btn" @click="showLeaderboard"> {{ leaderboardText }} </button>
 
+      <button class="c-leaderboard__btn c-leaderboard__btn--input" @click="gameOver"> input score </button>
+
       <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
       
       <Leaderboard v-show="showLeaderboardOn" class="c-leaderboard" />
 
-      <!-- <YourScore v-show="showLeaderboardOn" class="c-yourscore" /> -->
+      <YourScore v-show="inputScore" class="c-yourscore" />
 
       <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
@@ -79,6 +81,7 @@ export default {
       moveLeft: false,
       moveRight: false,
       showLeaderboardOn: false,
+      inputScore: false,
     };
   },
   computed: {
@@ -121,6 +124,9 @@ export default {
     showLeaderboard() {
       this.showLeaderboardOn = !this.showLeaderboardOn;
     },
+    gameOver() {
+      this.inputScore = true;
+    },
     pressKey() {
       this.leftClick = true;
     },
@@ -142,6 +148,11 @@ export default {
 
 <style lang="scss">
 @import "~assets/scss/master";
+
+.c-leaderboard__btn--input {
+  left: 10rem; 
+  bottom: 0;
+}
 
 .lock-screen {
   margin: 0;

@@ -3,52 +3,56 @@
 
     <h3 class="c-leaderboard__title">Hi, I'm the leader BOAR</h3>
     <table class="c-leaderboard__table">
-      <tr>
-        <th>Name</th>
-        <th>Rank</th> 
-        <th>Score</th>
-      </tr>
-      <tr>
-        <td>Vlada Vodic</td>
-        <td>100</td> 
-        <td>666</td>
-      </tr>
-      <tr>
-        <td>Ivan Gavrilovic</td>
-        <td>200</td> 
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>Mesar Iz Waltera</td>
-        <td>4</td> 
-        <td>195</td>
-      </tr>
-      <tr>
-        <td>Bukvalno osoba bez ruke</td>
-        <td>5</td> 
-        <td>150</td>
-      </tr>
-      <tr>
-        <td>Pevac iz Sars-a</td>
-        <td>6</td> 
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>Slepo Cigance</td>
-        <td>7</td> 
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>Djurdja Maksimovic</td>
-        <td>8</td> 
-        <td>-2</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Rank</th> 
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vlada Vodic</td>
+          <td>100</td> 
+          <td>666</td>
+        </tr>
+        <tr>
+          <td>Ivan Gavrilovic</td>
+          <td>200</td> 
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Mesar Iz Waltera</td>
+          <td>4</td> 
+          <td>195</td>
+        </tr>
+        <tr>
+          <td>Bukvalno osoba bez ruke</td>
+          <td>5</td> 
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>Pevac iz Sars-a</td>
+          <td>6</td> 
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Slepo Cigance</td>
+          <td>7</td> 
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Djurdja Maksimovic</td>
+          <td>8</td> 
+          <td>-2</td>
+        </tr>
+      </tbody>
     </table>
-
+      
   </div>
 </template>
-
-<style lang="scss">
+  
+  <style lang="scss">
 @import "~assets/scss/master";
     
 .c-leaderboard {

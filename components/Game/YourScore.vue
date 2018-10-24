@@ -3,20 +3,16 @@
     <div class="signup-form">
       <form @submit.prevent="onSubmit">
         <div class="input">
-          <label for="email">Mail</label>
-          <input id="email" v-model="email" type="email">
+          <label for="name">name</label>
+          <input id="name" v-model="name" type="name">
         </div>
         <div class="input">
-          <label for="age">Your Age</label>
-          <input id="age" v-model.number="age" type="number">
+          <label for="rank">Your rank</label>
+          <input id="rank" v-model.number="rank" type="number">
         </div>
         <div class="input">
-          <label for="password">Password</label>
-          <input id="password" v-model="password" type="password">
-        </div>
-        <div class="input">
-          <label for="confirm-password">Confirm Password</label>
-          <input id="confirm-password" v-model="confirmPassword" type="password" >
+          <label for="score">Your score</label>
+          <input id="score" v-model.number="score" type="number">
         </div>
         <div class="submit">
           <button type="submit">Submit</button>
@@ -28,48 +24,41 @@
 
 <script>
 import axios from "axios";
-
-  export default {
-    data() {
-      return {
-        email: '',
-        age: null,
-        password: '',
-        confirmPassword: '',
-        country: 'usa',
-        hobbyInputs: [],
-        terms: false
-      }
-    },
-    methods: {
-      onAddHobby() {
-        const newHobby = {
-          id: Math.random() * Math.random() * 1000,
-          value: ''
-        }
-        this.hobbyInputs.push(newHobby)
-      },
-      onDeleteHobby(id) {
-        this.hobbyInputs = this.hobbyInputs.filter(hobby => hobby.id !== id)
-      },
-      onSubmit() {
-        const formData = {
-          email: this.email,
-          age: this.age,
-          password: this.password,
-          confirmPassword: this.confirmPassword,
-          country: this.country,
-          hobbies: this.hobbyInputs.map(hobby => hobby.value),
-          terms: this.terms
-        }
-        console.log(formData)
-      }
+export default {
+  data() {
+    return {
+      name: '',
+      rank: null,
+      score: null,
+    }
+  },
+  methods: {
+    onSubmit() {
+      const formData = {
+      name: this.name,
+      rank: this.rank,
+      score: this.score
+    }
+    console.log(formData)
     }
   }
+}
 
 </script>
 
 <style scoped>
+
+  #signup {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 2.9rem;
+    color: black;
+    z-index: 999999;
+    height: 60vh;
+    background: black;
+  }
+  
   .signup-form {
     width: 400px;
     margin: 30px auto;

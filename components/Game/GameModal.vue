@@ -101,6 +101,7 @@ export default {
   mounted() {
     window.addEventListener("keydown", this.stickDirection);
     window.addEventListener("keyup", this.clearDirection);
+    window.SetNewScore = this.setScore;
   },
   beforeDestroy() {
     window.removeEventListener("keydown", this.stickDirection);
@@ -127,7 +128,8 @@ export default {
     },
     setScore(score) {
       this.inputScore = true;
-      this.playerScore = 300;
+      this.playerScore = score;
+      document.getElementById("input-name").disabled = false;
     },
     pressKey() {
       this.leftClick = true;

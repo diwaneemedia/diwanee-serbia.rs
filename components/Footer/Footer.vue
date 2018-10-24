@@ -10,7 +10,7 @@
       <Social style="margin:3.1rem auto 4rem" />
 
       <div class="footer__copyright">
-        COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED
+        COPYRIGHT © DIWANEE ALL RIGHTS RESERVED
       </div>
 
     </article>

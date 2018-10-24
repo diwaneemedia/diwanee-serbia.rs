@@ -4,31 +4,31 @@
     <Navigation />
 
     <!-- video desk -->
-    <video 
-      ref="video" 
-      :class="{'game-started': gameStarted}" 
-      class="video video--desk" 
-      width="100%" 
+    <video
+      ref="video"
+      :class="{'game-started': gameStarted}"
+      class="video video--desk"
+      width="100%"
       autoplay loop muted playsinline>
       <source src="~/assets/video/game.mp4" type="video/mp4">
     </video>
 
     <!-- video mob -->
-    <video 
-      ref="videoMob" 
-      :class="{'game-started': gameStarted}" 
-      class="video video--mob" 
-      width="100%" 
-      poster="video/game--mob.gif" 
+    <video
+      ref="videoMob"
+      :class="{'game-started': gameStarted}"
+      class="video video--mob"
+      width="100%"
+      poster="video/game--mob.gif"
       autoplay loop muted playsinline>
       <source src="~/assets/video/game--mob.mp4" type="video/mp4">
     </video>
-    
+
     <!-- button for loading game modal -->
-    <div 
-      id="start-btn" 
-      :class="{'game-started': gameStarted}" 
-      class="start-btn" 
+    <div
+      id="start-btn"
+      :class="{'game-started': gameStarted}"
+      class="start-btn"
       @click="startGame">
       {{ gameOptions }}
     </div>
@@ -63,7 +63,7 @@ export default {
   methods: {
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong2018ver6.json"
+        "Build/pong2018ver7.json"
       ]);
     },
     startGame() {

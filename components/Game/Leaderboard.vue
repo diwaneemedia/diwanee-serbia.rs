@@ -2,7 +2,8 @@
   <div class="c-leaderboard">
 
     <h3 class="c-leaderboard__title">Hi, I'm the leader BOAR</h3>
-    <table class="c-leaderboard__table">
+
+    <!-- <table class="c-leaderboard__table">
       <thead>
         <tr>
           <th>Name</th>
@@ -17,9 +18,9 @@
           <td>666</td>
         </tr>
         <tr>
-          <td>Ivan Gavrilovic</td>
+          <td>{{ users[0].name }}</td>
           <td>200</td> 
-          <td>200</td>
+          <td>{{ users[0].score }}</td>
         </tr>
         <tr>
           <td>Mesar Iz Waltera</td>
@@ -47,10 +48,69 @@
           <td>-2</td>
         </tr>
       </tbody>
+    </table> -->
+
+    <table class="c-leaderboard__table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Rank</th> 
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody 
+        v-for="(player,index) in bestPlayers" 
+        :key="player.id">
+        <tr>
+          <td>{{ player.name }}</td>
+          <td> {{ index+1 }} </td> 
+          <td>{{ player.score }}</td>
+        </tr>
+      </tbody>
     </table>
       
   </div>
 </template>
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      bestPlayers: [
+        { 
+          name: "" ,
+          score: null 
+        }
+      ]
+    }
+  },
+  // computed: {
+  //   bestPlayersOrder() {
+  //     return bestPlayers.sort((a, b) => a.score - b.score);
+  //   }
+  // },
+  created() {
+    axios.get("https://diwanee-serbia-game.firebaseio.com/users.json")
+    .then(res => {
+      console.log(res)
+      const data = res.data
+      const users = []
+      for(let key in data) {
+        const user = data[key]
+        user.id = key
+        users.push(user)
+      }
+      console.log(users);
+      this.bestPlayers = users.sort((a, b) => b.score - a.score);
+      // this.name = users[0].name;
+      // this.score = users[0].score;
+    })
+    .catch(error => console.log(error))
+  }  
+}
+</script>
+
   
   <style lang="scss">
 @import "~assets/scss/master";

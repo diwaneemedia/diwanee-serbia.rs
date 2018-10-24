@@ -6,6 +6,10 @@
   
     @else if $break == desktop {
         @media (min-width: 768px)                          { @content; }
-    }  
+    }
+
+    @else if $break == desktopLg {
+        @media (min-width: 1440px)                          { @content; }
+    }
   }
   

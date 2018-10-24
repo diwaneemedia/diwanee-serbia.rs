@@ -1,19 +1,17 @@
 <template>
-  <div id="game-modal" :class="{'game-started': gameStarted}" class="game-modal" @click="pressKey">
+  <div id="game-modal" :class="{'game-started': gameStarted}" class="game-modal">
 
-    <div class="game-modal__wrapper">
+    <div class="game-modal__wrapper" @click="pressKey">
 
       <button class="game-modal__wrapper-leave" @click="closeModal">X</button>
 
       <button class="c-leaderboard__btn" @click="showLeaderboard"> {{ leaderboardText }} </button>
 
-      <button class="c-leaderboard__btn c-leaderboard__btn--input" @click="gameOver"> input score </button>
+      <button class="c-leaderboard__btn c-leaderboard__btn--input" @click="setScore">input score</button>
 
       <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
       
       <Leaderboard v-show="showLeaderboardOn" class="c-leaderboard" />
-
-      <YourScore v-show="inputScore" class="c-yourscore" />
 
       <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
@@ -60,6 +58,8 @@
       </div>
 
     </div>
+    
+    <YourScore v-show="inputScore" :score="playerScore" class="c-yourscore" />
 
   </div>
 
@@ -82,6 +82,7 @@ export default {
       moveRight: false,
       showLeaderboardOn: false,
       inputScore: false,
+      playerScore: null,
     };
   },
   computed: {
@@ -124,8 +125,9 @@ export default {
     showLeaderboard() {
       this.showLeaderboardOn = !this.showLeaderboardOn;
     },
-    gameOver() {
+    setScore(score) {
       this.inputScore = true;
+      this.playerScore = 300;
     },
     pressKey() {
       this.leftClick = true;
@@ -162,10 +164,6 @@ export default {
 .game-modal {
   display: none;
   @include breakpoint(desktop) {
-    @media screen and (max-width: 1440px) {
-      top: -18rem;
-      height: calc(100vh + 18rem);
-      }
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -177,6 +175,10 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s linear;
+    @include breakpoint(desktopLg) {
+      top: -18rem;
+      height: calc(100vh + 18rem);
+    }
     &.game-started {
       opacity: 1;
       display: block;
@@ -185,13 +187,13 @@ export default {
     }
 
     .game-modal__wrapper {
-      @media screen and (max-width: 1440px) {
-        top: 21.6rem;
-      }
       position: relative;
       top: 21.7rem;
       width: 114rem;
       margin: 0 auto;
+      @include breakpoint(desktopLg) {
+        top: 21.6rem;
+      }
 
       &-leave {
         color: $white;
@@ -205,10 +207,10 @@ export default {
         z-index: 10;
         padding: 2.5rem 3rem;
         background: rgba($color: white, $alpha: 0.3);
-        @media screen and (max-width: 1440px) {
-        padding: 1rem 2rem;
-        top: -2.81rem;
-        right: -5rem;
+        @include breakpoint(desktopLg) {
+          padding: 1rem 2rem;
+          top: -2.81rem;
+          right: -5rem;
         }
       }
     }

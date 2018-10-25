@@ -126,12 +126,22 @@ export default {
     showLeaderboard() {
       this.showLeaderboardOn = !this.showLeaderboardOn;
     },
-    setScore(score, name) {
-      console.log("score"+score);
-      console.log("name"+name);
+    setScore(score) {
       this.inputScore = true;
       this.playerScore = score;
-      // document.getElementById("input-name").disabled = false;
+<<<<<<< HEAD
+      document.getElementById("input-name").disabled = false;
+=======
+      window.Vaske = function(){
+        console.log("event removed");
+      }
+      document.removeEventListener("keypress",Vaske, true );
+      document.removeEventListener("keydown",Vaske, true );
+      document.removeEventListener("keyup",Vaske, true );
+      document.getElementById("#canvas").removeEventListener("keypress",Vaske, true );
+      document.getElementById("#canvas").removeEventListener("keydown",Vaske, true );
+      document.getElementById("#canvas").removeEventListener("keyup",Vaske, true );
+>>>>>>> show score, add name
     },
     pressKey() {
       this.leftClick = true;

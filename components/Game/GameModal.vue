@@ -127,6 +127,7 @@ export default {
     },
     setScore(score, name) {
       this.playerScore = score;
+<<<<<<< HEAD
       this.playerName = name;
       const playerData = {
         name: this.playerName,
@@ -136,6 +137,21 @@ export default {
       axios.post("https://diwanee-serbia-game.firebaseio.com/users.json", playerData)
       .then(res => console.log(res))
       .catch(error => console.log(error))
+=======
+<<<<<<< HEAD
+      document.getElementById("input-name").disabled = false;
+=======
+      window.Vaske = function(){
+        console.log("event removed");
+      }
+      document.removeEventListener("keypress",Vaske, true );
+      document.removeEventListener("keydown",Vaske, true );
+      document.removeEventListener("keyup",Vaske, true );
+      document.getElementById("#canvas").removeEventListener("keypress",Vaske, true );
+      document.getElementById("#canvas").removeEventListener("keydown",Vaske, true );
+      document.getElementById("#canvas").removeEventListener("keyup",Vaske, true );
+>>>>>>> show score, add name
+>>>>>>> 444376ae6da7d09795f15697953fc6619187b9da
     },
     pressKey() {
       this.leftClick = true;

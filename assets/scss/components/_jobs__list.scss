@@ -15,12 +15,6 @@
   }
 }
 
-.jobs__list--underlay:nth-child(odd) {
-  border-bottom: dashed 1px #c7c7c7;
-  border-top: dashed 1px #c7c7c7;
-}
-
-
 .col--left {
   @include breakpoint(phone) {
     margin-bottom: 3.2rem;

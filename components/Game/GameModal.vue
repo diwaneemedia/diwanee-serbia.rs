@@ -10,7 +10,7 @@
       <button class="c-leaderboard__btn c-leaderboard__btn--input" @click="setScore">input score</button>
 
       <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
-      
+
       <Leaderboard v-show="showLeaderboardOn" class="c-leaderboard" />
 
       <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
@@ -23,42 +23,42 @@
 
         <!-- stick controls -->
 
-        <img 
-          class="arcade__controls-stick arcade__controls-stick--base" 
-          src="~assets/images/arcade/stick-base.svg" 
+        <img
+          class="arcade__controls-stick arcade__controls-stick--base"
+          src="~assets/images/arcade/stick-base.svg"
           alt="arcade stick base">
 
-        <img 
-          :class="{'move-left': moveLeft, 'move-right': moveRight }" 
-          class="arcade__controls-stick" 
-          src="~assets/images/arcade/stick.svg" 
+        <img
+          :class="{'move-left': moveLeft, 'move-right': moveRight }"
+          class="arcade__controls-stick"
+          src="~assets/images/arcade/stick.svg"
           alt="arcade stick">
 
         <!-- button svg NEED TO REFACTOR THIS SHIT ASAP -->
 
         <img
-          class="arcade__controls-button arcade__controls-button-fire"           
-          src="~assets/images/arcade/fire-btn--pushed.svg" 
+          class="arcade__controls-button arcade__controls-button-fire"
+          src="~assets/images/arcade/fire-btn--pushed.svg"
           alt="btn pressed">
 
-        <img 
-          :class="{'pressed': leftClick}" 
+        <img
+          :class="{'pressed': leftClick}"
           class="arcade__controls-button arcade__controls-button-bg"
           src="~assets/images/arcade/fire-btn.svg"
           alt="btn pressed"
           @animationend="leftClick = false">
-  
+
         <!-- passive button -->
-          
+
         <img
-          class="arcade__controls-button arcade__controls-button--neutral"           
-          src="~assets/images/arcade/neutral-btn.svg" 
+          class="arcade__controls-button arcade__controls-button--neutral"
+          src="~assets/images/arcade/neutral-btn.svg"
           alt="btn neutral">
 
       </div>
 
     </div>
-    
+
     <YourScore v-show="inputScore" :score="playerScore" class="c-yourscore" />
 
   </div>
@@ -154,7 +154,7 @@ export default {
 @import "~assets/scss/master";
 
 .c-leaderboard__btn--input {
-  left: 10rem; 
+  left: 10rem;
   bottom: 0;
 }
 
@@ -283,7 +283,7 @@ export default {
       &--base {
         top: 80rem;
       }
-    }  
+    }
 
     // button controls
     &-button {

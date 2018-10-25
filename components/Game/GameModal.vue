@@ -126,10 +126,12 @@ export default {
     showLeaderboard() {
       this.showLeaderboardOn = !this.showLeaderboardOn;
     },
-    setScore(score) {
+    setScore(score, name) {
+      console.log("score"+score);
+      console.log("name"+name);
       this.inputScore = true;
       this.playerScore = score;
-      document.getElementById("input-name").disabled = false;
+      // document.getElementById("input-name").disabled = false;
     },
     pressKey() {
       this.leftClick = true;

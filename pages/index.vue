@@ -61,11 +61,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-@import "~assets/scss/master.scss";
-
-#home {
-  margin-bottom: 8rem;
-}
-</style>

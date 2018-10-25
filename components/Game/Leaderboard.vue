@@ -1,7 +1,7 @@
 <template>
   <div class="c-leaderboard">
 
-    <h3 class="c-leaderboard__title">Hi, I'm the leader BOAR</h3>
+    <h3 class="c-leaderboard__title">top 5</h3>
 
     <table class="c-leaderboard__table">
       <thead>
@@ -11,8 +11,8 @@
           <th>Score</th>
         </tr>
       </thead>
-      <tbody 
-        v-for="(player,index) in bestPlayers" 
+      <tbody
+        v-for="(player,index) in bestPlayers.slice(0,5)" 
         :key="player.id">
         <tr>
           <td>{{ player.name }}</td>
@@ -66,15 +66,15 @@ export default {
   background: rgba($color: #000000, $alpha: 0.6);
   font-family: "Space-Invaders";
   text-align: center;
-  overflow: scroll;
+  overflow-y: scroll;
   // make sure that height is always the same as height of the game!
   height: 54rem;
-  padding: 6rem 17rem 0;
+  padding: 4rem 17rem 2rem;
 
   &__title {
     color: #f600f7;
     font-size: 2.2rem;
-    margin-bottom: 8.4rem;
+    margin-bottom: 6rem;
   }
 
   &__table {
@@ -97,15 +97,16 @@ export default {
     font-family: "Space-Invaders";
     color: white;
     position: absolute;
-    bottom: -7.5rem;
-    left: 0;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.5rem;
     // All Modal Buttons should be same Z-Index
     z-index: 10;
     padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
     @include breakpoint(desktopLg) {
-      bottom: -15rem;
       // left: ;
       // transform: translateX(-50%);
     }

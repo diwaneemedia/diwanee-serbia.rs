@@ -5,7 +5,7 @@
 
       <button class="game-modal__wrapper-leave" @click="closeModal">X</button>
 
-      <!-- <button v-show="showLeaderboardOn" class="c-leaderboard__btn" @click="returnToTheGame"> {{ leaderboardText }} </button> -->
+      <button v-show="showLeaderboardOn" class="c-leaderboard__btn" @click="returnToTheGame"> Return to the game </button>
 
       <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
 
@@ -76,7 +76,6 @@ export default {
       moveLeft: false,
       moveRight: false,
       showLeaderboardOn: false,
-      leaderboardText: "Return to the game",
       inputScore: false,
     };
   },
@@ -112,7 +111,7 @@ export default {
       this.$store.state.video.play();
     },
     returnToTheGame() {
-      alert('return to the game');
+      this.showLeaderboardOn = false;
     },
     setScore(score, name) {
       this.playerScore = score;

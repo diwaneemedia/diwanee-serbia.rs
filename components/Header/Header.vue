@@ -83,8 +83,13 @@ export default {
   overflow: hidden;
   max-height: 70rem;
   @include breakpoint(desktop) {
-    margin-bottom: 3rem;
+    height: 92vh;
     max-height: 77rem;
+  }
+  @include breakpoint(desktopLg) {
+    margin-bottom: 3rem;
+    height: 92vh;
+    max-height: 80rem;
   }
 }
 
@@ -108,7 +113,10 @@ export default {
 }
 
 .start-btn {
-  bottom: 11.8%;
+  @include breakpoint(phone) {
+    display: none;
+  }
+  bottom: 20%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -117,17 +125,32 @@ export default {
   position: absolute;
   display: inline;
   font-weight: bold;
-  color: black;
+  color: $black;
   font-family: "Geomanist";
   font-size: 1.6rem;
   text-transform: uppercase;
   cursor: pointer;
-
-  @include breakpoint(phone) {
-    display: none;
+  animation: blinker 0.8s linear infinite;
+  @include breakpoint(desktopLg) {
+    bottom: 11.8%;
   }
   &.game-started {
     display: none;
+  }
+}
+
+@keyframes blinker {
+  0%,49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>

@@ -97,9 +97,8 @@ export default {
     font-family: "Space-Invaders";
     color: white;
     position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -7.5rem;
+    left: 0;
     font-size: 1.5rem;
     // All Modal Buttons should be same Z-Index
     z-index: 10;
@@ -107,6 +106,8 @@ export default {
     background: rgba(255, 255, 255, 0.3);
     @include breakpoint(desktopLg) {
       bottom: -28.5rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 

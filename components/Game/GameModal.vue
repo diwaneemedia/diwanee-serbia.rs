@@ -172,8 +172,8 @@ export default {
   @include breakpoint(desktop) {
     position: fixed;
     width: 100vw;
-    height: 100vh;
-    top: 0;
+    height: calc(100vh + 18rem);
+    top: -18rem;
     left: 0;
     opacity: 0;
     background: url("~assets/images/arcade/modal-bg.png");
@@ -182,8 +182,8 @@ export default {
     background-position: center;
     transition: all 0.3s linear;
     @include breakpoint(desktopLg) {
-      top: -18rem;
-      height: calc(100vh + 18rem);
+      top: 0;
+      height: 100vh;
     }
     &.game-started {
       opacity: 1;
@@ -204,19 +204,19 @@ export default {
       &-leave {
         color: $white;
         position: absolute;
-        top: -17rem;
-        right: -33rem;
+        padding: 1rem 2rem;
+        top: -2.81rem;
+        right: -5rem;
         font-size: 2rem;
         background: none;
         border: none;
         font-weight: 100;
         z-index: 10;
-        padding: 2.5rem 3rem;
         background: rgba($color: white, $alpha: 0.3);
         @include breakpoint(desktopLg) {
-          padding: 1rem 2rem;
-          top: -2.81rem;
-          right: -5rem;
+          padding: 2.5rem 3rem;
+          top: -17rem;
+          right: -33rem;
         }
       }
     }

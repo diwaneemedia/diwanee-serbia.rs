@@ -5,7 +5,7 @@
 
       <button class="game-modal__wrapper-leave" @click="closeModal">X</button>
 
-      <button class="c-leaderboard__btn" @click="showLeaderboard"> {{ leaderboardText }} </button>
+      <!-- <button v-show="showLeaderboardOn" class="c-leaderboard__btn" @click="returnToTheGame"> {{ leaderboardText }} </button> -->
 
       <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
 
@@ -65,12 +65,10 @@
 import axios from "axios";
 import VasilyGame from "~/components/Game/VasilyGame.vue";
 import Leaderboard from "~/components/Game/Leaderboard.vue";
-// import YourScore from "~/components/Game/YourScore.vue";
 export default {
   components: {
     VasilyGame,
     Leaderboard,
-    // YourScore
   },
   data() {
     return {
@@ -78,21 +76,14 @@ export default {
       moveLeft: false,
       moveRight: false,
       showLeaderboardOn: false,
+      leaderboardText: "Return to the game",
       inputScore: false,
-      playerScore: null,
     };
   },
   computed: {
     gameStarted() {
       return this.$store.state.gameStarted;
     },
-    leaderboardText() {
-      if(this.showLeaderboardOn) {
-        return "Return to the Game"
-      } else {
-        return "See the Leaderboard"
-      }
-    }
   },
   // Stick direction listeners
   mounted() {
@@ -120,8 +111,8 @@ export default {
       this.$store.state.gameStarted = false;
       this.$store.state.video.play();
     },
-    showLeaderboard() {
-      this.showLeaderboardOn = !this.showLeaderboardOn;
+    returnToTheGame() {
+      alert('return to the game');
     },
     setScore(score, name) {
       this.playerScore = score;
@@ -132,7 +123,7 @@ export default {
       }
       console.log(playerData);
       axios.post("https://diwanee-serbia-game.firebaseio.com/users.json", playerData)
-      .then(res => console.log(res))
+      .then(res => this.showLeaderboardOn = true)
       .catch(error => console.log(error))
     },
     pressKey() {

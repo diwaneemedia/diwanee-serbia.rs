@@ -19,7 +19,7 @@
       :class="{'game-started': gameStarted}"
       class="video video--mob"
       width="100%"
-      poster="video/game--mob.gif"
+      poster="video/poster.png"
       autoplay loop muted playsinline>
       <source src="~/assets/video/game--mob.mp4" type="video/mp4">
     </video>

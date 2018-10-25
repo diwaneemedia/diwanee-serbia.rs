@@ -105,9 +105,9 @@ export default {
     padding: 2rem 1rem;
     background: rgba(255, 255, 255, 0.3);
     @include breakpoint(desktopLg) {
-      bottom: -28.5rem;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: -15rem;
+      // left: ;
+      // transform: translateX(-50%);
     }
   }
 

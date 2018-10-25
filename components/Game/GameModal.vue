@@ -7,13 +7,13 @@
 
       <button class="c-leaderboard__btn" @click="showLeaderboard"> {{ leaderboardText }} </button>
 
-      <button class="c-leaderboard__btn c-leaderboard__btn--input" @click="setScore">input score</button>
+      <!-- <img src="~/assets/images/arcade/leaderboard-btn.png" alt="btn"> -->
 
       <VasilyGame v-show="!showLeaderboardOn" id="game" class="game" />
 
-      <Leaderboard v-show="showLeaderboardOn" class="c-leaderboard" />
+      <Leaderboard v-if="showLeaderboardOn" class="c-leaderboard" />
 
-      <div id="loading-text" :class="{'game-started': gameStarted}" class="loading-text">LOADING <span id="loading-text--num">0%</span></div>
+      <div id="loading-text" :class="{'game-started': gameStarted}" class="c-loading-text">LOADING <span id="loading-text--num">0%</span></div>
 
     </div>
 
@@ -59,21 +59,20 @@
 
     </div>
 
-    <YourScore v-show="inputScore" :score="playerScore" class="c-yourscore" />
-
   </div>
 
 </template>
 
 <script>
+import axios from "axios";
 import VasilyGame from "~/components/Game/VasilyGame.vue";
 import Leaderboard from "~/components/Game/Leaderboard.vue";
-import YourScore from "~/components/Game/YourScore.vue";
+// import YourScore from "~/components/Game/YourScore.vue";
 export default {
   components: {
     VasilyGame,
     Leaderboard,
-    YourScore
+    // YourScore
   },
   data() {
     return {
@@ -126,10 +125,17 @@ export default {
     showLeaderboard() {
       this.showLeaderboardOn = !this.showLeaderboardOn;
     },
-    setScore(score) {
-      this.inputScore = true;
+    setScore(score, name) {
       this.playerScore = score;
-      document.getElementById("input-name").disabled = false;
+      this.playerName = name;
+      const playerData = {
+        name: this.playerName,
+        score: this.playerScore
+      }
+      console.log(playerData);
+      axios.post("https://diwanee-serbia-game.firebaseio.com/users.json", playerData)
+      .then(res => console.log(res))
+      .catch(error => console.log(error))
     },
     pressKey() {
       this.leftClick = true;
@@ -216,101 +222,6 @@ export default {
         }
       }
     }
-  }
-}
-
-// loading text that shows load bar, doesnt dissappear just gets ran over by z-index of game
-.loading-text {
-  position: absolute;
-  bottom: 10px;
-  left: 15px;
-  font-family: "Geomanist";
-  z-index: 2;
-  font-size: 16px;
-  color: #db345f;
-  opacity: 0;
-  display: none;
-  &.game-started {
-    opacity: 1;
-    display: block;
-  }
-  &.loaded {
-    display: none;
-  }
-}
-
-// Arcade div and controls for it
-.arcade {
-  position: absolute;
-  top: -1rem;
-  background-image: url("~assets/images/arcade/arcade-bg.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 137.4rem;
-  height: 165.1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
-  z-index: 3;
-
-  // Controls wrapper
-  &__controls {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-
-    // Stick controls!
-    &-stick {
-      position: absolute;
-      top: 79.4rem;
-      left: 50rem;
-      width: 6.5rem;
-      -webkit-user-select: none; /* Chrome all / Safari all */
-      -moz-user-select: none; /* Firefox all */
-      -ms-user-select: none; /* IE 10+ */
-      user-select: none;
-      &.move-left {
-        left: 48.8rem;
-        transform: rotate(-20deg);
-      }
-      &.move-right {
-        left: 51.2rem;
-        transform: rotate(20deg);
-      }
-      // Position of base of stick
-      &--base {
-        top: 80rem;
-      }
-    }
-
-    // button controls
-    &-button {
-      position: absolute;
-      top: 87.5rem;
-      left: 63rem;
-      width: 6.5rem;
-
-      &-fire {
-        top: 88.1rem;
-        fill: red;
-      }
-
-      &-bg.pressed {
-        animation: pressed 0.2s;
-      }
-
-      &--neutral {
-        top: 88rem;
-        left: 70rem;
-      }
-    }
-  }
-}
-@keyframes pressed {
-  0%,100% {
-    opacity: 0.2;
   }
 }
 

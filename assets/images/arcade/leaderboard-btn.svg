@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.189 74.551">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        font-size: 16px;
+        font-family: Space-Invaders, Space Invaders;
+        letter-spacing: 0.02em;
+        opacity: 0.997;
+      }
+    </style>
+  </defs>
+  <g id="Group_1756" data-name="Group 1756" transform="translate(12182 -7778.275)">
+    <rect id="Rectangle_473" data-name="Rectangle 473" class="cls-1" width="304.189" height="74.551" transform="translate(-12182 7778.275)"/>
+    <text id="See_the_leaderboard" data-name="See the leaderboard" class="cls-2" transform="translate(-12029.905 7823.275)"><tspan x="-108.88" y="0">See the leaderboard</tspan></text>
+  </g>
+</svg>

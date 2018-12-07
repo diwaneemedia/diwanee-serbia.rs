@@ -1,116 +1,4 @@
-.navigation {
-  padding-top: 3.8rem;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 3;
-
-  @include breakpoint(desktop) {
-    margin-bottom: 5rem;
-  }
-
-  &__logo {
-    background: center / cover no-repeat url("~assets/images/diwanee-logo.svg");
-    width: 7.03rem;
-    height: 1.87rem;
-
-    @include breakpoint(desktop) {
-      width: 10.9rem;
-      height: 2.9rem;
-    }
-  }
-
-  &__links {
-    display: flex;
-    z-index: 3;
-
-    @include breakpoint(phone) {
-      background: $white;
-      position: absolute;
-      flex-direction: column;
-      width: 38rem;
-      left: -2.4rem;
-      padding-left: 2.4rem;
-      margin-top: 7.2rem;
-      -webkit-transform: translateX(-105%);
-      transform: translateX(-105%);
-    }
-
-    transition: all 200ms ease-in;
-
-    &.open {
-      transform: none;
-    }
-
-    &__item {
-      font-size: 2.6rem;
-      line-height: 1.39;
-      text-transform: uppercase;
-      -webkit-transition: 0.5s;
-      transition: 0.3s;
-      padding-bottom: 1.6rem;
-      color: $dark;
-
-      @include breakpoint(desktop) {
-        font-size: 1.4rem;
-        margin-left: 1.75rem;
-        padding-bottom: 0;
-        position: relative;
-
-        &:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 7px;
-          background-color: $pinkish-gray;
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          width: 0%;
-          height: 2px;
-          bottom: 7px;
-          left: 0;
-          opacity: 0;
-          background-color: $black;
-          -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-        }
-
-        &:hover {
-          &:after {
-            width: 100%;
-            opacity: 1;
-          }
-        }
-      }
-
-      &:hover {
-        color: $rouge;
-      }
-    }
-
-    &__social {
-      margin: 0;
-
-      @include breakpoint(desktop) {
-        display: none;
-      }
-
-      &--text {
-        margin: 9.2rem 0 1.1rem 0;
-        font-size: 1.6rem;
-        line-height: 1.94;
-
-        @include breakpoint(desktop) {
-          display: none;
-        }
-      }
-    }
-  }
-}
+.navigation {}
 
 // Hamburger animation
 
@@ -154,6 +42,7 @@
     display: none;
   }
 }
+
 .navigation__links--desk {
   @include breakpoint(phone) {
     display: none;

@@ -12,25 +12,15 @@ html {
 
 // Fonts \\
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('~assets/font/roboto/Roboto-Regular.ttf');
-  src:
-    url('~assets/font/roboto/Roboto-Regular.woff2') format('woff2'),
-    url('~assets/font/roboto/Roboto-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('~assets/font/roboto/Roboto-Bold.ttf');
-  src:
-    url('~assets/font/roboto/Roboto-Bold.woff2') format('woff2'),
-    url('~assets/font/roboto/Roboto-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Roboto';
+//   src: url('~assets/font/roboto/Roboto-Regular.ttf');
+//   src:
+//     url('~assets/font/roboto/Roboto-Regular.woff2') format('woff2'),
+//     url('~assets/font/roboto/Roboto-Regular.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: 'Roboto';
@@ -41,6 +31,17 @@ html {
   font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('~assets/font/roboto/Roboto-Bold.ttf');
+  src:
+    url('~assets/font/roboto/Roboto-Bold.woff2') format('woff2'),
+    url('~assets/font/roboto/Roboto-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Playfair';
@@ -76,4 +77,8 @@ p {
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: normal;
+}
+
+.text--bold {
+  font-weight: 600;
 }

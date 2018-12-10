@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="container">
-      <h4 class="c-section__guide about__section__guide">About us</h4>
+      <h4 class="c-section__guide">About us</h4>
 
       <h3
         class="c-section__title about__title"
@@ -25,9 +25,6 @@ export default {};
 </script>
 
 <style lang="scss">
-.about__section__guide {
-  margin-bottom: 1.4rem;
-}
 .about {
   &__title {
     margin-bottom: 4.2rem;

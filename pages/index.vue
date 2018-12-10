@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Header/>
-  </div>
+  <Header/>
 </template>
 
 <script>
@@ -11,18 +9,6 @@ export default {
     Header
   },
   mounted() {
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-          left: 0,
-          top: anchor.offsetTop
-        });
-      });
-    });
-
     window.UnityFinished = function() {
       /// Unity finished loading event
       let game = document.getElementById("game");

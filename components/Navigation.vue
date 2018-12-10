@@ -1,34 +1,33 @@
 <template>
-  <nav role="navigation">
-    <div class="container navigation">
-      <ul>
-        <li class="one">
-          <a href="#">
-            Back to where it
-            all began
-          </a>
-        </li>
-        <li class="two">
-          <a href="#">
-            Discover who we are
-            and what we do
-          </a>
-        </li>
-        <li class="three">
-          <a href="#">
-            Scroll and check
-            our brands
-          </a>
-        </li>
-        <li class="four">
-          <a href="#">
-            Want to be part
-            of the team?
-          </a>
-        </li>
-        <hr>
-      </ul>
-      <!-- <div 
+  <nav class="navigation" role="navigation">
+    <ul>
+      <li class="one">
+        <a href="#">
+          Back to where it
+          all began
+        </a>
+      </li>
+      <li class="two">
+        <a href="#">
+          Discover who we are
+          and what we do
+        </a>
+      </li>
+      <li class="three">
+        <a href="#">
+          Scroll and check
+          our brands
+        </a>
+      </li>
+      <li class="four">
+        <a href="#">
+          Want to be part
+          of the team?
+        </a>
+      </li>
+      <hr>
+    </ul>
+    <!-- <div 
         class="hamburger" 
         @click="openSidebar">
 
@@ -41,8 +40,7 @@
         <div 
           :class="{ open : sideBarOpen }" 
           class="hamburger__bar hamburger__bar3" />
-      </div>-->
-    </div>
+    </div>-->
   </nav>
 </template>
 
@@ -72,9 +70,8 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
+.navigation {
   position: relative;
-  width: 110rem;
 }
 hr {
   position: absolute;

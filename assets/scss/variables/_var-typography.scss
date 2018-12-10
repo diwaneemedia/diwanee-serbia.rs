@@ -12,65 +12,63 @@ html {
 
 // Fonts \\
 
-// @font-face {
-//   font-family: 'Poppins';
-//   src: url('~assets/font/Poppins-Regular.eot');
-//   src: url('~assets/font/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
-//     url('~assets/font/Poppins-Regular.woff2') format('woff2'),
-//     url('~assets/font/Poppins-Regular.woff') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Roboto';
+  src: url('~assets/font/roboto/Roboto-Regular.ttf');
+  src:
+    url('~assets/font/roboto/Roboto-Regular.woff2') format('woff2'),
+    url('~assets/font/roboto/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('~assets/font/roboto/Roboto-Bold.ttf');
+  src:
+    url('~assets/font/roboto/Roboto-Bold.woff2') format('woff2'),
+    url('~assets/font/roboto/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('~assets/font/roboto/Roboto-Light.ttf');
+  src:
+    url('~assets/font/roboto/Roboto-Light.woff2') format('woff2'),
+    url('~assets/font/roboto/Roboto-Light.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair';
+  src: url('~assets/font/playfair/Playfair.ttf');
+  src:
+    url('~assets/font/playfair/Playfair.woff2') format('woff2'),
+    url('~assets/font/playfair/Playfair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Space-Invaders';
-  src: url('~assets/font/space_invaders.eot');
-  src: url('~assets/font/space_invaders.ttf'),
-    url('~assets/font/space_invaders.woff') format('woff');
+  src: url('~assets/font/space_invaders/space_invaders.eot');
+  src: url('~assets/font/space_invaders/space_invaders.ttf'),
+    url('~assets/font/space_invaders/space_invaders.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: normal;
-}
-
-.line-title {
-  width: 2.2rem;
-  height: 0.4rem;
-  background-color: $rouge;
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: 1.2rem;
-
-  @include breakpoint(desktop) {
-    margin-right: 2.1rem;
-    width: 4.3rem;
-  }
 }
 
 // Subheadings such as About Diwane, Audience, Jobs...
 
-h2 {
-  font-size: 2.2rem;
-  color: $rouge;
-  font-weight: 600;
-  line-height: 1.3;
+h2 {}
 
-  @include breakpoint(desktop) {
-    font-size: 3.2rem;
-  }
-}
-
-p {
-  line-height: 1.5;
-  color: $dark;
-  font-size: 2rem;
-
-  @include breakpoint(desktop) {
-    font-size: 2.7rem;
-    line-height: 1.63;
-  }
-}
+p {}

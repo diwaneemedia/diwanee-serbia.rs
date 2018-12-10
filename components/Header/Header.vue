@@ -1,16 +1,19 @@
 <template>
   <header class="header">
-    <img src="~/assets/images/diwanee-logo.svg" alt="logo">
+    <div class="container">
+      <img class="logo" src="~/assets/images/diwanee-logo.svg" alt="logo">
 
-    <h1 class="header__title">
-      Research
-      Improvement
-      Design
-      Development
-      <span>We are building the future of digital media. We are gamers, developers, designers, thinkers.</span>
-    </h1>
+      <h1 class="header__title">Research
+        <br>Improvement
+        <br>Design
+        <br>Development
+      </h1>
+      <h2>
+        <span>We are building the future of digital media. We are gamers, developers, designers, thinkers.</span>
+      </h2>
 
-    <Navigation/>
+      <Navigation/>
+    </div>
   </header>
 </template>
 
@@ -24,5 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-// @import "~assets/scss/master.scss";
+.logo {
+  width: 9rem;
+}
 </style>

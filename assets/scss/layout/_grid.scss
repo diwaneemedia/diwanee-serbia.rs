@@ -9,6 +9,7 @@ body {
   position: relative;
   max-width: 100%;
   overflow-y: hidden;
+  line-height: 1;
   background: $white;
   color: $dark;
   transition: all 0.2s linear;
@@ -26,7 +27,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 33rem;
+  width: 34.4rem;
 
   @include breakpoint(desktop) {
     width: 114rem;

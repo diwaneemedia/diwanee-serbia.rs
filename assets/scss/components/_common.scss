@@ -1,0 +1,17 @@
+.c-section {
+
+  &__guide {
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    color: $rouge;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-family: Playfair;
+    font-size: 3rem;
+    line-height: 1.37;
+    letter-spacing: normal;
+  }
+}

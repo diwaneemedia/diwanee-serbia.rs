@@ -1,12 +1,20 @@
 <template>
-  <Header/>
+  <div>
+    <Header class="header--hp"/>
+    <About class="about--hp"/>
+    <Brands class="brands--hp"/>
+  </div>
 </template>
 
 <script>
 import Header from "~/components/Header/Header.vue";
+import About from "~/components/About/About.vue";
+import Brands from "~/components/Brands/Brands.vue";
 export default {
   components: {
-    Header
+    Header,
+    About,
+    Brands
   },
   mounted() {
     window.UnityFinished = function() {
@@ -20,3 +28,12 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.header--hp {
+  margin-bottom: 5rem;
+}
+.about--hp {
+  margin-bottom: 12.4rem;
+}
+</style>

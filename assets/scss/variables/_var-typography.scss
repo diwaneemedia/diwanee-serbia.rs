@@ -23,22 +23,22 @@ html {
 }
 
 @font-face {
-  font-family: 'Roboto-Bold';
+  font-family: 'Roboto';
   src: url('~assets/font/roboto/Roboto-Bold.ttf');
   src:
     url('~assets/font/roboto/Roboto-Bold.woff2') format('woff2'),
     url('~assets/font/roboto/Roboto-Bold.woff') format('woff');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto-Light';
+  font-family: 'Roboto';
   src: url('~assets/font/roboto/Roboto-Light.ttf');
   src:
     url('~assets/font/roboto/Roboto-Light.woff2') format('woff2'),
     url('~assets/font/roboto/Roboto-Light.woff') format('woff');
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -71,4 +71,9 @@ body {
 
 h2 {}
 
-p {}
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: normal;
+}

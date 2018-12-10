@@ -69,13 +69,19 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "~/assets/scss/master.scss";
+
 .navigation {
   position: relative;
 }
 hr {
   position: absolute;
   top: 0;
+}
+ul {
+  display: flex;
+  flex-direction: column;
 }
 ul li {
   display: inline;
@@ -92,15 +98,28 @@ a {
 }
 
 .two:hover ~ hr {
-  margin-left: 25%;
+  margin-top: 25%;
 }
 
 .three:hover ~ hr {
-  margin-left: 50%;
+  margin-top: 50%;
 }
 
 .four:hover ~ hr {
-  margin-left: 75%;
+  margin-top: 75%;
+}
+@include breakpoint(desktop) {
+  .two:hover ~ hr {
+    margin-left: 25%;
+  }
+
+  .three:hover ~ hr {
+    margin-left: 50%;
+  }
+
+  .four:hover ~ hr {
+    margin-left: 75%;
+  }
 }
 
 hr {

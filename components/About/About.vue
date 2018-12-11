@@ -32,7 +32,7 @@ export default {};
   &__paragraphs {
     margin-bottom: 1.8rem;
     span {
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 }

@@ -33,10 +33,25 @@ module.exports = {
       },
     ],
     link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }],
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      }
+    ],
+    script: [{
+        src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+        type: "text/javascript"
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js",
+        type: "text/javascript"
+      }
+    ],
     noscript: [{
       innerHTML: 'This website requires JavaScript.'
     }],
@@ -97,6 +112,5 @@ module.exports = {
         })
       }
     },
-    // vendor:['~/assets/js/UnityLoader.js'],
   }
 }

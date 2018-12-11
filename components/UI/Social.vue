@@ -1,23 +1,66 @@
 <template>
   <div class="social">
-    
     <!-- facebook -->
-    <a href="https://www.facebook.com/diwaneeserbia/" class="social__btn social__facebook" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.883 8.333">
-        <path d="M128.2 2.73v-.718a1.581 1.581 0 0 1 .015-.25.486.486 0 0 1 .068-.174.279.279 0 0 1 .172-.119 1.224 1.224 0 0 1 .316-.033h.718V0h-1.148a1.868 1.868 0 0 0-1.431.473 1.991 1.991 0 0 0-.435 1.393v.864h-.86v1.436h.86v4.167h1.725V4.166h1.148l.152-1.436z"
-              class="cls-1" transform="translate(-125.619)" />
-      </svg>
-    </a>
-    
-    <!-- twitter -->
-    <a href="https://twitter.com/diwaneeserbia" class="social__btn social__twitter" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.968 8.097">
-        <g id="twitter">
-          <path id="Path_21" d="M9.969 58.4a4.084 4.084 0 0 1-1.174.322 2.053 2.053 0 0 0 .9-1.131 4.122 4.122 0 0 1-1.3.5 2.046 2.046 0 0 0-3.485 1.86A5.805 5.805 0 0 1 .7 57.815a2.047 2.047 0 0 0 .633 2.729 2.045 2.045 0 0 1-.933-.256v.026a2.047 2.047 0 0 0 1.64 2.005 2.071 2.071 0 0 1-.539.072 1.963 1.963 0 0 1-.385-.038 2.046 2.046 0 0 0 1.91 1.42 4.1 4.1 0 0 1-2.539.874A4.347 4.347 0 0 1 0 64.618a5.78 5.78 0 0 0 3.134.92 5.778 5.778 0 0 0 5.819-5.818l-.007-.265A4.083 4.083 0 0 0 9.969 58.4z"
-                class="cls-1" data-name="Path 21" transform="translate(-.001 -57.441)" />
-        </g>
-      </svg>
-    </a>
+    <div class="social__btn social__facebook">
+      <a href="https://www.facebook.com/diwaneeserbia/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.914 12.688">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #818391;
+              }
+            </style>
+          </defs>
+          <path
+            id="facebook-footer"
+            d="M129.554 4.158V3.064a2.4 2.4 0 0 1 .023-.381.74.74 0 0 1 .1-.266.425.425 0 0 1 .262-.181 1.863 1.863 0 0 1 .481-.05h1.093V0h-1.748a2.845 2.845 0 0 0-2.179.72 3.032 3.032 0 0 0-.662 2.121v1.317h-1.309v2.186h1.309v6.344h2.626V6.344h1.75l.231-2.187z"
+            class="cls-1"
+            transform="translate(-125.619)"
+          ></path>
+        </svg>
+      </a>
+    </div>
 
+    <!-- twitter -->
+    <div class="social__btn social__twitter">
+      <a href="https://twitter.com/diwaneeserbia" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.178 12.33">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #818391;
+              }
+            </style>
+          </defs>
+          <path
+            id="twitter-footer"
+            d="M15.18 58.9a6.219 6.219 0 0 1-1.788.49 3.127 3.127 0 0 0 1.369-1.722 6.277 6.277 0 0 1-1.979.756 3.116 3.116 0 0 0-5.306 2.839 8.84 8.84 0 0 1-6.417-3.253 3.117 3.117 0 0 0 .964 4.156 3.114 3.114 0 0 1-1.41-.391v.039a3.117 3.117 0 0 0 2.5 3.053 3.154 3.154 0 0 1-.82.109 2.989 2.989 0 0 1-.586-.058 3.115 3.115 0 0 0 2.908 2.163 6.247 6.247 0 0 1-3.871 1.331A6.62 6.62 0 0 1 0 68.369a8.8 8.8 0 0 0 4.773 1.4 8.8 8.8 0 0 0 8.859-8.859l-.01-.4a6.218 6.218 0 0 0 1.558-1.61z"
+            class="cls-1"
+            transform="translate(-.002 -57.441)"
+          ></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </template>
+
+<style lang="scss">
+.social {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+
+  &__btn {
+    cursor: pointer;
+    margin: 0 0.8rem;
+  }
+
+  &__facebook {
+    width: 0.6rem;
+  }
+
+  &__twitter {
+    width: 1.6rem;
+  }
+}
+</style>

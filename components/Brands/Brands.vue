@@ -6,9 +6,6 @@
         class="c-section__title brands__title"
       >With our brands we are reaching over 10.2 million users on a monthly basis, and 25 milion page views</h3>
     </div>
-
-    <!-- <brands-slider/> -->
-    slider
     <div class="container">
       <p>
         27 million fans across platforms.

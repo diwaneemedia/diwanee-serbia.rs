@@ -1,46 +1,39 @@
 <template>
   <nav class="navigation" role="navigation">
-    <ul>
-      <li class="one">
-        <a href="#">
-          Back to where it
-          all began
-        </a>
-      </li>
-      <li class="two">
-        <a href="#">
-          Discover who we are
-          and what we do
-        </a>
-      </li>
-      <li class="three">
-        <a href="#">
-          Scroll and check
-          our brands
-        </a>
-      </li>
-      <li class="four">
-        <a href="#">
-          Want to be part
-          of the team?
-        </a>
-      </li>
-      <hr>
-    </ul>
-    <!-- <div 
-        class="hamburger" 
-        @click="openSidebar">
-
-        <div 
-          :class="{ open : sideBarOpen }" 
-          class="hamburger__bar hamburger__bar1" />
-        <div 
-          :class="{ open : sideBarOpen }" 
-          class="hamburger__bar hamburger__bar2" />
-        <div 
-          :class="{ open : sideBarOpen }" 
-          class="hamburger__bar hamburger__bar3" />
-    </div>-->
+    <div :class="{ open : sideBarOpen }" class="navigation__container">
+      <ul>
+        <li class="one">
+          <a href="#">
+            Back to where it
+            all began
+          </a>
+        </li>
+        <li class="two">
+          <a href="#">
+            Discover who we are
+            and what we do
+          </a>
+        </li>
+        <li class="three">
+          <a href="#">
+            Scroll and check
+            our brands
+          </a>
+        </li>
+        <li class="four">
+          <a href="#">
+            Want to be part
+            of the team?
+          </a>
+        </li>
+        <hr>
+      </ul>
+    </div>
+    <div class="hamburger" @click="openSidebar">
+      <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar1"/>
+      <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar2"/>
+      <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar3"/>
+    </div>
   </nav>
 </template>
 
@@ -49,23 +42,17 @@
 export default {
   components: {
     // Social
+  },
+  computed: {
+    sideBarOpen() {
+      return this.$store.state.sideBarOpen;
+    }
+  },
+  methods: {
+    openSidebar() {
+      this.$store.state.sideBarOpen = !this.$store.state.sideBarOpen;
+    }
   }
-  // computed: {
-  //   sideBarOpen() {
-  //     return this.$store.state.sideBarOpen;
-  //   }
-  // },
-  // methods: {
-  //   openSidebar() {
-  //     this.$store.state.sideBarOpen = !this.$store.state.sideBarOpen;
-  //     if (this.$store.state.sideBarOpen) {
-  //       this.$store.state.videoMob.currentTime = 0;
-  //       this.$store.state.videoMob.pause();
-  //     } else {
-  //       this.$store.state.videoMob.play();
-  //     }
-  //   }
-  // }
 };
 </script>
 
@@ -73,12 +60,27 @@ export default {
 @import "~/assets/scss/master.scss";
 
 .navigation {
-  position: relative;
-}
-hr {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
+  z-index: 1;
+  &__container {
+    position: relative;
+    transform: translate(100%, 100%);
+    transition: all 200ms ease;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    &.open {
+      transform: none;
+    }
+  }
 }
+// hr {
+//   position: absolute;
+//   top: 0;
+// }
 ul {
   display: flex;
   flex-direction: column;
@@ -97,17 +99,17 @@ a {
   color: #333;
 }
 
-.two:hover ~ hr {
-  margin-top: 25%;
-}
+// .two:hover ~ hr {
+//   margin-top: 25%;
+// }
 
-.three:hover ~ hr {
-  margin-top: 50%;
-}
+// .three:hover ~ hr {
+//   margin-top: 50%;
+// }
 
-.four:hover ~ hr {
-  margin-top: 75%;
-}
+// .four:hover ~ hr {
+//   margin-top: 75%;
+// }
 @include breakpoint(desktop) {
   .two:hover ~ hr {
     margin-left: 25%;
@@ -129,5 +131,41 @@ hr {
   background: tomato;
   border: none;
   transition: 0.3s ease-in-out;
+}
+
+// Hamburger animation
+
+.hamburger {
+  position: absolute;
+  right: 1.6rem;
+  bottom: 1.5rem;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.hamburger__bar1,
+.hamburger__bar2,
+.hamburger__bar3 {
+  width: 33px;
+  height: 3px;
+  background-color: $white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open.hamburger__bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+  background-color: $rouge;
+}
+
+.open.hamburger__bar2 {
+  opacity: 0;
+}
+
+.open.hamburger__bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+  background-color: $rouge;
 }
 </style>

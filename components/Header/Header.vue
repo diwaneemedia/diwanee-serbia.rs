@@ -3,7 +3,7 @@
     <div class="container">
       <div class="header__top">
         <img class="logo" src="~/assets/images/diwanee-logo.svg" alt="logo">
-        <nuxt-link tag="a" to="/contact">Contact</nuxt-link>
+        <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
       </div>
 
       <div class="headings">
@@ -16,9 +16,8 @@
           class="headings__subtitle"
         >We are building the future of digital media. We are gamers, developers, designers, thinkers.</h2>
       </div>
-
-      <!-- <Navigation/> -->
     </div>
+    <Navigation/>
   </header>
 </template>
 
@@ -26,7 +25,7 @@
 import Navigation from "~/components/Navigation.vue";
 export default {
   components: {
-    // Navigation
+    Navigation
   }
 };
 </script>
@@ -69,7 +68,9 @@ export default {
   }
 }
 
-.logo {
+.logo,
+.contact-link {
   width: 9rem;
+  z-index: 2;
 }
 </style>

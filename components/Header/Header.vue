@@ -6,7 +6,7 @@
         <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
       </div>
 
-      <div class="headings">
+      <div :class="{ open : sideBarOpen }" class="headings">
         <h1 class="headings__title">Research
           <br>Improvement
           <br>Design
@@ -26,6 +26,11 @@ import Navigation from "~/components/Navigation.vue";
 export default {
   components: {
     Navigation
+  },
+  computed: {
+    sideBarOpen() {
+      return this.$store.state.sideBarOpen;
+    }
   }
 };
 </script>
@@ -34,7 +39,13 @@ export default {
 @import "~/assets/scss/master.scss";
 .header {
   height: 100vh;
-  background: center / cover no-repeat url("~assets/images/header.jpg");
+  background: center / cover no-repeat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("~assets/images/header.jpg");
   position: relative;
   &__top {
     padding-top: 3rem;
@@ -54,6 +65,11 @@ export default {
   color: $white;
   font-family: "Roboto";
   width: 31.2rem;
+  transition: all 300ms ease-in;
+
+  &.open {
+    transform: translate(-100%, -100%);
+  }
   &__title {
     font-size: 4.6rem;
     font-weight: bold;
@@ -72,5 +88,11 @@ export default {
 .contact-link {
   width: 9rem;
   z-index: 2;
+}
+// had to add this cause it's gonna glitch without it,
+// and I don't like it
+.contact-link {
+  position: absolute;
+  right: 0;
 }
 </style>

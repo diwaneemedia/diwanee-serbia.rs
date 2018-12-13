@@ -16,12 +16,12 @@
       <div class="b-grid__line"></div>
       <div class="b-grid__line"></div>
     </div>-->
-    <Header class="header--hp" />
-    <About class="about--hp" />
-    <Brands class="brands--hp" />
-    <Audience class="audience--hp" />
-    <Jobs class="jobs--hp" />
-    <Footer class="footer--hp" />
+    <Header id="header--hp"/>
+    <About id="about--hp"/>
+    <Brands id="brands--hp"/>
+    <Audience id="audience--hp"/>
+    <Jobs id="jobs--hp"/>
+    <Footer id="footer--hp"/>
   </main>
 </template>
 
@@ -53,10 +53,11 @@ export default {
 
     // Init Slick
 
-    $(".your-class").slick({
+    $(".brands__slider").slick({
       infinite: true,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      arrows: false
     });
 
     // var resize_timeout;
@@ -78,30 +79,31 @@ export default {
 </script>
 
 <style lang="scss">
-.header--hp {
+#header--hp {
   margin-bottom: 5rem;
 }
-.about--hp {
+#about--hp {
   margin-bottom: 12.4rem;
 }
-.brands--hp {
+#brands--hp {
   margin-bottom: 11.4rem;
 }
-.audience--hp {
+#audience--hp {
   margin-bottom: 16.8rem;
 }
-.b-grid__holder {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 2800px;
-  transition: all 0.3s ease;
-  z-index: -1;
-}
-.b-grid__line {
-  width: 200px;
-  float: left;
-  border-right: 1px solid #eee;
-  height: 100%;
-}
+
+// .b-grid__holder {
+//   position: absolute;
+//   top: 0;
+//   height: 100%;
+//   width: 2800px;
+//   transition: all 0.3s ease;
+//   z-index: -1;
+// }
+// .b-grid__line {
+//   width: 200px;
+//   float: left;
+//   border-right: 1px solid #eee;
+//   height: 100%;
+// }
 </style>

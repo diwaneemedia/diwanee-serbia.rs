@@ -6,6 +6,10 @@
         class="c-section__title brands__title"
       >With our brands we are reaching over 10.2 million users on a monthly basis, and 25 milion page views</h3>
     </div>
+
+    <!-- slider -->
+    <Brands-Slider/>
+
     <div class="container">
       <p>
         27 million fans across platforms.
@@ -16,11 +20,19 @@
 </template>
 
 <script>
-export default {};
+import BrandsSlider from "~/components/Brands/BrandsSlider";
+export default {
+  components: {
+    BrandsSlider
+  }
+};
 </script>
 
 <style scoped>
 .brands__title {
   margin-bottom: 3.6rem;
+}
+.brands__slider {
+  margin-bottom: 3.3rem;
 }
 </style>

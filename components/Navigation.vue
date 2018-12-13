@@ -1,5 +1,6 @@
 <template>
   <nav class="navigation" role="navigation">
+    <div :class="{ active : sideBarOpen }" class="navigation--mask"></div>
     <div :class="{ open : sideBarOpen }" class="navigation__container">
       <ul>
         <li class="one">
@@ -88,21 +89,30 @@ hr {
     width: 100%;
     height: 100%;
     top: 0;
+    overflow: hidden;
+    &--mask {
+      transition: all 300ms ease-in;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      transform: rotate(45deg) translateX(150%);
+      &.active {
+        transform: rotate(45deg) scale(2);
+      }
+    }
     &__container {
       position: relative;
-      background-color: black;
-      transform: translate(100%, 100%);
       width: 100%;
-      height: 30%;
-      opacity: 0;
-      // correct measures
       padding: 13.5rem 7rem 10.2rem 2.7rem;
       color: $white;
+      opacity: 0;
+      pointer-events: none;
 
       &.open {
         transform: none;
-        height: 100%;
         opacity: 1;
+        pointer-events: initial;
       }
     }
   }
@@ -116,7 +126,7 @@ hr {
   a {
     font-size: 2.6rem;
     font-weight: 500;
-    // line-height: 1.04;
+    line-height: 1.04;
   }
   hr {
     height: 4rem;
@@ -204,7 +214,6 @@ hr {
 
 .open.hamburger__bar1 {
   transform: rotate(-45deg) translate(-6px, 6px);
-  background-color: $rouge;
 }
 
 .open.hamburger__bar2 {
@@ -213,6 +222,5 @@ hr {
 
 .open.hamburger__bar3 {
   transform: rotate(45deg) translate(-6px, -6px);
-  background-color: $rouge;
 }
 </style>

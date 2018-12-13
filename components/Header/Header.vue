@@ -5,8 +5,8 @@
         <img class="logo" src="~/assets/images/diwanee-logo.svg" alt="logo">
         <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
       </div>
-
-      <div :class="{ open : sideBarOpen }" class="headings">
+      <!-- :class="{ open : sideBarOpen }"  -->
+      <div class="headings">
         <h1 class="headings__title">Research
           <br>Improvement
           <br>Design

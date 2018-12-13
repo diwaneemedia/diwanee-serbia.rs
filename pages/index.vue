@@ -1,21 +1,13 @@
 <template>
   <main>
-    <!-- <div class="b-grid__holder">
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-      <div class="b-grid__line"></div>
-    </div>-->
+    <div class="container container--grid container--grid--main">
+      <div class="container--grid__item"></div>
+      <div class="container--grid__item"></div>
+      <div class="container--grid__item"></div>
+      <div class="container--grid__item"></div>
+      <div class="container--grid__item"></div>
+      <div class="container--grid__item last"></div>
+    </div>
     <Header id="header--hp"/>
     <About id="about--hp"/>
     <Brands id="brands--hp"/>
@@ -90,6 +82,23 @@ export default {
 }
 #audience--hp {
   margin-bottom: 16.8rem;
+}
+.container--grid--main {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container--grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  pointer-events: none;
+  &__item {
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+    &.last {
+      border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+  }
 }
 
 // .b-grid__holder {

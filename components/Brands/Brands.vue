@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .brands__title {
   margin-bottom: 3.6rem;
 }

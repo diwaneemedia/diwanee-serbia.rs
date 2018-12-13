@@ -4,32 +4,28 @@
     <div :class="{ open : sideBarOpen }" class="navigation__container">
       <ul>
         <li class="one">
-          <a href="#">
-            Back to where it
-            all began
+          <a href="#header--hp">Back to where it
+            <br>all began
           </a>
         </li>
         <li class="two">
-          <a href="#">
-            Discover who we are
-            and what we do
+          <a href="#about--hp">Discover who we are
+            <br>and what we do
           </a>
         </li>
         <li class="three">
-          <a href="#">
-            Scroll and check
-            our brands
+          <a href="#brands--hp">Scroll and check
+            <br>our brands
           </a>
         </li>
         <li class="four">
-          <a href="#">
-            Want to be part
-            of the team?
+          <a href="#jobs--hp">Want to be part
+            <br>of the team?
           </a>
         </li>
         <hr>
       </ul>
-      <Social class="social--header"/>
+      <Social class="social--navigation"/>
     </div>
     <div class="hamburger" @click="openSidebar">
       <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar1"/>
@@ -79,10 +75,16 @@ ul {
 hr {
   position: absolute;
 }
-.social--header {
+.social--navigation {
   position: absolute;
   bottom: 10%;
+  @include breakpoint(desktop) {
+    display: none;
+    // top: 0;
+  }
 }
+
+// Mobile design
 @include breakpoint(phone) {
   .navigation {
     position: absolute;
@@ -150,45 +152,57 @@ hr {
   }
 }
 
-// a {
-//   display: inline-block;
-//   width: 24%;
-//   padding: 0.75rem 0;
-//   margin: 0;
-//   text-decoration: none;
-//   color: #333;
-// }
+// Desk design
+@include breakpoint(desktop) {
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .navigation__container {
+    position: relative;
+    width: 114rem;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  ul {
+    li {
+      width: 25%;
+      padding: 3.7rem 0 1% 10rem;
+    }
+  }
+  a {
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0.75rem 0;
+    font-weight: 300;
+    margin: 0;
+    color: $white;
+  }
 
-// hr {
-//   height: 0.25rem;
-//   width: 25%;
-//   margin: 0;
-//   background: tomato;
-//   border: none;
-//   transition: 0.3s ease-in-out;
-// }
+  hr {
+    height: 2px;
+    width: 10%;
+    margin-left: 8.5%;
+    background: $white;
+    border: none;
+    top: -7px;
+    transition: 0.3s ease-in-out;
+  }
 
-// hr {
-//   position: absolute;
-//   top: 0;
-// }
+  .two:hover ~ hr {
+    margin-left: 33.5%;
+  }
 
-// @include breakpoint(desktop) {
-// hr {
-//   top: 0;
-// }
-//   .two:hover ~ hr {
-//     margin-left: 25%;
-//   }
+  .three:hover ~ hr {
+    margin-left: 58.5%;
+  }
 
-//   .three:hover ~ hr {
-//     margin-left: 50%;
-//   }
-
-//   .four:hover ~ hr {
-//     margin-left: 75%;
-//   }
-// }
+  .four:hover ~ hr {
+    margin-left: 83.5%;
+  }
+}
 
 // Hamburger animation
 

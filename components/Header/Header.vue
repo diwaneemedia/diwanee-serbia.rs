@@ -5,7 +5,6 @@
         <img class="logo" src="~/assets/images/diwanee-logo.svg" alt="logo">
         <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
       </div>
-      <!-- :class="{ open : sideBarOpen }"  -->
       <div class="headings">
         <h1 class="headings__title">Research
           <br>Improvement
@@ -39,6 +38,7 @@ export default {
 @import "~/assets/scss/master.scss";
 .header {
   height: 100vh;
+  position: relative;
   background: center / cover no-repeat;
   background-image: linear-gradient(
       to bottom,
@@ -46,7 +46,14 @@ export default {
       rgba(0, 0, 0, 0.3)
     ),
     url("~assets/images/header.jpg");
-  position: relative;
+  @include breakpoint(desktop) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("~assets/images/header--desk.jpg");
+  }
   &__top {
     padding-top: 3rem;
     display: flex;
@@ -59,28 +66,35 @@ export default {
 }
 
 .headings {
+  color: $white;
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
-  color: $white;
-  font-family: "Roboto";
   width: 31.2rem;
-  transition: all 300ms ease-in;
-
-  &.open {
-    transform: translate(-100%, -100%);
+  @include breakpoint(desktop) {
+    top: 50%;
+    left: 22.2rem;
   }
+
   &__title {
     font-size: 4.6rem;
     font-weight: bold;
     line-height: 1.07;
     margin-bottom: 1.2rem;
+    @include breakpoint(desktop) {
+      font-size: 5.6rem;
+      line-height: 1.05;
+      margin-bottom: 2.3rem;
+    }
   }
   &__subtitle {
     font-size: 1.6rem;
     font-weight: 300;
     opacity: 0.6;
     line-height: 1.5;
+    @include breakpoint(desktop) {
+      font-size: 1.6rem;
+    }
   }
 }
 

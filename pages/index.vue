@@ -13,7 +13,6 @@
     <Brands id="brands--hp"/>
     <Audience id="audience--hp"/>
     <Jobs id="jobs--hp"/>
-    <Footer id="footer--hp"/>
   </main>
 </template>
 
@@ -23,15 +22,13 @@ import About from "~/components/About/About.vue";
 import Brands from "~/components/Brands/Brands.vue";
 import Audience from "~/components/Audience/Audience.vue";
 import Jobs from "~/components/Jobs/Jobs.vue";
-import Footer from "~/components/Footer/Footer.vue";
 export default {
   components: {
     Header,
     About,
     Brands,
     Audience,
-    Jobs,
-    Footer
+    Jobs
   },
   mounted() {
     window.UnityFinished = function() {
@@ -48,8 +45,8 @@ export default {
     $(".brands__slider").slick({
       infinite: true,
       slidesToShow: 4,
-      slidesToScroll: 1
-      // arrows: true
+      slidesToScroll: 1,
+      arrows: false
     });
 
     // var resize_timeout;
@@ -71,6 +68,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~/assets/scss/master.scss";
+
 #header--hp {
   margin-bottom: 5rem;
 }
@@ -82,6 +81,12 @@ export default {
 }
 #audience--hp {
   margin-bottom: 16.8rem;
+}
+#jobs--hp {
+  margin-bottom: 10.2rem;
+  @include breakpoint(desktop) {
+    margin-bottom: 15rem;
+  }
 }
 .l-container--grid--main {
   position: absolute;

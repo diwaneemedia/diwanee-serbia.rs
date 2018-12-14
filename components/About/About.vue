@@ -32,8 +32,6 @@ export default {};
   &__title {
     margin-bottom: 4.2rem;
     @include breakpoint(desktop) {
-      grid-row: 2;
-      grid-column: 1/5;
       margin-bottom: 5.8rem;
     }
   }
@@ -46,17 +44,19 @@ export default {};
 }
 
 @include breakpoint(desktop) {
-  .item2 {
-    grid-row: 3;
-    grid-column: 2/4;
-  }
-  .item3 {
-    grid-row: 3;
-    grid-column: 4/6;
-  }
-  .item4 {
-    grid-row: 4;
-    grid-column: 4/6;
+  .about {
+    .item2 {
+      grid-row: 3;
+      grid-column: 2/4;
+    }
+    .item3 {
+      grid-row: 3;
+      grid-column: 4/6;
+    }
+    .item4 {
+      grid-row: 4;
+      grid-column: 4/6;
+    }
   }
 }
 </style>

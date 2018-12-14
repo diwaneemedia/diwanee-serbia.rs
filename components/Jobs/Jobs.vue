@@ -1,16 +1,16 @@
 <template>
   <div class="jobs">
-    <div class="container">
-      <h4 class="c-section__guide">jobs</h4>
-      <h3 class="c-section__title jobs__title">Build the future with us.</h3>
-      <p class="jobs__paragraph">
+    <div class="container l-container--grid">
+      <h4 class="c-section__guide l-padded--left">jobs</h4>
+      <h3 class="c-section__title l-padded--left jobs__title">Build the future with us.</h3>
+      <p class="jobs__paragraph item3">
         We are always looking for motivated, multi-talented and organized people to join our diverse team! So if you want to be part of our team, check out open positions and apply today at
         <span
           class="text--bold"
         >posao@diwanee-serbia.com</span>
       </p>
 
-      <div class="jobs__list">
+      <div class="jobs__list item4">
         <JobsListItem class="jobs__list__item">
           <p slot="title" class="jobs__list__item-title">Frontend Developer</p>
           <p slot="hash" class="jobs__list__item-hash">#Html #CSS #SASS #JS</p>
@@ -71,6 +71,17 @@ export default {
       &-btn {
         color: $rouge;
       }
+    }
+  }
+  // grid layout
+  @include breakpoint(desktop) {
+    .item3 {
+      grid-column: 2/5;
+      grid-row: 3;
+    }
+    .item4 {
+      grid-column: 2/-1;
+      grid-row: 4;
     }
   }
 }

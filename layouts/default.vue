@@ -1,6 +1,20 @@
 <template>
-  <nuxt />
+  <div>
+    <nuxt/>
+    <Footer/>
+  </div>
 </template>
+
+<script>
+import Footer from "~/components/Footer/Footer.vue";
+
+export default {
+  components: {
+    Footer
+  }
+};
+</script>
+
 
 <style>
 .fade-enter-active,

@@ -17,6 +17,8 @@
     letter-spacing: normal;
 
     @include breakpoint(desktop) {
+      grid-column: 1/5;
+      grid-row: 2;
       font-size: 3.6rem;
       line-height: 1.28
     }

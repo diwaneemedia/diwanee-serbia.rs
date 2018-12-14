@@ -30,7 +30,7 @@
         </p>
         <!-- right -->
         <div class="footer__nav--right">
-          <a href="#home">
+          <a href="#header--hp">
             <svg viewBox="0 0 21.057 21.057">
               <defs>
                 <style>

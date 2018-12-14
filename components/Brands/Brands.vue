@@ -33,8 +33,6 @@ export default {
 .brands__title {
   margin-bottom: 3.6rem;
   @include breakpoint(desktop) {
-    grid-column: 1/5;
-    grid-row: 2;
     margin-bottom: 4.8rem;
   }
 }

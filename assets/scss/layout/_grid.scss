@@ -16,14 +16,14 @@ body {
   margin: 0 auto;
 }
 
-// #__layout {
-//   max-width: 100%;
+#__layout {
+  max-width: 100%;
 
-//   @include breakpoint(desktop) {
-//     max-width: 1440px;
-//     margin: 0 auto;
-//   }
-// }
+  @include breakpoint(desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
 
 .container {
   margin: 0 auto;
@@ -32,6 +32,29 @@ body {
   @include breakpoint(desktop) {
     width: 124.8rem;
     max-width: 1248px;
+  }
+}
+
+.l-container--grid {
+  @include breakpoint(desktop) {
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    pointer-events: none;
+
+    &__item {
+      border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+      &.last {
+        border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+  }
+
+  .l-padded--left {
+    @include breakpoint(desktop) {
+      padding-left: 5.4rem;
+    }
   }
 }
 

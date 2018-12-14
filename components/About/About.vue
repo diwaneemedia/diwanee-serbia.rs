@@ -1,10 +1,10 @@
 <template>
   <div class="about">
-    <div class="container container--grid">
-      <h4 class="c-section__guide">About us</h4>
+    <div class="container l-container--grid">
+      <h4 class="c-section__guide l-padded--left">About us</h4>
 
       <h3
-        class="c-section__title about__title"
+        class="c-section__title l-padded--left about__title"
       >Our mission is to create, distribute and engage in original high-quality and trusted content</h3>
 
       <p
@@ -34,6 +34,7 @@ export default {};
     @include breakpoint(desktop) {
       grid-row: 2;
       grid-column: 1/5;
+      margin-bottom: 5.8rem;
     }
   }
   &__paragraphs {
@@ -43,6 +44,7 @@ export default {};
     }
   }
 }
+
 @include breakpoint(desktop) {
   .item2 {
     grid-row: 3;

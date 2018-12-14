@@ -1,12 +1,12 @@
 <template>
   <main>
-    <div class="container container--grid container--grid--main">
-      <div class="container--grid__item"></div>
-      <div class="container--grid__item"></div>
-      <div class="container--grid__item"></div>
-      <div class="container--grid__item"></div>
-      <div class="container--grid__item"></div>
-      <div class="container--grid__item last"></div>
+    <div class="container l-container--grid l-container--grid--main">
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item last"></div>
     </div>
     <Header id="header--hp"/>
     <About id="about--hp"/>
@@ -47,9 +47,9 @@ export default {
 
     $(".brands__slider").slick({
       infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false
+      slidesToShow: 4,
+      slidesToScroll: 1
+      // arrows: true
     });
 
     // var resize_timeout;
@@ -83,22 +83,11 @@ export default {
 #audience--hp {
   margin-bottom: 16.8rem;
 }
-.container--grid--main {
+.l-container--grid--main {
   position: absolute;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-}
-.container--grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  pointer-events: none;
-  &__item {
-    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
-    &.last {
-      border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
-    }
-  }
 }
 
 // .b-grid__holder {

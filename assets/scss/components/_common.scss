@@ -5,6 +5,7 @@
     line-height: 2;
     letter-spacing: 1.2px;
     color: $rouge;
+    font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
   }
@@ -14,5 +15,10 @@
     font-size: 3rem;
     line-height: 1.37;
     letter-spacing: normal;
+
+    @include breakpoint(desktop) {
+      font-size: 3.6rem;
+      line-height: 1.28
+    }
   }
 }

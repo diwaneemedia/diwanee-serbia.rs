@@ -46,7 +46,16 @@ export default {
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
-      arrows: false
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 
     // var resize_timeout;

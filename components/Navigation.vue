@@ -96,7 +96,7 @@ hr {
       transition: all 300ms ease-in;
       position: absolute;
       height: 100%;
-      width: 100%;
+      width: 100vh;
       background-color: black;
       transform: rotate(45deg) translateX(150%);
       &.active {

@@ -54,6 +54,9 @@ export default {
       ),
       url("~assets/images/header--desk.jpg");
   }
+  @media only screen and (min-height: 1023px) {
+    height: auto;
+  }
   &__top {
     padding-top: 3rem;
     display: flex;
@@ -62,18 +65,23 @@ export default {
     color: $white;
     font-size: 1.8rem;
     line-height: 1.72;
+    @include breakpoint(desktop) {
+      margin-bottom: 19.3rem;
+    }
   }
 }
 
 .headings {
   color: $white;
-  position: absolute;
-  top: 60%;
-  transform: translateY(-50%);
   width: 31.2rem;
+  @include breakpoint(phone) {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+  }
   @include breakpoint(desktop) {
-    top: 50%;
-    left: 22.2rem;
+    padding-left: 5.1rem;
+    padding-bottom: 35rem;
   }
 
   &__title {
@@ -108,5 +116,8 @@ export default {
 .contact-link {
   position: absolute;
   right: 0;
+  @include breakpoint(desktop) {
+    position: static;
+  }
 }
 </style>

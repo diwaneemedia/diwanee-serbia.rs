@@ -16,6 +16,205 @@
         >We are building the future of digital media. We are gamers, developers, designers, thinkers.</h2>
       </div>
     </div>
+
+    <!-- click to action button -->
+    <a href="/game" class="cta__game">
+      <svg class="cta__game-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.02 54">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #c41230;
+            }
+            .cls-2 {
+              fill: #fff;
+            }
+            .cls-3 {
+              fill: #3b4570;
+            }
+            .cls-4 {
+              fill: #3befbb;
+            }
+            .cls-5 {
+              fill: #f67e76;
+            }
+            .cls-6 {
+              fill: #ff3bec;
+            }
+            .cls-7 {
+              fill: #5d94ff;
+            }
+          </style>
+        </defs>
+        <g id="icon" transform="translate(-1114 -287)">
+          <circle
+            id="Ellipse_1"
+            cx="27"
+            cy="27"
+            r="27"
+            class="cls-1"
+            data-name="Ellipse 1"
+            transform="translate(1114 287)"
+          ></circle>
+          <path
+            id="Path_1179"
+            d="M6 0h30c3.313 0 6 3.038 6 6.785v14.54a1.837 1.837 0 0 1-1.714 1.939s-10.567-3.076-18.058-3.17-9.739 6.179-15.152 5.886A7.36 7.36 0 0 1 0 18.417V6.785C0 3.038 2.686 0 6 0z"
+            class="cls-2"
+            data-name="Path 1179"
+            transform="rotate(-22 1356.428 -2740.42)"
+          ></path>
+          <circle
+            id="Ellipse_2"
+            cx="4.5"
+            cy="4.5"
+            r="4.5"
+            class="cls-3"
+            data-name="Ellipse 2"
+            transform="translate(1135 311)"
+          ></circle>
+          <g id="Group_1737" data-name="Group 1737" transform="translate(-5172 2560)">
+            <circle
+              id="Ellipse_3"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-4"
+              data-name="Ellipse 3"
+              transform="translate(6327 -2260)"
+            ></circle>
+            <circle
+              id="Ellipse_4"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-5"
+              data-name="Ellipse 4"
+              transform="translate(6325 -2255)"
+            ></circle>
+            <circle
+              id="Ellipse_5"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-6"
+              data-name="Ellipse 5"
+              transform="translate(6332 -2258)"
+            ></circle>
+            <circle
+              id="Ellipse_6"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-7"
+              data-name="Ellipse 6"
+              transform="translate(6330 -2253)"
+            ></circle>
+          </g>
+        </g>
+      </svg>
+      <p class="cta__game-text">
+        <span class="bold">Hey you!</span> Play our latest
+        game and have some fun.
+      </p>
+    </a>
+    <a href="/game" class="cta__game active">
+      <svg class="cta__game-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.02 54">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #c41230;
+            }
+            .cls-2 {
+              fill: #fff;
+            }
+            .cls-3 {
+              fill: #3b4570;
+            }
+            .cls-4 {
+              fill: #3befbb;
+            }
+            .cls-5 {
+              fill: #f67e76;
+            }
+            .cls-6 {
+              fill: #ff3bec;
+            }
+            .cls-7 {
+              fill: #5d94ff;
+            }
+          </style>
+        </defs>
+        <g id="icon" transform="translate(-1114 -287)">
+          <circle
+            id="Ellipse_1"
+            cx="27"
+            cy="27"
+            r="27"
+            class="cls-1"
+            data-name="Ellipse 1"
+            transform="translate(1114 287)"
+          ></circle>
+          <path
+            id="Path_1179"
+            d="M6 0h30c3.313 0 6 3.038 6 6.785v14.54a1.837 1.837 0 0 1-1.714 1.939s-10.567-3.076-18.058-3.17-9.739 6.179-15.152 5.886A7.36 7.36 0 0 1 0 18.417V6.785C0 3.038 2.686 0 6 0z"
+            class="cls-2"
+            data-name="Path 1179"
+            transform="rotate(-22 1356.428 -2740.42)"
+          ></path>
+          <circle
+            id="Ellipse_2"
+            cx="4.5"
+            cy="4.5"
+            r="4.5"
+            class="cls-3"
+            data-name="Ellipse 2"
+            transform="translate(1135 311)"
+          ></circle>
+          <g id="Group_1737" data-name="Group 1737" transform="translate(-5172 2560)">
+            <circle
+              id="Ellipse_3"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-4"
+              data-name="Ellipse 3"
+              transform="translate(6327 -2260)"
+            ></circle>
+            <circle
+              id="Ellipse_4"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-5"
+              data-name="Ellipse 4"
+              transform="translate(6325 -2255)"
+            ></circle>
+            <circle
+              id="Ellipse_5"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-6"
+              data-name="Ellipse 5"
+              transform="translate(6332 -2258)"
+            ></circle>
+            <circle
+              id="Ellipse_6"
+              cx="2"
+              cy="2"
+              r="2"
+              class="cls-7"
+              data-name="Ellipse 6"
+              transform="translate(6330 -2253)"
+            ></circle>
+          </g>
+        </g>
+      </svg>
+      <p class="cta__game-text">
+        <span class="bold">Hey you!</span> Play our latest
+        game and have some fun.
+      </p>
+    </a>
+
     <Navigation/>
   </header>
 </template>
@@ -118,6 +317,43 @@ export default {
   right: 0;
   @include breakpoint(desktop) {
     position: static;
+  }
+}
+
+// Call to action button
+
+.cta__game {
+  display: flex;
+  background-color: $white;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  border-radius: 2%;
+  z-index: 10;
+  &-icon {
+    width: 6rem;
+    margin: 1.5rem;
+  }
+  &-text {
+    color: $steel;
+    padding-right: 2.6rem;
+    line-height: 1.22;
+    font-size: 0rem;
+    span {
+      font-weight: bold;
+      color: $dark;
+    }
+  }
+  &.active {
+    top: 60%;
+    & .cta__game-icon {
+      margin: 1.5rem 3.2rem 1.5rem 2.1rem;
+    }
+    & .cta__game-text {
+      font-size: 1.8rem;
+      width: 22rem;
+    }
   }
 }
 </style>

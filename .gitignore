@@ -16,7 +16,7 @@ npm-debug.log
 .idea
 
 # Distribution files
-.dist
+dist
 
 #Unity
 UnityHelp.txt

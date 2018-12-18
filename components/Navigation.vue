@@ -168,7 +168,7 @@ hr {
   ul {
     li {
       width: 25%;
-      padding: 3.7rem 0 1% 10rem;
+      padding: 3.7rem 0 3.7rem 10rem;
     }
   }
   a {

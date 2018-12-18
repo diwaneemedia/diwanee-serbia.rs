@@ -145,6 +145,8 @@ export default {
       margin-bottom: 2.1rem;
       @include breakpoint(desktop) {
         grid-column: 3;
+        margin: 0;
+        justify-content: flex-end;
       }
     }
 

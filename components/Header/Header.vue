@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <div class="header__top">
         <img class="logo" src="~/assets/images/diwanee-logo.svg" alt="logo">
         <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <!-- click to action button -->
+    <!-- click to action button
     <a href="/game" class="cta__game">
       <svg class="cta__game-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.02 54">
         <defs>
@@ -213,8 +213,7 @@
         <span class="bold">Hey you!</span> Play our latest
         game and have some fun.
       </p>
-    </a>
-
+    </a>-->
     <Navigation/>
   </header>
 </template>
@@ -236,7 +235,8 @@ export default {
 <style lang="scss">
 @import "~/assets/scss/master.scss";
 .header {
-  height: 100vh;
+  padding-top: 2.9rem;
+  padding-bottom: 10.9rem;
   position: relative;
   background: center / cover no-repeat;
   background-image: linear-gradient(
@@ -246,6 +246,8 @@ export default {
     ),
     url("~assets/images/header.jpg");
   @include breakpoint(desktop) {
+    padding-top: 4rem;
+    padding-bottom: 30rem;
     background-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0),
@@ -253,34 +255,30 @@ export default {
       ),
       url("~assets/images/header--desk.jpg");
   }
-  @media only screen and (min-height: 1023px) {
-    height: auto;
+  &__container.container {
+    @include breakpoint(desktop) {
+      width: 114rem;
+    }
   }
   &__top {
-    padding-top: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: $white;
     font-size: 1.8rem;
     line-height: 1.72;
+    margin-bottom: 22.3rem;
     @include breakpoint(desktop) {
-      margin-bottom: 19.3rem;
+      margin-bottom: 19.37rem;
     }
   }
 }
 
 .headings {
   color: $white;
-  width: 31.2rem;
-  @include breakpoint(phone) {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-  }
+
   @include breakpoint(desktop) {
-    padding-left: 5.1rem;
-    padding-bottom: 35rem;
+    padding-left: 12.6rem;
   }
 
   &__title {
@@ -299,6 +297,8 @@ export default {
     font-weight: 300;
     opacity: 0.6;
     line-height: 1.5;
+    width: 31.2rem;
+
     @include breakpoint(desktop) {
       font-size: 1.6rem;
     }
@@ -317,43 +317,44 @@ export default {
   right: 0;
   @include breakpoint(desktop) {
     position: static;
+    width: auto;
   }
 }
 
 // Call to action button
 
-.cta__game {
-  display: flex;
-  background-color: $white;
-  align-items: center;
-  position: fixed;
-  top: 50%;
-  right: 0;
-  border-radius: 2%;
-  z-index: 10;
-  &-icon {
-    width: 6rem;
-    margin: 1.5rem;
-  }
-  &-text {
-    color: $steel;
-    padding-right: 2.6rem;
-    line-height: 1.22;
-    font-size: 0rem;
-    span {
-      font-weight: bold;
-      color: $dark;
-    }
-  }
-  &.active {
-    top: 60%;
-    & .cta__game-icon {
-      margin: 1.5rem 3.2rem 1.5rem 2.1rem;
-    }
-    & .cta__game-text {
-      font-size: 1.8rem;
-      width: 22rem;
-    }
-  }
-}
+// .cta__game {
+//   display: flex;
+//   background-color: $white;
+//   align-items: center;
+//   position: fixed;
+//   top: 50%;
+//   right: 0;
+//   border-radius: 2%;
+//   z-index: 10;
+//   &-icon {
+//     width: 6rem;
+//     margin: 1.5rem;
+//   }
+//   &-text {
+//     color: $steel;
+//     padding-right: 2.6rem;
+//     line-height: 1.22;
+//     font-size: 0rem;
+//     span {
+//       font-weight: bold;
+//       color: $dark;
+//     }
+//   }
+//   &.active {
+//     top: 60%;
+//     & .cta__game-icon {
+//       margin: 1.5rem 3.2rem 1.5rem 2.1rem;
+//     }
+//     & .cta__game-text {
+//       font-size: 1.8rem;
+//       width: 22rem;
+//     }
+//   }
+// }
 </style>

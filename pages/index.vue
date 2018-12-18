@@ -31,15 +31,6 @@ export default {
     Jobs
   },
   mounted() {
-    window.UnityFinished = function() {
-      /// Unity finished loading event
-      let game = document.getElementById("game");
-      let loadingText = document.getElementById("loading-text");
-      loadingText.classList.add("loaded");
-      game.classList.add("loaded");
-      console.log("Unity Done");
-    };
-
     // Init Slick
 
     $(".brands__slider").slick({

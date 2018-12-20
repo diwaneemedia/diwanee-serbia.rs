@@ -1,8 +1,8 @@
 <template>
   <nav class="navigation" role="navigation">
-    <div :class="{ active : sideBarOpen }" class="navigation--mask"></div>
-    <div :class="{ open : sideBarOpen }" class="navigation__container">
-      <ul>
+    <div :class="{ active : sidebarOpen }" class="navigation--mask"></div>
+    <div :class="{ open : sidebarOpen }" class="navigation__container">
+      <ul @click="openSidebar">
         <li class="one">
           <a href="#header--hp">Back to where it
             <br>all began
@@ -28,9 +28,9 @@
       <Social class="social--navigation"/>
     </div>
     <div class="hamburger" @click="openSidebar">
-      <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar1"/>
-      <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar2"/>
-      <div :class="{ open : sideBarOpen }" class="hamburger__bar hamburger__bar3"/>
+      <div :class="{ open : sidebarOpen }" class="hamburger__bar hamburger__bar1"/>
+      <div :class="{ open : sidebarOpen }" class="hamburger__bar hamburger__bar2"/>
+      <div :class="{ open : sidebarOpen }" class="hamburger__bar hamburger__bar3"/>
     </div>
   </nav>
 </template>
@@ -41,14 +41,20 @@ export default {
   components: {
     Social
   },
-  computed: {
-    sideBarOpen() {
-      return this.$store.state.sideBarOpen;
-    }
+  data() {
+    return {
+      sidebarOpen: false
+    };
   },
   methods: {
     openSidebar() {
-      this.$store.state.sideBarOpen = !this.$store.state.sideBarOpen;
+      this.sidebarOpen = !this.sidebarOpen;
+      window.scrollTo(0, 0);
+
+      document.body.style.overflow = this.sidebarOpen ? "hidden" : "";
+      document.documentElement.style.overflow = this.sidebarOpen
+        ? "hidden"
+        : "";
     }
   }
 };
@@ -80,7 +86,6 @@ hr {
   bottom: 10%;
   @include breakpoint(desktop) {
     display: none;
-    // top: 0;
   }
 }
 

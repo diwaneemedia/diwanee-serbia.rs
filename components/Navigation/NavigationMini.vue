@@ -1,11 +1,13 @@
 <template>
   <div class="navigation--mini">
     <div class="container navigation--mini__container">
-      <nuxt-link class="logo" tag="a" to="/">
+      <a class="logo" href="/">
         <img src="~/assets/images/diwanee-logo.svg" alt="logo">
-      </nuxt-link>
-      <nuxt-link class="contact-link jobLink" tag="a" to="/work/">Jobs</nuxt-link>
-      <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
+      </a>
+      <div>
+        <nuxt-link class="contact-link jobLink" tag="a" to="/work/">Jobs</nuxt-link>
+        <a href="/" class="contact-link">Home</a>
+      </div>
     </div>
   </div>
 </template>

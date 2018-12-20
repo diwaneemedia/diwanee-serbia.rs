@@ -207,13 +207,22 @@
 .rajil {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000),
     url("~assets/images/brands/rajil-bg.png");
+  img {
+    width: 5.5rem;
+  }
 }
 .warrini {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000),
     url("~assets/images/brands/warrini-bg.png");
+  img {
+    width: 5.5rem;
+  }
 }
 .yasmina {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000),
     url("~assets/images/brands/yasmina-bg.png");
+  img {
+    width: 5.5rem;
+  }
 }
 </style>

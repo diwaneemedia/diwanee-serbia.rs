@@ -24,6 +24,16 @@ html {
 
 @font-face {
   font-family: 'Roboto';
+  src: url('~assets/font/roboto/Roboto-Regular.ttf');
+  src:
+    url('~assets/font/roboto/Roboto-Regular.woff2') format('woff2'),
+    url('~assets/font/roboto/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
   src: url('~assets/font/roboto/Roboto-Light.ttf');
   src:
     url('~assets/font/roboto/Roboto-Light.woff2') format('woff2'),

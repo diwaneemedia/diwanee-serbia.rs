@@ -130,27 +130,24 @@ export default {
     };
   },
   mounted() {
-    this.$nextTick(() => {
-      this.ctaActive = true;
-      window.onload = function() {
-        var ctaBtn = $(".cta__game");
-        // height of button
-        var ctaBtnHeight = ctaBtn.height();
-        // top position
-        var ctaBtnScrollTop = ctaBtn.offset().top;
-        var headerHeight = $(".header").outerHeight();
-
-        $(window).scroll(function() {
-          var windowScrollTop = $(window).scrollTop();
-
-          if (windowScrollTop + ctaBtnScrollTop > headerHeight - ctaBtnHeight) {
-            ctaBtn.addClass("collapsed");
-          } else {
-            ctaBtn.removeClass("collapsed");
-          }
-        });
-      };
-    });
+    // CTA Button
+    this.ctaActive = true;
+    window.onload = function() {
+      var ctaBtn = $(".cta__game");
+      // height of button
+      var ctaBtnHeight = ctaBtn.height();
+      // top position
+      var ctaBtnScrollTop = ctaBtn.offset().top;
+      var headerHeight = $(".header").outerHeight();
+      $(window).scroll(function() {
+        var windowScrollTop = $(window).scrollTop();
+        if (windowScrollTop + ctaBtnScrollTop > headerHeight - ctaBtnHeight) {
+          ctaBtn.addClass("collapsed");
+        } else {
+          ctaBtn.removeClass("collapsed");
+        }
+      });
+    };
   }
 };
 </script>
@@ -159,7 +156,7 @@ export default {
 @import "~/assets/scss/master.scss";
 .header {
   padding-top: 2.9rem;
-  padding-bottom: 10.9rem;
+  padding-bottom: 11.2rem;
   position: relative;
   background: center / cover no-repeat;
   background-image: linear-gradient(

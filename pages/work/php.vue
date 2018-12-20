@@ -3,6 +3,8 @@
     <NavigationMini class="navigation--mini"/>
     <div class="work-details">
       <div class="container">
+        <h6 class="work-details-tag">JOBS</h6>
+
         <h2 class="work-details-title">PHP Developer</h2>
 
         <h5 class="work-details-subheadings">JOB REQUIREMENTS</h5>

@@ -43,7 +43,8 @@ export default {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            autoplay: true
           }
         }
       ]
@@ -55,21 +56,6 @@ export default {
     $(".slider-arrow-right").click(function() {
       $(".brands__slider").slick("slickNext");
     });
-
-    // var resize_timeout;
-    // $(window).resize(function() {
-    //   clearTimeout(resize_timeout);
-    //   resize_timeout = setTimeout(function() {
-    //     gridRelocate();
-    //   }, 300);
-    // });
-
-    // function gridRelocate() {
-    //   var width = $(window).width(),
-    //     grid_width = 2800,
-    //     left = (width - grid_width) / 2;
-    //   $(".b-grid__holder").css({ left: left + "px" }, 400);
-    // }
   }
 };
 </script>

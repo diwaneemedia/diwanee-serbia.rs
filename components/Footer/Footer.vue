@@ -30,7 +30,7 @@
         </p>
         <!-- right -->
         <div class="footer__nav--right">
-          <a href="#header--hp">
+          <a href="#">
             <svg class="footer__nav--right-arrow" viewBox="0 0 21.057 21.057">
               <g id="arrow-white" transform="rotate(-90 10.529 10.528)">
                 <g id="arrow-forward">

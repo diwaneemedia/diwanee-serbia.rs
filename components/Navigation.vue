@@ -50,11 +50,12 @@ export default {
     openSidebar() {
       this.sidebarOpen = !this.sidebarOpen;
       window.scrollTo(0, 0);
-
-      document.body.style.overflow = this.sidebarOpen ? "hidden" : "";
-      document.documentElement.style.overflow = this.sidebarOpen
-        ? "hidden"
-        : "";
+      if (window.innerWidth < 768) {
+        document.body.style.overflow = this.sidebarOpen ? "hidden" : "";
+        document.documentElement.style.overflow = this.sidebarOpen
+          ? "hidden"
+          : "";
+      }
     }
   }
 };

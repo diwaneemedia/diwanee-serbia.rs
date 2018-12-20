@@ -24,12 +24,12 @@
         <JobsListItem class="jobs__list__item">
           <p slot="title" class="jobs__list__item-title">Web Designer</p>
           <p slot="hash" class="jobs__list__item-hash">#Zeplin #XD #Sketch #Illustrator</p>
-          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/web">VIEW MORE</nuxt-link>
+          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/web/">VIEW MORE</nuxt-link>
         </JobsListItem>
         <JobsListItem class="jobs__list__item">
           <p slot="title" class="jobs__list__item-title">Project Manager</p>
           <p slot="hash" class="jobs__list__item-hash">#Organization #Agile #Scrum #Kanban</p>
-          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/pm">VIEW MORE</nuxt-link>
+          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/pm/">VIEW MORE</nuxt-link>
         </JobsListItem>
       </div>
     </div>

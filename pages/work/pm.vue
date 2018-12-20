@@ -3,40 +3,30 @@
     <NavigationMini class="navigation--mini"/>
     <div class="work-details">
       <div class="container">
-        <h2 class="work-details-title">Frontend Developer</h2>
+        <h2 class="work-details-title">Project Manager</h2>
 
         <h5 class="work-details-subheadings">JOB REQUIREMENTS</h5>
 
         <ul class="work-details-description">
-          <li>- 3+ years of relevant working experience</li>
-          <li>- Proficient knowledge of HTML5 and CSS3</li>
+          <li>- At least 2 years of experience managing projects in a creative setting</li>
+          <li>- English language, please state the level of proficiency</li>
           <li>- Experience using CSS preprocessors (SASS, LESS)</li>
-          <li>- Good understanding of client-side scripting</li>
-          <li>- Knowledge of either Angular, React, Vue.js</li>
-          <li>- Experience using NodeJS modules for application build cycle (Webpack/Gulp)</li>
-          <li>- Experience using some of testing frameworks (Jest, Jasmine, Mocha …) is a plus</li>
-          <li>- Experience with Git</li>
-          <li>- Knowledge of server side language (Java, PHP, etc.) is a plus</li>
-          <li>- Creating responsive, fluid, and maintainable interfaces</li>
-          <li>- Knowledge of cross-device compatibility issues and solutions</li>
+          <li>- Google Analytics, Tag Manager, Webmaster Tools, etc.</li>
+          <li>- Experience in communicating with clients in various ways</li>
+          <li>- Knowledge about the development and design of online sites</li>
+          <li>- Ability to manage many different jobs and meet deadlines consistently</li>
+          <li>- Excellent verbal and written communication skills</li>
+          <li>- PHP, HTML, please state any additional knowledge in web development</li>
+          <li>- Other languages, please state the level of proficiency</li>
         </ul>
 
         <h5 class="work-details-subheadings">RESPONSIBILITIES</h5>
 
         <ul class="work-details-description">
-          <li>- Work as a part of team</li>
-          <li>- Write “clean” and well-designed code</li>
-          <li>- Contribute in all phases of the development lifecycle</li>
-          <li>- Develop and deploy new features to facilitate related procedures and tools if necessary</li>
-          <li>- Produce, update and/or maintain accurate project documentation</li>
-        </ul>
-
-        <h5 class="work-details-subheadings">FOLLOWING WILL BE CONSIDERED AS AN ASSET</h5>
-
-        <ul class="work-details-description">
-          <li>- jQuery</li>
-          <li>- Other programming languages, please state the level of proficiency</li>
-          <li>- Please state which Framework you’ve worked with</li>
+          <li>- Coordination and delivery of commercial online projects.</li>
+          <li>- Produce work plans and coordinate the efforts of the creative team, development teams and technical staff</li>
+          <li>- Ability to lead the team of developers and set priorities</li>
+          <li>- Ensure the integrated elements of digital projects come together on time and meet client’s expectations.</li>
         </ul>
 
         <h5

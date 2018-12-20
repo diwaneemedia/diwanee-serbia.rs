@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="container l-container--grid l-container--grid--main">
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item last"></div>
+    </div>
     <nuxt/>
     <Footer/>
   </div>
@@ -23,5 +31,12 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+.l-container--grid--main {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 </style>

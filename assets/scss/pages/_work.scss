@@ -1,0 +1,62 @@
+.work-details {
+  padding-top: 5.6rem;
+
+  @include breakpoint(desktop) {
+    padding-top: 8.4rem;
+  }
+
+
+  &-title {
+    margin-bottom: 4rem;
+    font-size: 4.4rem;
+    font-weight: bold;
+    line-height: 1.07;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 7.8rem;
+    }
+  }
+
+  &-subheadings {
+    font-size: 1.8rem;
+    line-height: 1.33;
+    color: $dark;
+    font-weight: 700;
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(desktop) {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.09;
+    }
+  }
+
+  &-description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 5.6rem;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 1.4rem;
+
+    @include breakpoint(desktop) {
+      padding-left: 2.3rem;
+    }
+  }
+
+  &-outro {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 10.7rem;
+
+    .playfair {
+      font-family: 'Playfair';
+    }
+
+    @include breakpoint(desktop) {
+      width: 64rem;
+      margin-bottom: 15.9rem;
+    }
+  }
+}

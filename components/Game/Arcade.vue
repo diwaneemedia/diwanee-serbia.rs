@@ -17,6 +17,6 @@
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
-  z-index: 3;
+  // z-index: 3;
 }
 </style>

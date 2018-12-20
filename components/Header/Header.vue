@@ -257,7 +257,7 @@ export default {
   top: 45%;
   right: 0;
   border-radius: 2%;
-  z-index: 10;
+  z-index: 3;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out 0.4s;
   &-icon {

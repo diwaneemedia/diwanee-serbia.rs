@@ -48,6 +48,13 @@ export default {
         }
       ]
     });
+    $(".slider-arrow-left").click(function() {
+      $(".brands__slider").slick("slickPrev");
+    });
+
+    $(".slider-arrow-right").click(function() {
+      $(".brands__slider").slick("slickNext");
+    });
 
     // var resize_timeout;
     // $(window).resize(function() {
@@ -94,19 +101,4 @@ export default {
   left: 50%;
   transform: translateX(-50%);
 }
-
-// .b-grid__holder {
-//   position: absolute;
-//   top: 0;
-//   height: 100%;
-//   width: 2800px;
-//   transition: all 0.3s ease;
-//   z-index: -1;
-// }
-// .b-grid__line {
-//   width: 200px;
-//   float: left;
-//   border-right: 1px solid #eee;
-//   height: 100%;
-// }
 </style>

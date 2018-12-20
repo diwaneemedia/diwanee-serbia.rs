@@ -12,16 +12,16 @@
         <!-- left -->
         <ul>
           <li class="footer__nav__link">
-            <a href="#header--hp">Home</a>
+            <a href="/#header--hp">Home</a>
           </li>
           <li class="footer__nav__link">
-            <a href="#about--hp">About</a>
+            <a href="/#about--hp">About</a>
           </li>
           <li class="footer__nav__link">
-            <a href="#brands--hp">Our Brands</a>
+            <a href="/#brands--hp">Our Brands</a>
           </li>
           <li class="footer__nav__link">
-            <a href="#jobs--hp">Jobs</a>
+            <a href="/#jobs--hp">Jobs</a>
           </li>
         </ul>
         <!-- center -->
@@ -91,9 +91,12 @@ export default {
     margin-bottom: 5.2rem;
     grid-row: 1;
     @include breakpoint(desktop) {
-      margin-top: -4rem;
+      margin-top: -5rem;
       margin-bottom: 0;
       border-bottom: 1px solid $dark-grey;
+      p {
+        line-height: 1.9;
+      }
     }
 
     .steel {

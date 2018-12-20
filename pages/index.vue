@@ -1,13 +1,5 @@
 <template>
   <main>
-    <div class="container l-container--grid l-container--grid--main">
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item last"></div>
-    </div>
     <Header id="header--hp"/>
     <About id="about--hp"/>
     <Brands id="brands--hp"/>

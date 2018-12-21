@@ -132,22 +132,20 @@ export default {
   mounted() {
     // CTA Button
     this.ctaActive = true;
-    window.onload = function() {
+    $(window).scroll(function() {
       var ctaBtn = $(".cta__game");
       // height of button
       var ctaBtnHeight = ctaBtn.height();
       // top position
       var ctaBtnScrollTop = ctaBtn.offset().top;
       var headerHeight = $(".header").outerHeight();
-      $(window).scroll(function() {
-        var windowScrollTop = $(window).scrollTop();
-        if (windowScrollTop + ctaBtnScrollTop > headerHeight - ctaBtnHeight) {
-          ctaBtn.addClass("collapsed");
-        } else {
-          ctaBtn.removeClass("collapsed");
-        }
-      });
-    };
+      var windowScrollTop = $(window).scrollTop();
+      if (windowScrollTop + ctaBtnScrollTop > headerHeight - ctaBtnHeight) {
+        ctaBtn.addClass("collapsed");
+      } else {
+        ctaBtn.removeClass("collapsed");
+      }
+    });
   }
 };
 </script>

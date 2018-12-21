@@ -37,6 +37,9 @@
   }
   .contact-link {
     position: static;
+    &:hover {
+      color: $white;
+    }
   }
 }
 </style>

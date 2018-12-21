@@ -1,13 +1,12 @@
 <template>
   <div>
-    <NavigationMini class="navigation--mini"/>
     <div class="work-details">
       <div class="container">
         <h6 class="work-details-tag">JOBS</h6>
 
         <h2 class="work-details-title">Project Manager</h2>
 
-        <h5 class="work-details-subheadings">JOB REQUIREMENTS</h5>
+        <h5 class="work-details-subheadings">job requirements</h5>
 
         <ul class="work-details-description">
           <li>- At least 2 years of experience managing projects in a creative setting</li>
@@ -22,7 +21,7 @@
           <li>- Other languages, please state the level of proficiency</li>
         </ul>
 
-        <h5 class="work-details-subheadings">RESPONSIBILITIES</h5>
+        <h5 class="work-details-subheadings">responsibilites</h5>
 
         <ul class="work-details-description">
           <li>- Coordination and delivery of commercial online projects.</li>
@@ -31,9 +30,7 @@
           <li>- Ensure the integrated elements of digital projects come together on time and meet client’s expectations.</li>
         </ul>
 
-        <h5
-          class="work-details-subheadings"
-        >WE LOOK FORWARD TO YOUR APPLICATION, WHICH SHOULD INCLUDE</h5>
+        <h5 class="work-details-subheadings">Following Will be considered as an asset</h5>
 
         <ul class="work-details-description">
           <li>- CV</li>
@@ -63,10 +60,7 @@
 </template>
 
 <script>
-import NavigationMini from "~/components/Navigation/NavigationMini";
 export default {
-  components: {
-    NavigationMini
-  }
+  layout: "work"
 };
 </script>

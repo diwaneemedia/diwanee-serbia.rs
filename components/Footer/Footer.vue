@@ -12,16 +12,16 @@
         <!-- left -->
         <ul>
           <li class="footer__nav__link">
-            <a href="/#header--hp">Home</a>
+            <a href="#header--hp">Home</a>
           </li>
           <li class="footer__nav__link">
-            <a href="/#about--hp">About</a>
+            <a href="#about--hp">About</a>
           </li>
           <li class="footer__nav__link">
-            <a href="/#brands--hp">Our Brands</a>
+            <a href="#brands--hp">Our Brands</a>
           </li>
           <li class="footer__nav__link">
-            <a href="/#jobs--hp">Jobs</a>
+            <a href="#jobs--hp">Jobs</a>
           </li>
         </ul>
         <!-- center -->

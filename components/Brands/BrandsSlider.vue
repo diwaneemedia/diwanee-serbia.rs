@@ -1,6 +1,7 @@
 <template>
   <div class="brands__slider__wrapper">
     <div class="brands__slider__border brands__slider__border--left"></div>
+    <div class="brands__slider__border-mask"></div>
     <div class="brands__slider">
       <a href="https://www.atyabtabkha.com/" target="_blank">
         <div class="brands__slider__item aty">
@@ -44,6 +45,7 @@
       </a>
     </div>
     <div class="brands__slider__border brands__slider__border--right"></div>
+    <div class="brands__slider__border-mask brands__slider__border-mask--right"></div>
     <svg
       class="slider-arrow slider-arrow-left"
       xmlns="http://www.w3.org/2000/svg"
@@ -105,8 +107,8 @@
     width: 142.4rem;
   }
 }
-.brands__slider__border {
-  @include breakpoint(desktop) {
+@include breakpoint(desktop) {
+  .brands__slider__border {
     position: absolute;
     background-color: white;
     width: 8.8rem;
@@ -114,18 +116,29 @@
     z-index: 2;
     top: -4rem;
   }
+  .brands__slider__border-mask {
+    position: absolute;
+    background-color: white;
+    width: 8.8rem;
+    height: 6rem;
+    z-index: 2;
+    top: -6rem;
+  }
 }
 // those bordery thingies
 .brands__slider__border--left {
-  -webkit-box-shadow: 15px 0px 23px -9px rgba(139, 139, 139, 0.41);
-  -moz-box-shadow: 15px 0px 23px -9px rgba(139, 139, 139, 0.41);
-  box-shadow: 15px 0px 23px -9px rgba(139, 139, 139, 0.41);
+  -webkit-box-shadow: 15px -5px 23px -9px rgba(139, 139, 139, 0.41);
+  -moz-box-shadow: 15px -5px 23px -9px rgba(139, 139, 139, 0.41);
+  box-shadow: 15px -5px 23px -9px rgba(139, 139, 139, 0.41);
 }
 .brands__slider__border--right {
   right: 0;
-  -webkit-box-shadow: -15px 0px 23px -9px rgba(139, 139, 139, 0.41);
-  -moz-box-shadow: -15px 0px 23px -9px rgba(139, 139, 139, 0.41);
-  box-shadow: -15px 0px 23px -9px rgba(139, 139, 139, 0.41);
+  -webkit-box-shadow: -15px -5px 23px -9px rgba(139, 139, 139, 0.41);
+  -moz-box-shadow: -15px -5px 23px -9px rgba(139, 139, 139, 0.41);
+  box-shadow: -15px -5px 23px -9px rgba(139, 139, 139, 0.41);
+}
+.brands__slider__border-mask--right {
+  right: 0;
 }
 
 .brands__slider__item {

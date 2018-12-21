@@ -119,7 +119,7 @@
 </template>
 
 <script>
-import Navigation from "~/components/Navigation.vue";
+import Navigation from "~/components/Navigation/Navigation.vue";
 export default {
   components: {
     Navigation
@@ -250,7 +250,7 @@ export default {
   align-items: center;
   position: fixed;
   top: 45%;
-  right: 0;
+  right: -2px;
   border-radius: 2%;
   z-index: 3;
   transform: translateX(100%);
@@ -284,6 +284,12 @@ export default {
     & .cta__game-text {
       transition: opacity 0.4s ease;
       opacity: 0;
+    }
+  }
+  &:hover {
+    transform: none;
+    & .cta__game-text {
+      opacity: 1;
     }
   }
 }

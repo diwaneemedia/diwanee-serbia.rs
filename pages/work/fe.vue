@@ -1,13 +1,12 @@
 <template>
   <div>
-    <NavigationMini class="navigation--mini"/>
     <div class="work-details">
       <div class="container">
         <h6 class="work-details-tag">JOBS</h6>
 
         <h2 class="work-details-title">Frontend Developer</h2>
 
-        <h5 class="work-details-subheadings">JOB REQUIREMENTS</h5>
+        <h5 class="work-details-subheadings">job requirements</h5>
 
         <ul class="work-details-description">
           <li>- 3+ years of relevant working experience</li>
@@ -23,7 +22,7 @@
           <li>- Knowledge of cross-device compatibility issues and solutions</li>
         </ul>
 
-        <h5 class="work-details-subheadings">RESPONSIBILITIES</h5>
+        <h5 class="work-details-subheadings">responsibilites</h5>
 
         <ul class="work-details-description">
           <li>- Work as a part of team</li>
@@ -33,7 +32,7 @@
           <li>- Produce, update and/or maintain accurate project documentation</li>
         </ul>
 
-        <h5 class="work-details-subheadings">FOLLOWING WILL BE CONSIDERED AS AN ASSET</h5>
+        <h5 class="work-details-subheadings">Following Will be considered as an asset</h5>
 
         <ul class="work-details-description">
           <li>- jQuery</li>
@@ -43,7 +42,7 @@
 
         <h5
           class="work-details-subheadings"
-        >WE LOOK FORWARD TO YOUR APPLICATION, WHICH SHOULD INCLUDE</h5>
+        >we look forward to your aplication, which should include</h5>
 
         <ul class="work-details-description">
           <li>- CV</li>
@@ -73,10 +72,7 @@
 </template>
 
 <script>
-import NavigationMini from "~/components/Navigation/NavigationMini";
 export default {
-  components: {
-    NavigationMini
-  }
+  layout: "work"
 };
 </script>

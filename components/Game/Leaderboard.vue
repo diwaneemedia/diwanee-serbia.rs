@@ -47,6 +47,7 @@ export default {
           users.push(user);
         }
         // console.log(users);
+        // Sort right away
         this.bestPlayers = users.sort((a, b) => b.score - a.score);
       })
       .catch(error => console.log(error));
@@ -103,10 +104,6 @@ export default {
     padding: 2rem 1rem;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
-    @include breakpoint(desktopLg) {
-      // left: ;
-      // transform: translateX(-50%);
-    }
   }
 }
 </style>

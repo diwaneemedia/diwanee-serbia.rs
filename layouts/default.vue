@@ -3,7 +3,7 @@
     <div class="container l-container--grid l-container--grid--main">
       <div class="l-container--grid__item"></div>
       <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
+      <div class="l-container--grid__item l-container--grid__item--phone"></div>
       <div class="l-container--grid__item"></div>
       <div class="l-container--grid__item"></div>
       <div class="l-container--grid__item last"></div>
@@ -38,5 +38,15 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .l-container--grid__item--phone {
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: #eeeeee;
+  }
 }
 </style>

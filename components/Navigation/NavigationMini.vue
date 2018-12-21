@@ -5,7 +5,7 @@
         <img src="~/assets/images/diwanee-logo.svg" alt="logo">
       </a>
       <div>
-        <nuxt-link class="contact-link jobLink" tag="a" to="/work/">Jobs</nuxt-link>
+        <nuxt-link class="contact-link jobLink" tag="a" to="/#jobs--hp">Jobs</nuxt-link>
         <a href="/" class="contact-link">Home</a>
       </div>
     </div>
@@ -34,6 +34,9 @@
   .jobLink {
     padding-right: 3rem;
     color: $white;
+  }
+  .contact-link {
+    position: static;
   }
 }
 </style>

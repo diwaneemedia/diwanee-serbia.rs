@@ -2,30 +2,53 @@
   <div class="navigation--mini">
     <div class="container navigation--mini__container">
       <a class="logo" href="/">
-        <img src="~/assets/images/diwanee-logo.svg" alt="logo">
+        <img src="~/assets/images/diwanee-logo--black.svg" alt="logo">
       </a>
       <div>
-        <nuxt-link class="contact-link jobLink" tag="a" to="/#jobs--hp">Jobs</nuxt-link>
         <a href="/" class="contact-link">Home</a>
+        <!-- <nuxt-link class="contact-link jobLink" tag="a" to="/#jobs--hp">Jobs</nuxt-link> -->
+
       </div>
+      <Social class='header__social'/>
     </div>
   </div>
 </template>
 
 <script>
+import Social from "~/components/UI/Social";
+export default {
+  components: {
+     Social
+  }
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/assets/scss/master.scss";
+@include breakpoint(desktop) {
+  .fb-social {
+    width:7px;
+    fill:#17191d;
+  }
+  .tw-social {
+    width: 17px;
+    fill:#17191d;
+  }
+}
+
 .navigation--mini {
-  background-color: #17191d;
-  color: $warm-grey;
+  background-color: white;
+  color: #17191d;
   font-size: 2.1rem;
   line-height: 1.72;
   padding: 2.8rem 0;
   &__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 9fr 1fr 1fr;
     align-items: center;
+    @include breakpoint(phone) {
+      grid-template-columns: 9fr 1fr ;
+    }
   }
   .logo {
     width: 9rem;
@@ -33,13 +56,32 @@
   }
   .jobLink {
     padding-right: 3rem;
+
     color: $white;
   }
   .contact-link {
     position: static;
-    &:hover {
-      color: $white;
+    font-size: 18px;
+  }
+  .social__facebook {
+    svg {
+      width:7px;
+      fill:#17191d;
+    }
+  }
+  .social__twitter {
+    svg {
+      width: 17px;
+      fill:#17191d;
+    }
+  }
+  .social {
+    justify-self: start;
+    margin: 0;
+    @include breakpoint(phone) {
+      display: none;
     }
   }
 }
+
 </style>

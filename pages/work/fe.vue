@@ -66,6 +66,7 @@
           applicants
           will be contacted.
         </p>
+        <a href='mailto:posao@diwanee-serbia.com' class="button">Apply now</a>
       </div>
     </div>
   </div>
@@ -76,3 +77,6 @@ export default {
   layout: "work"
 };
 </script>
+<style lang="scss">
+
+</style>

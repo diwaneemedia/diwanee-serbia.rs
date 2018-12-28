@@ -59,7 +59,7 @@
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: 300;
-    margin-bottom: 10.7rem;
+    margin-bottom: 5rem;
 
     .playfair {
       font-family: 'Playfair';
@@ -67,7 +67,7 @@
 
     @include breakpoint(desktop) {
       width: 64rem;
-      margin-bottom: 15.9rem;
+      margin-bottom: 5rem;
     }
   }
 }

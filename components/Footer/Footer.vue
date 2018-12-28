@@ -1,8 +1,11 @@
 <template>
   <footer class="footer">
+
     <div class="container footer__container">
+      <p class="footer__small-heading">Contact</p>
+      <p class="steel">Get in touch</p>
       <div class="footer__contact">
-        <p class="steel">Get in touch</p>
+
         <p>Resavska 23</p>
         <p>11000 Belgrade</p>
         <p>T: 381 11 - 3340 117</p>
@@ -26,7 +29,8 @@
         </ul>
         <!-- center -->
         <p class="text--center">
-          <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/contact/">Contact</nuxt-link>
+          <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/contact/">Contact</nuxt-link><br/>
+          <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/game/">Game</nuxt-link>
         </p>
         <!-- right -->
         <div class="footer__nav--right">
@@ -76,22 +80,46 @@ export default {
 .footer {
   background-color: $dark;
   color: $white;
-  padding-top: 9.1rem;
-
+  padding-top: 10.1rem;
+  .steel {
+    color: $steel;
+    font-weight: 500;
+    margin-bottom: 5.1rem;
+    font-family: "Playfair", sans-serif;
+    font-size: 36px;
+    color: white;
+    @include breakpoint(desktop) {
+      grid-column: 1;
+      margin-bottom: 5.1rem;
+      grid-row:2;
+    }
+  }
+  &__small-heading {
+    grid-row:1;
+    grid-column:1;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color:$steel;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
   &__container {
     display: grid;
     @include breakpoint(desktop) {
-      grid-template-columns: 1fr 3fr;
-      padding-top: 21.6rem;
+      grid-template-columns: 22% 78%;
+
     }
   }
 
   &__contact {
     grid-column: 1;
     margin-bottom: 5.2rem;
-    grid-row: 1;
+    grid-row: 3;
     @include breakpoint(desktop) {
-      margin-top: -5rem;
+
+      grid-row: 3;
       margin-bottom: 0;
       border-bottom: 1px solid $dark-grey;
       p {
@@ -99,11 +127,7 @@ export default {
       }
     }
 
-    .steel {
-      color: $steel;
-      font-weight: 500;
-      margin-bottom: 2.1rem;
-    }
+
   }
 
   &__nav {
@@ -113,9 +137,10 @@ export default {
     padding-bottom: 2.6rem;
     border-bottom: 1px solid $dark-grey;
     @include breakpoint(desktop) {
-      grid-row: 1;
+      grid-row: 3;
       grid-column: 2;
-      grid-template-columns: 2fr 2fr 6fr;
+      grid-template-columns: 1fr 1fr 5.8fr;
+      padding-bottom: 3.9rem;
     }
 
     &__link {
@@ -142,6 +167,7 @@ export default {
       display: grid;
       grid-column: 1/-1;
       grid-template-columns: repeat(3, 1fr);
+      padding:4.8rem 0 3.3rem;
     }
 
     &__item1 {
@@ -186,4 +212,3 @@ export default {
   }
 }
 </style>
-

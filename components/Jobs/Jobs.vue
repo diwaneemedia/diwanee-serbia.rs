@@ -12,24 +12,32 @@
 
       <div class="jobs__list item4">
         <JobsListItem class="jobs__list__item">
-          <p slot="title" class="jobs__list__item-title">Frontend Developer</p>
-          <p slot="hash" class="jobs__list__item-hash">#Html #CSS #SASS #JS</p>
-          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/fe/">VIEW MORE</nuxt-link>
+
+            <p slot="title" class="jobs__list__item-title">Frontend Developer</p>
+            <p slot="hash" class="jobs__list__item-hash">#Html #CSS #SASS #JS</p>
+
+          <!-- <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/fe/">VIEW MORE</nuxt-link> -->
         </JobsListItem>
         <JobsListItem class="jobs__list__item">
-          <p slot="title" class="jobs__list__item-title">PHP Developer</p>
-          <p slot="hash" class="jobs__list__item-hash">#PHP #MySQL #Git #Apache</p>
-          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/php/">VIEW MORE</nuxt-link>
+
+            <p slot="title" class="jobs__list__item-title">PHP Developer</p>
+            <p slot="hash" class="jobs__list__item-hash">#PHP #MySQL #Git #Apache</p>
+
+          <!-- <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/php/">VIEW MORE</nuxt-link> -->
         </JobsListItem>
         <JobsListItem class="jobs__list__item">
-          <p slot="title" class="jobs__list__item-title">Web Designer</p>
-          <p slot="hash" class="jobs__list__item-hash">#Zeplin #XD #Sketch #Illustrator</p>
-          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/web/">VIEW MORE</nuxt-link>
+
+            <p slot="title" class="jobs__list__item-title">Web Designer</p>
+            <p slot="hash" class="jobs__list__item-hash">#Zeplin #XD #Sketch #Illustrator</p>
+
+          <!-- <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/web/">VIEW MORE</nuxt-link> -->
         </JobsListItem>
         <JobsListItem class="jobs__list__item">
-          <p slot="title" class="jobs__list__item-title">Project Manager</p>
-          <p slot="hash" class="jobs__list__item-hash">#Organization #Agile #Scrum #Kanban</p>
-          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/pm/">VIEW MORE</nuxt-link>
+
+            <p slot="title" class="jobs__list__item-title">Project Manager</p>
+            <p slot="hash" class="jobs__list__item-hash">#Organization #Agile #Scrum #Kanban</p>
+
+          <!-- <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/pm/">VIEW MORE</nuxt-link> -->
         </JobsListItem>
       </div>
     </div>
@@ -57,8 +65,8 @@ export default {
   }
   &__list {
     &__item {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       margin-bottom: 3.8rem;
       &-title {
         font-size: 1.8rem;
@@ -72,8 +80,14 @@ export default {
       &-btn {
         color: $rouge;
         font-size: 1.2rem;
-        text-decoration: underline;
         pointer-events: auto;
+        background: #f8f8f8;
+        padding: 14px 23px;
+        align-self: center;
+        display: inline-block;
+      }
+      @include breakpoint(desktop) {
+        grid-template-columns: 0.67fr 1fr;
       }
     }
   }

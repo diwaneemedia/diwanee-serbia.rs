@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="container l-container--grid l-container--grid--main">
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item l-container--grid__item--phone"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item"></div>
-      <div class="l-container--grid__item last"></div>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item l-container--grid__item--phone"/>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item last"/>
     </div>
     <nuxt/>
     <Footer/>

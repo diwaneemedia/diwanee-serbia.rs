@@ -4,6 +4,7 @@
       <div class="header__top">
         <img class="logo" src="~/assets/images/diwanee-logo.svg" alt="logo">
         <nuxt-link class="contact-link" tag="a" to="/contact">Contact</nuxt-link>
+        <Social class='header__social'/>
       </div>
       <div class="headings">
         <h1 class="headings__title">Research
@@ -120,9 +121,11 @@
 
 <script>
 import Navigation from "~/components/Navigation/Navigation.vue";
+import Social from "~/components/UI/Social";
 export default {
   components: {
-    Navigation
+    Navigation,
+    Social
   },
   data() {
     return {
@@ -173,14 +176,19 @@ export default {
       ),
       url("~assets/images/header--desk.jpg");
   }
+  @include breakpoint(phone) {
+    height: 100vh;
+    overflow: hidden;
+  }
   &__container.container {
     @include breakpoint(desktop) {
       width: 114rem;
     }
   }
   &__top {
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 10fr 1fr 1fr;
     align-items: center;
     color: $white;
     font-size: 1.8rem;
@@ -188,6 +196,29 @@ export default {
     margin-bottom: 22.3rem;
     @include breakpoint(desktop) {
       margin-bottom: 19.37rem;
+    }
+  }
+  .header__social {
+    @include breakpoint(phone) {
+      display: none;
+    }
+  }
+  .social {
+    justify-self: end;
+    margin: 0;
+  }
+  .social__btn {
+    &.social__facebook {
+      svg {
+        width:7px;
+        fill:white;
+      }
+    }
+    &.social__twitter {
+      svg {
+        width: 17px;
+        fill:white;
+      }
     }
   }
 }
@@ -236,6 +267,8 @@ export default {
   @include breakpoint(desktop) {
     position: static;
     width: auto;
+    // float: right;
+    display: block;
   }
 }
 

@@ -1,14 +1,21 @@
 <template>
   <div>
     <NavigationMini/>
-    <nuxt/>
+    <div class='container'>
+      <div class="work__container">
+        <nuxt/>
+        <!-- <JobsNavSticky/> -->
+      </div>
+    </div>
+
     <!-- footer / refactor it
-    put it like this because a tag works for scroll behaviour on first page but doesn't work on work pages. 
+    put it like this because a tag works for scroll behaviour on first page but doesn't work on work pages.
     On them I use nuxt-link-->
     <footer class="footer">
       <div class="container footer__container">
+        <p class="footer__small-heading">Contact</p>
+        <p class="steel">Get in touch</p>
         <div class="footer__contact">
-          <p class="steel">Get in touch</p>
           <p>Resavska 23</p>
           <p>11000 Belgrade</p>
           <p>T: 381 11 - 3340 117</p>
@@ -45,7 +52,7 @@
                       d="M10.528 0L8.686 1.842l7.37 7.37H0v2.632h16.056l-7.37 7.37 1.842 1.842 10.529-10.528z"
                       class="cls-2"
                       data-name="Path 1178"
-                    ></path>
+                    />
                   </g>
                 </g>
               </svg>
@@ -67,13 +74,39 @@
     </footer>
   </div>
 </template>
-
 <script>
 import NavigationMini from "~/components/Navigation/NavigationMini";
+import JobsNavSticky from "~/components/JobsNavSticky/JobsNavSticky";
+import Social from "~/components/UI/Social";
+
 
 export default {
   components: {
-    NavigationMini
+    NavigationMini,
+    JobsNavSticky,
+    Social
   }
 };
 </script>
+<style lang="scss">
+@import "~assets/scss/master.scss";
+  .work__container {
+    display: grid;
+    grid-template-columns: 79% 53%;
+    @include breakpoint(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .button {
+    color: #c41230;
+    font-size: 1.2rem;
+    pointer-events: auto;
+    background: #f8f8f8;
+    padding: 14px 23px;
+    align-self: center;
+    margin-bottom: 8.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+</style>

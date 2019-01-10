@@ -17,7 +17,7 @@
         >We are building the future of digital media. We are gamers, developers, designers, thinkers.</h2>
       </div>
     </div>
-    <a href="/game" :class="{ active : ctaActive }" class="cta__game">
+    <a href="/game" :class="{ active : ctaActive }" target="_blank" class="cta__game">
       <svg class="cta__game-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.02 54">
         <defs>
           <style>
@@ -143,10 +143,12 @@ export default {
       var ctaBtnScrollTop = ctaBtn.offset().top;
       var headerHeight = $(".header").outerHeight();
       var windowScrollTop = $(window).scrollTop();
-      if (windowScrollTop + ctaBtnScrollTop > headerHeight - ctaBtnHeight) {
+      if (windowScrollTop + ctaBtnScrollTop > headerHeight) {
         ctaBtn.addClass("collapsed");
+         // document.body.scrollTop = 0;
       } else {
         ctaBtn.removeClass("collapsed");
+
       }
     });
   }

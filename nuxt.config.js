@@ -27,10 +27,24 @@ module.exports = {
         content: "/icon.png"
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: pkg.description
+          hid: 'robots',
+          name: 'robots',
+          content: "index, nofollow"
       },
+      {
+          hid: 'cannonical',
+          name: 'cannonical',
+          content: "http://www.diwanee-serbia.rs"
+      },
+      {
+          hid: 'author',
+          name: 'author',
+          content: pkg.author
+      },
+      {
+          name: 'copyright',
+          content: "Diwanee Serbia Copyright (c) 2018"
+      }
     ],
     link: [{
         rel: 'icon',

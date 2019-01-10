@@ -1,6 +1,6 @@
 <template>
   <div class="navigation--mini">
-    <div class="container navigation--mini__container">
+    <div class="container header__container navigation--mini__container">
       <a class="logo" href="/">
         <img src="~/assets/images/diwanee-logo--black.svg" alt="logo">
       </a>
@@ -37,17 +37,21 @@ export default {
 }
 
 .navigation--mini {
-  background-color: white;
+  background-color: transparent;
   color: #17191d;
   font-size: 2.1rem;
   line-height: 1.72;
   padding: 2.8rem 0;
+  padding-top: 4rem;
+  @include breakpoint(phone) {
+    padding-top:0;
+  }
   &__container {
     display: grid;
-    grid-template-columns: 9fr 1fr 1fr;
+    grid-template-columns: 10fr 1fr 1fr;
     align-items: center;
     @include breakpoint(phone) {
-      grid-template-columns: 9fr 1fr ;
+      padding-top: 2.9rem;
     }
   }
   .logo {
@@ -76,7 +80,7 @@ export default {
     }
   }
   .social {
-    justify-self: start;
+    justify-self: end;
     margin: 0;
     @include breakpoint(phone) {
       display: none;

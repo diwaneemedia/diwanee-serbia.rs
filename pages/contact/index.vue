@@ -1,9 +1,8 @@
 <template>
-  <div >
-
+  <div>
     <div class="container">
       <div class="map__container">
-        <div id='map' class="map map-responsive">
+        <div id='map3' class="map map-responsive">
         </div>
         <div class="map__info">
           <p class='map__area-code'>11000</p>
@@ -14,18 +13,20 @@
         <div id='map2' class="map map-responsive">
         </div>
         <div class="map__info">
-          <p class='map__area-code'>11000</p>
-          <h3>Belgrade</h3>
-          <p class='map__address'>Resavska 23</p>
-          <p class='map__nbr'>+381 (0) 11 3340 117</p>
+          <p class='map__area-code'>BDD 1075</p>
+          <h3>Beirut</h3>
+          <p class='map__address'>Bechara El Khoury</p>
+          <p class='map__nbr'>+961 1 - 660327</p>
         </div>
-        <div id='map3' class="map map-responsive">
+        <div id='map' class="map map-responsive">
         </div>
         <div class="map__info">
-          <p class='map__area-code'>11000</p>
-          <h3>Belgrade</h3>
-          <p class='map__address'>Resavska 23</p>
-          <p class='map__nbr'>+381 (0) 11 3340 117</p>
+
+          <p class='map__area-code'>OFFICE PARK</p>
+          <h3>Dubai</h3>
+          <p class='map__address'>Units A301-A302</p>
+          <p class='map__address'>Dubai Internet City</p>
+          <p class='map__nbr'>+971 4-434 7147</p>
         </div>
       </div>
     </div>
@@ -33,12 +34,21 @@
 </template>
 
 <script>
-import NavigationMini from "~/components/Navigation/NavigationMini";
+// import NavigationMini from "~/components/Navigation/NavigationMini";
 
 export default {
   layout:"work",
   components: {
-    NavigationMini
+    // NavigationMini
+  },
+  head(){
+    return {
+      title: "Diwanee Serbia - Contact",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'canonical', name: 'canonical', content: 'http://www.diwanee-serbia.rs/contact' }
+      ]
+    }
   },
   mounted(){
     return new Promise((resolve, reject) => {

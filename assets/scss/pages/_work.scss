@@ -48,6 +48,9 @@
 
     li {
       font-weight: 300;
+      &:before {
+        content: "-"
+      }
     }
 
     @include breakpoint(desktop) {

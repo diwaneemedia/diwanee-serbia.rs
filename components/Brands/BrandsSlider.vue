@@ -197,6 +197,9 @@
       stroke-dashoffset: 0;
     }
   }
+  @include breakpoint(phone) {
+    display: none;
+  }
 }
 .slider-arrow-left {
   transform: rotateY(180deg);

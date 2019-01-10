@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="container l-container--grid l-container--grid--main">
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item l-container--grid__item--phone"/>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item"/>
+      <div class="l-container--grid__item last"/>
+    </div>
     <NavigationMini/>
     <div class='container'>
       <div class="work__container">
@@ -76,14 +84,14 @@
 </template>
 <script>
 import NavigationMini from "~/components/Navigation/NavigationMini";
-import JobsNavSticky from "~/components/JobsNavSticky/JobsNavSticky";
+// import JobsNavSticky from "~/components/JobsNavSticky/JobsNavSticky";
 import Social from "~/components/UI/Social";
 
 
 export default {
   components: {
     NavigationMini,
-    JobsNavSticky,
+    // JobsNavSticky,
     Social
   }
 };
@@ -108,5 +116,29 @@ export default {
     text-transform: uppercase;
     display: inline-block;
   }
-
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .l-container--grid--main {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  @media screen and (max-width: 768px) {
+    .l-container--grid__item--phone {
+      display: none;
+      height: 100%;
+      width: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      background-color: #eeeeee;
+    }
+  }
 </style>

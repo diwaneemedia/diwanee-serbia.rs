@@ -55,18 +55,22 @@ export default {
 };
 </script>
 
-  
-  <style lang="scss">
+
+  <style lang="scss" scoped>
 @import "~assets/scss/master";
 
 .c-leaderboard {
   width: 100%;
-  background: rgba($color: #000000, $alpha: 0.6);
+  background: rgba($color: #000000, $alpha: 0.7);
   font-family: "Space-Invaders";
   text-align: center;
-  overflow-y: scroll;
+  // display: none;
+  // overflow-y: scroll;
   // make sure that height is always the same as height of the game!
   height: 54rem;
+  position: absolute;
+  top:0;
+  z-index: 10;
   padding: 4rem 17rem 2rem;
 
   &__title {

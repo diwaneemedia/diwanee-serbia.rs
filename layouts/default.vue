@@ -41,6 +41,7 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .l-container--grid__item--phone {
+    display: none;
     height: 100%;
     width: 1px;
     left: 50%;

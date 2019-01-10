@@ -5,10 +5,20 @@
 </template>
 
 <script>
+import axios from "axios";
 import Arcade from "~/components/Game/Arcade.vue";
 export default {
   components: {
     Arcade
+  },
+  head(){
+    return {
+      title: "Diwanee Serbia - Game",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'canonical', name: 'canonical', content: 'http://www.diwanee-serbia.rs/game' }
+      ]
+    }
   },
   layout: "game"
 };

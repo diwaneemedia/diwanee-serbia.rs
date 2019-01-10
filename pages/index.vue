@@ -15,6 +15,7 @@ import Brands from "~/components/Brands/Brands.vue";
 import Audience from "~/components/Audience/Audience.vue";
 import Jobs from "~/components/Jobs/Jobs.vue";
 export default {
+
   components: {
     Header,
     About,
@@ -22,6 +23,7 @@ export default {
     Audience,
     Jobs
   },
+
   mounted() {
     // Init Slick
 

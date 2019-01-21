@@ -41,5 +41,6 @@ export default {
 }
 .brands__info-txt {
   grid-column: 2/4;
+  -ms-grid-column: 2/4;
 }
 </style>

@@ -7,14 +7,14 @@
         <Social class='header__social'/>
       </div>
       <div class="headings">
-        <h1 class="headings__title">Research
-          <br>Improvement
-          <br>Design
-          <br>Development
+        <h1 class="headings__title">We are
+          <br>Building
+          <br>The future of
+          <br>Digital media
         </h1>
         <h2
           class="headings__subtitle"
-        >We are building the future of digital media. We are gamers, developers, designers, thinkers.</h2>
+        >We are gamers, developers, designers, thinkers.</h2>
       </div>
     </div>
     <a href="/game" :class="{ active : ctaActive }" target="_blank" class="cta__game">
@@ -135,8 +135,15 @@ export default {
   mounted() {
     // CTA Button
     this.ctaActive = true;
-    $(window).scroll(function() {
+    $(window).on("scroll", this.ctaScrollHandler);
+  },
+  beforeDestroy(){
+    $(window).off("scroll", this.ctaScrollHandler);
+  },
+  methods: {
+    ctaScrollHandler: function(event){
       var ctaBtn = $(".cta__game");
+
       // height of button
       var ctaBtnHeight = ctaBtn.height();
       // top position
@@ -148,9 +155,8 @@ export default {
          // document.body.scrollTop = 0;
       } else {
         ctaBtn.removeClass("collapsed");
-
       }
-    });
+    }
   }
 };
 </script>
@@ -189,8 +195,10 @@ export default {
   }
   &__top {
     display: grid;
+    display: -ms-grid;
     justify-content: space-between;
     grid-template-columns: 10fr 1fr 1fr;
+    -ms-grid-columns: 10fr 1fr 1fr;
     align-items: center;
     color: $white;
     font-size: 1.8rem;
@@ -207,6 +215,7 @@ export default {
   }
   .social {
     justify-self: end;
+    -ms-grid-row-align:end;
     margin: 0;
   }
   .social__btn {

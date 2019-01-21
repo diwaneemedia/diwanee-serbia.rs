@@ -37,7 +37,7 @@
 // import NavigationMini from "~/components/Navigation/NavigationMini";
 
 export default {
-  layout:"work",
+  layout:"contact",
   components: {
     // NavigationMini
   },
@@ -57,7 +57,7 @@ export default {
        resolve(this.initMap())
       }
       script.async = true
-      script.src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyCayd2cYZHZU89SVQ2VHDQYNqos6EcFWoQ&callback=initMap"
+      script.src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1UG0y5mDEy-d7BEE7s4MK5OY0Ah1BzAg&callback=initMap"
       document.head.appendChild(script)
    })
 
@@ -159,7 +159,10 @@ export default {
   .map__info {
       text-align: left;
       justify-self: center;
+      -ms-grid-row-align:center;
+      -ms-grid-column-align:center;
       align-self: center;
+
     h3 {
       font-family: "Playfair", sans-serif;
       font-size: 36px;
@@ -179,11 +182,13 @@ export default {
   }
   .map__container {
     display: grid;
+    display: -ms-grid;
     @include breakpoint(desktop) {
       padding-top: 6rem;
       padding-bottom: 4.2rem;
       padding-left: 8.1%;
       grid-template-columns: 0.84fr 1fr;
+      -ms-grid-columns: 0.84fr 1fr;
     }
     @include breakpoint(phone) {
       padding-bottom: 7.5%;

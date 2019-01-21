@@ -17,10 +17,12 @@
     "@nuxtjs/pwa": "^2.6.0",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
+    "diwanee-sticky": "https://github.com/biosonic/diwanee-sticky.git#v1.0.15",
     "nuxt": "^2.3.4",
     "vue-axios": "^2.1.4"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.5",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",

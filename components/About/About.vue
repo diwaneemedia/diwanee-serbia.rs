@@ -48,14 +48,20 @@ export default {};
     .item2 {
       grid-row: 3;
       grid-column: 2/4;
+      -ms-grid-row: 3;
+      -ms-grid-column: 2/4;
     }
     .item3 {
       grid-row: 3;
       grid-column: 4/6;
+      -ms-grid-row: 3;
+      -ms-grid-column: 4/6;
     }
     .item4 {
       grid-row: 4;
       grid-column: 4/6;
+      -ms-grid-row: 4;
+      -ms-grid-column: 4/6;
     }
   }
 }

@@ -13,7 +13,6 @@
       <div class="work__container">
         <nuxt/>
         <div class='sticky-holder'>
-          <JobsNavSticky/>
         </div>
       </div>
     </div>
@@ -86,14 +85,12 @@
 </template>
 <script>
 import NavigationMini from "~/components/Navigation/NavigationMini";
-import JobsNavSticky from "~/components/JobsNavSticky/JobsNavSticky";
 import Social from "~/components/UI/Social";
 
 
 export default {
   components: {
     NavigationMini,
-    JobsNavSticky,
     Social
   }
 };
@@ -101,13 +98,14 @@ export default {
 <style lang="scss">
 @import "~assets/scss/master.scss";
   .work__container {
-    display: grid;
     display: -ms-grid;
+    display: grid;
     grid-template-columns: 79% 53%;
     -ms-grid-columns: 79% 53%;
+
     @include breakpoint(phone) {
       grid-template-columns: 1fr;
-      -ms-grid-columns: 1fr;
+      -ms-grid-columns:1fr;
     }
   }
   .button {
@@ -121,9 +119,6 @@ export default {
     margin-bottom: 8.8rem;
     text-transform: uppercase;
     display: inline-block;
-    @include breakpoint(phone) {
-      margin-bottom: 4rem;
-    }
   }
   .fade-enter-active,
   .fade-leave-active {

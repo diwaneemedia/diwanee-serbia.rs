@@ -47,7 +47,7 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    background-color: #eeeeee;
+    background-color: #eee;
   }
 }
 </style>

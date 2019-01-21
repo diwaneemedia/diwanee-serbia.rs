@@ -72,5 +72,8 @@
       width: 64rem;
       margin-bottom: 5rem;
     }
+    @include breakpoint(phone) {
+      margin-bottom: 3rem;
+    }
   }
 }

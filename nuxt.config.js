@@ -30,9 +30,18 @@ module.exports = {
         content: "Diwanee Serbia"
       },
       {
-        hid: 'og:image',
         property: 'og:image',
-        content: "/og/hp-banner-twitt-fb.png"
+        content: "https://diwaneemedia.github.io/og/hp-banner-twitt-fb.png"
+      },
+      {
+        hid: "og:image:width",
+        property:"og:image:width",
+        content:"606"
+      },
+      {
+        hid: "og:image:height",
+        property:"og:image:height",
+        content:"322"
       },
       {
         hid: 'og:site_name',
@@ -49,16 +58,7 @@ module.exports = {
         property: 'og:type',
         content: "website"
       },
-      {
-        hid: "og:image:width",
-        property:"og:image:width",
-        content:"606"
-      },
-      {
-        hid: "og:image:height",
-        property:"og:image:height",
-        content:"322"
-      },
+
       {
         hid: "og:url",
         property:"og:url",
@@ -80,9 +80,8 @@ module.exports = {
         content:"Digital Media Company - We are building the future of digital media. We are gamers, developers, designers, thinkers."
       },
       {
-        hid: "twitter:image",
         property:"twitter:image",
-        content:"/og/hp-banner-twitt-fb.png"
+        content: "https://diwaneemedia.github.io/og/hp-banner-twitt-fb.png"
       },
       {
         hid: "twitter:site",

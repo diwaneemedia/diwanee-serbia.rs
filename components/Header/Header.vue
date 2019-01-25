@@ -194,16 +194,24 @@ export default {
     }
   }
   &__top {
-    display: grid;
     display: -ms-grid;
-    justify-content: space-between;
-    grid-template-columns: 10fr 1fr 1fr;
-    -ms-grid-columns: 10fr 1fr 1fr;
+    display: grid;
+    // justify-content: space-between;
+    -ms-grid-columns: 80% 10% 10%;
+    grid-template-columns: 80% 10% 10%;
+    grid-template-areas:"a b c";
+    
     align-items: center;
     color: $white;
     font-size: 1.8rem;
     line-height: 1.72;
     margin-bottom: 22.3rem;
+    .logo {
+      grid-area:a;
+    }
+    .contact-link {
+      grid-area: b;
+    }
     @include breakpoint(desktop) {
       margin-bottom: 19.37rem;
     }

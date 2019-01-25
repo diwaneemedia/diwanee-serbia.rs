@@ -92,7 +92,18 @@ export default {
   components: {
     NavigationMini,
     Social
-  }
+  },
+  head(){
+    return {
+      title: "Diwanee Serbia - Contact",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'canonical', name: 'canonical', content: 'http://www.diwanee-serbia.rs/contact' },
+        { hid: 'og:url', name: 'og:url', content: 'http://www.diwanee-serbia.rs/contact' },
+        { hid: 'twitter:url', name: 'twitter:url', content: 'http://www.diwanee-serbia.rs/contact' },
+      ]
+    }
+  },
 };
 </script>
 <style lang="scss">
@@ -100,12 +111,12 @@ export default {
   .work__container {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 79% 53%;
     -ms-grid-columns: 79% 53%;
+    grid-template-columns: 79% 53%;
 
     @include breakpoint(phone) {
-      grid-template-columns: 1fr;
       -ms-grid-columns:1fr;
+      grid-template-columns: 1fr;
     }
   }
   .button {
@@ -114,8 +125,8 @@ export default {
     pointer-events: auto;
     background: #f8f8f8;
     padding: 14px 23px;
-    align-self: center;
     -ms-grid-column-align:center;
+    align-self: center;
     margin-bottom: 8.8rem;
     text-transform: uppercase;
     display: inline-block;

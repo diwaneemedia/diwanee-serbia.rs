@@ -89,18 +89,18 @@ export default {
     font-size: 36px;
     color: white;
     @include breakpoint(desktop) {
-      grid-column: 1;
-      grid-row:2;
       -ms-grid-column: 1;
       -ms-grid-row:2;
+      grid-column: 1;
+      grid-row:2;
       margin-bottom: 5.1rem;
     }
   }
   &__small-heading {
-    grid-row:1;
-    grid-column:1;
     -ms-grid-row:1;
     -ms-grid-column:1;
+    grid-row:1;
+    grid-column:1;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color:$steel;
@@ -110,25 +110,25 @@ export default {
     text-transform: uppercase;
   }
   &__container {
-    display: grid;
     display: -ms-grid;
+    display: grid;
     @include breakpoint(desktop) {
-      grid-template-columns: 22% 78%;
       -ms-grid-columns: 22% 78%;
+      grid-template-columns: 22% 78%;
 
     }
   }
 
   &__contact {
-    grid-column: 1;
     -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    grid-column: 1;
     margin-bottom: 5.2rem;
     grid-row: 3;
-    -ms-grid-row: 3;
     @include breakpoint(desktop) {
 
-      grid-row: 3;
       -ms-grid-row: 3;
+      grid-row: 3;
       margin-bottom: 0;
       border-bottom: 1px solid $dark-grey;
       p {
@@ -140,21 +140,21 @@ export default {
   }
 
   &__nav {
-    grid-column: 1/-1;
-    grid-template-columns: repeat(3, 1fr);
     -ms-grid-column: 1/-1;
     -ms-grid-columns: repeat(3, 1fr);
-    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(3, 1fr);
     display: -ms-grid;
+    display: grid;
     padding-bottom: 2.6rem;
     border-bottom: 1px solid $dark-grey;
     @include breakpoint(desktop) {
-      grid-row: 3;
-      grid-column: 2;
-      grid-template-columns: 1fr 1fr 5.8fr;
       -ms-grid-row: 3;
       -ms-grid-column: 2;
       -ms-grid-columns: 1fr 1fr 5.8fr;
+      grid-row: 3;
+      grid-column: 2;
+      grid-template-columns: 1fr 1fr 5.8fr;
       padding-bottom: 3.9rem;
     }
 
@@ -179,20 +179,20 @@ export default {
     color: $steel;
     padding: 2.8rem 0 3.3rem;
     @include breakpoint(desktop) {
-      display: grid;
       display: -ms-grid;
-      grid-column: 1/-1;
-      grid-template-columns: repeat(3, 1fr);
+      display: grid;
       -ms-grid-column: 1/-1;
       -ms-grid-columns: repeat(3, 1fr);
+      grid-column: 1/-1;
+      grid-template-columns: repeat(3, 1fr);
       padding:4.8rem 0 3.3rem;
     }
 
     &__item1 {
       margin-bottom: 2.1rem;
       @include breakpoint(desktop) {
-        grid-column: 3;
         -ms-grid-column: 3;
+        grid-column: 3;
         margin: 0;
         justify-content: flex-end;
       }
@@ -204,10 +204,10 @@ export default {
       display: block;
       margin-bottom: 2.2rem;
       @include breakpoint(desktop) {
-        grid-column: 1;
-        grid-row: 1;
         -ms-grid-column: 1;
         -ms-grid-row: 1;
+        grid-column: 1;
+        grid-row: 1;
         text-align: left;
       }
     }
@@ -218,10 +218,10 @@ export default {
       display: block;
       margin: 0 auto 2.5rem;
       @include breakpoint(desktop) {
-        grid-column: 2;
-        grid-row: 1;
         -ms-grid-column: 2;
         -ms-grid-row: 1;
+        grid-column: 2;
+        grid-row: 1;
       }
     }
 
@@ -229,10 +229,10 @@ export default {
       color: #46474a;
       font-size: 1.2rem;
       line-height: 1.25;
-      grid-column: 2;
-      grid-row: 2;
       -ms-grid-column: 2;
       -ms-grid-row: 2;
+      grid-column: 2;
+      grid-row: 2;
     }
   }
 }

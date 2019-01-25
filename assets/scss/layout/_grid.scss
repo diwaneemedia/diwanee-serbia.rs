@@ -36,10 +36,10 @@ body {
 
   @include breakpoint(desktop) {
 
-    display: grid;
     display: -ms-grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: grid;
     -ms-grid-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 
 
     &__item {

@@ -30,8 +30,9 @@ module.exports = {
         content: "Diwanee Serbia"
       },
       {
+        hid: "og:image",
         property: 'og:image',
-        content: "https://diwaneemedia.github.io/og/hp-banner-twitt-fb.png"
+        content: "http://www.diwanee-serbia.rs/og/hp-banner-twitt-fb.png"
       },
       {
         hid: "og:image:width",
@@ -80,8 +81,9 @@ module.exports = {
         content:"Digital Media Company - We are building the future of digital media. We are gamers, developers, designers, thinkers."
       },
       {
+        hid:"twitter:image",
         property:"twitter:image",
-        content: "https://diwaneemedia.github.io/og/hp-banner-twitt-fb.png"
+        content: "http://www.diwanee-serbia.rs/og/hp-banner-twitt-fb.png"
       },
       {
         hid: "twitter:site",

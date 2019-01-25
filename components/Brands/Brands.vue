@@ -40,7 +40,7 @@ export default {
   margin-bottom: 3.3rem;
 }
 .brands__info-txt {
-  grid-column: 2/4;
   -ms-grid-column: 2/4;
+  grid-column: 2/4;
 }
 </style>

@@ -47,10 +47,10 @@ export default {
     padding-top:0;
   }
   &__container {
-    display: grid;
     display: -ms-grid;
-    grid-template-columns: 10fr 1fr 1fr;
+    display: grid;
     -ms-grid-columns: 10fr 1fr 1fr;
+    grid-template-columns: 10fr 1fr 1fr;
     align-items: center;
     @include breakpoint(phone) {
       padding-top: 2.9rem;
@@ -82,8 +82,8 @@ export default {
     }
   }
   .social {
+    -ms-grid-row-align:end;
     justify-self: end;
-  	-ms-grid-row-align:end;
     margin: 0;
     @include breakpoint(phone) {
       display: none;

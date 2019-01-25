@@ -157,10 +157,10 @@ export default {
     font-weight: 400;
   }
   .map__info {
-      text-align: left;
-      justify-self: center;
       -ms-grid-row-align:center;
       -ms-grid-column-align:center;
+      text-align: left;
+      justify-self: center;
       align-self: center;
 
     h3 {
@@ -181,14 +181,14 @@ export default {
     color:#17191d;
   }
   .map__container {
-    display: grid;
     display: -ms-grid;
+    display: grid;
     @include breakpoint(desktop) {
       padding-top: 6rem;
       padding-bottom: 4.2rem;
       padding-left: 8.1%;
-      grid-template-columns: 0.84fr 1fr;
       -ms-grid-columns: 0.84fr 1fr;
+      grid-template-columns: 0.84fr 1fr;
     }
     @include breakpoint(phone) {
       padding-bottom: 7.5%;

@@ -81,36 +81,35 @@ export default {
 // Desktop Layout
 @include breakpoint(desktop) {
   .audience__card-wrapper {
-    grid-row: 3;
-    grid-column: 2/-1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    display: -ms-grid;
     -ms-grid-row: 3;
     -ms-grid-column: 2/-1;
-    -ms-display: grid;
     -ms-grid-columns: repeat(5, 1fr);
+    grid-row: 3;
+    grid-column: 2/-1;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
   .audience {
     .item1,
     .item3 {
-      grid-column: 1;
-      grid-row: 1;
       -ms-grid-column: 1;
       -ms-grid-row: 1;
+      grid-column: 1;
+      grid-row: 1;
     }
     .item2,
     .item4 {
-      grid-row: 2;
       -ms-grid-row: 2;
+      grid-row: 2;
     }
     .item3 {
-      grid-column: 3;
       -ms-grid-column: 3;
+      grid-column: 3;
     }
     .item4 {
-      grid-column: 3/5;
       -ms-grid-column: 3/5;
+      grid-column: 3/5;
       width: 30rem;
     }
   }

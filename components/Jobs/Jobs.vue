@@ -65,10 +65,10 @@ export default {
   }
   &__list {
     &__item {
-      display: grid;
       display: -ms-grid;
-      grid-template-columns: 1fr;
+      display: grid;
       -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
       margin-bottom: 3.8rem;
       &-title {
         font-size: 1.8rem;
@@ -85,29 +85,29 @@ export default {
         pointer-events: auto;
         background: #f8f8f8;
         padding: 14px 23px;
-        align-self: center;
         -ms-grid-column-align:center;
+        align-self: center;
         display: inline-block;
       }
       @include breakpoint(desktop) {
-        grid-template-columns: 0.67fr 1fr;
         -ms-grid-columns: 0.67fr 1fr;
+        grid-template-columns: 0.67fr 1fr;
       }
     }
   }
   // grid layout
   @include breakpoint(desktop) {
     .item3 {
-      grid-column: 2/5;
-      grid-row: 3;
       -ms-grid-column: 2/5;
       -ms-grid-row: 3;
+      grid-column: 2/5;
+      grid-row: 3;
     }
     .item4 {
-      grid-column: 2/-1;
-      grid-row: 4;
       -ms-grid-column: 2/-1;
       -ms-grid-row: 4;
+      grid-column: 2/-1;
+      grid-row: 4;
     }
   }
 }

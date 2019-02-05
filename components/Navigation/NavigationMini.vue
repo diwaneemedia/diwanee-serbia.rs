@@ -25,16 +25,28 @@ export default {
 
 <style lang="scss" >
 @import "~/assets/scss/master.scss";
-@include breakpoint(desktop) {
+
   .fb-social {
-    width:7px;
-    fill:#17191d;
+    @include breakpoint(desktop) {
+      width:7px;
+      fill:#17191d;
+    }
+    @include breakpoint(landscape) {
+      width:3px;
+      fill:#17191d;
+    }
   }
   .tw-social {
-    width: 17px;
-    fill:#17191d;
+   @include breakpoint(desktop) {
+      width: 17px;
+      fill:#17191d;
+    }
+   @include breakpoint(landscape) {
+      width: 10px;
+      fill:#17191d;
+    }
   }
-}
+
 
 .navigation--mini {
   background-color: transparent;

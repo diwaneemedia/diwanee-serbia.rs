@@ -3,13 +3,14 @@
     @if $break == phone {
         @media (max-width: 767px)                           { @content; }
     }
-  
+    @if $break == landscape {
+        @media (max-device-width: 1024px) and (orientation: landscape)                          { @content; }
+    }
     @else if $break == desktop {
-        @media (min-width: 768px)                          { @content; }
+        @media (min-width: 768px), (max-device-width: 1024px) and (orientation: landscape)                         { @content; }
     }
 
     @else if $break == desktopLg {
         @media (min-width: 1441px)                          { @content; }
     }
   }
-  

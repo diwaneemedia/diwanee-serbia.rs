@@ -88,11 +88,15 @@ export default {
         -ms-grid-column-align:center;
         align-self: center;
         display: inline-block;
+        @include breakpoint(landscape) {
+          padding: 8px 15px;
+        }
       }
       @include breakpoint(desktop) {
         -ms-grid-columns: 0.67fr 1fr;
         grid-template-columns: 0.67fr 1fr;
       }
+
     }
   }
   // grid layout

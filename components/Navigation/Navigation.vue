@@ -243,4 +243,9 @@ hr {
 .open.hamburger__bar3 {
   transform: rotate(45deg) translate(-6px, -6px);
 }
+.navigation--mask {
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
 </style>

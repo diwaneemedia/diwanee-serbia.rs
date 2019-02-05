@@ -28,7 +28,7 @@
           </li>
         </ul>
         <!-- center -->
-        <p class="text--center">
+        <p >
           <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/contact/">Contact</nuxt-link><br/>
           <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/game/">Game</nuxt-link>
         </p>
@@ -86,7 +86,7 @@ export default {
     font-weight: 500;
     margin-bottom: 5.1rem;
     font-family: "Playfair", sans-serif;
-    font-size: 36px;
+    font-size: 3.6rem;
     color: white;
     @include breakpoint(desktop) {
       -ms-grid-column: 1;
@@ -151,10 +151,10 @@ export default {
     @include breakpoint(desktop) {
       -ms-grid-row: 3;
       -ms-grid-column: 2;
-      -ms-grid-columns: 1fr 1fr 5.8fr;
+      -ms-grid-columns: 1.3fr 1fr 5.8fr;
       grid-row: 3;
       grid-column: 2;
-      grid-template-columns: 1fr 1fr 5.8fr;
+      grid-template-columns: 1.3fr 1fr 5.8fr;
       padding-bottom: 3.9rem;
     }
 

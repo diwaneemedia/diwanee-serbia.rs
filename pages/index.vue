@@ -23,33 +23,44 @@ export default {
     Audience,
     Jobs
   },
+  methods: {
+    initSlick(){
+      if (window.innerWidth > 768 || window.innerWidth < 768 && window.innerWidth > window.innerHeight){
+        $(".brands__slider").slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: false
+        });
+      } else {
+        $(".brands__slider").slick({
+          arrows: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true
+        });
+      }
+      $(".slider-arrow-left").click(function() {
+        $(".brands__slider").slick("slickPrev");
+      });
 
+      $(".slider-arrow-right").click(function() {
+        $(".brands__slider").slick("slickNext");
+      });
+    }
+  },
   mounted() {
+    this.initSlick();
     // Init Slick
-
-    $(".brands__slider").slick({
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true
-          }
-        }
-      ]
-    });
-    $(".slider-arrow-left").click(function() {
-      $(".brands__slider").slick("slickPrev");
+    let _this = this;
+    window.addEventListener("orientationchange", function() {
+      $(".brands__slider").slick("unslick");
+      setTimeout(function(){
+        _this.initSlick();
+      }, 100)
     });
 
-    $(".slider-arrow-right").click(function() {
-      $(".brands__slider").slick("slickNext");
-    });
   }
 };
 </script>

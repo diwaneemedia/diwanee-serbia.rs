@@ -36,7 +36,7 @@ import Leaderboard from "~/components/Game/Leaderboard.vue";
 import axios from "axios";
 export default {
   head: {
-    script: [{ src: "Build/UnityLoader.js" }]
+    script: [{ src: "/Build/UnityLoader.js" }]
   },
   data(){
     return {
@@ -92,7 +92,7 @@ export default {
     },
     UnityLoaderReady() {
       window.gameInstance = UnityLoader.instantiate("gameContainer", [
-        "Build/pong2018ver7.json"
+        '/Build/pong2018ver7.json'
       ]);
     }
   }

@@ -41,22 +41,22 @@ export default {
            id: "php",
            title: "PHP Developer",
            tags:"#PHP #MySql"
-         },
-         {
-           id: "fe",
-           title: "FrontEnd Developer",
-           tags:"#PHP #MySql"
-         },
-         {
-           id: "web",
-           title: "Web Designer",
-           tags:"#PHP #MySql"
-         },
-         {
-           id: "pm",
-           title: "Project Manager",
-           tags:"#PHP #MySql"
          }
+         // {
+         //   id: "fe",
+         //   title: "FrontEnd Developer",
+         //   tags:"#PHP #MySql"
+         // },
+         // {
+         //   id: "web",
+         //   title: "Web Designer",
+         //   tags:"#PHP #MySql"
+         // },
+         // {
+         //   id: "pm",
+         //   title: "Project Manager",
+         //   tags:"#PHP #MySql"
+         // }
        ],
 
     }

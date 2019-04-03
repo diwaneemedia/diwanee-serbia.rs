@@ -96,15 +96,16 @@ export default {
               {
                 title: "Job Requirements",
                 list: [
-                   "More than 2 years’ experience with any of listed PHP framework (Zend framework, Laravel, Symphony, SlimPHP, Yii,Cake PHP)",
+                   "More than 2 years’ experience with any of listed PHP framework (Laravel, Yii, Symphony, Slim, Lumen)",
                    "Strong understanding of OOP concepts",
                    "MySQL",
-                   "Smarty template engine",
+                   "Smarty template engine (or state which template you use)",
                    "Memcached",
                    "ElasticSearch",
                    "Git",
                    "Composer",
                    "Apache",
+                   "NginX",
                    "Work on Linux OS (Mac OS X)",
                    "English language"
                 ]
@@ -123,7 +124,6 @@ export default {
                 title: "Following Will Be Considered As An Asset",
                 list: [
                   "NoSQL databases (Redis, Neo4J ..)",
-                  "NginX",
                   "Varnish",
                   "APC",
                   "JavaScript, jQuery",

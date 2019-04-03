@@ -5,6 +5,14 @@ module.exports = {
     host: "192.168.0.143",
     port: 3333
   },
+  generate:{
+    routes: [
+      '/work/php',
+      // '/work/fe',
+      // '/work/web',
+      // '/work/pm'
+    ]
+  },
   mode: 'universal',
 
   /*
@@ -124,7 +132,8 @@ module.exports = {
         rel: "stylesheet",
         type: "text/css",
         href: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-      }
+      },
+
     ],
     script: [
       {

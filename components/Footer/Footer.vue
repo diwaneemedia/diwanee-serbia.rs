@@ -6,7 +6,7 @@
       <p class="steel">Get in touch</p>
       <div class="footer__contact">
 
-        <p>Resavska 23</p>
+        <p>Kneza Miloša 3</p>
         <p>11000 Belgrade</p>
         <p>T: 381 11 - 3340 117</p>
       </div>
@@ -30,7 +30,7 @@
         <!-- center -->
         <p >
           <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/contact/">Contact</nuxt-link><br/>
-          <nuxt-link slot="url" class="footer__nav__link" tag="a" to="/game/">Game</nuxt-link>
+          <a href="/game"  class="footer__nav__link" tag="a" to="/game/">Game</a>
         </p>
         <!-- right -->
         <div class="footer__nav--right">

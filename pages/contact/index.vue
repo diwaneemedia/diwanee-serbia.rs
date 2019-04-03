@@ -7,7 +7,7 @@
         <div class="map__info">
           <p class='map__area-code'>11000</p>
           <h3>Belgrade</h3>
-          <p class='map__address'>Resavska 23</p>
+          <p class='map__address'>Kneza Miloša 3</p>
           <p class='map__nbr'>+381 (0) 11 3340 117</p>
         </div>
         <div id='map2' class="map map-responsive">
@@ -69,7 +69,7 @@ export default {
        var map3;
        var dubaiCords = {lat: 25.1049000, lng: 55.1681569};
        var beirutCords = {lat: 33.8915885, lng: 35.5055454};
-       var belgradeCords = {lat: 44.8075600, lng:20.465700};
+       var belgradeCords =  {lat: 44.809968, lng:20.465705};
 
        map = new window.google.maps.Map(document.getElementById('map'), {
          center: dubaiCords,

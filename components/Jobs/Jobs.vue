@@ -39,6 +39,21 @@
 
           <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/pm/">VIEW MORE</nuxt-link>
         </JobsListItem> -->
+
+        <JobsListItem class="jobs__list__item">
+
+            <p slot="title" class="jobs__list__item-title">JS Developer</p>
+            <p slot="hash" class="jobs__list__item-hash">#FE #JS #Vue/React/Angular </p>
+
+          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/js/">VIEW MORE</nuxt-link>
+        </JobsListItem>
+        <!-- <JobsListItem class="jobs__list__item">
+
+            <p slot="title" class="jobs__list__item-title">Project Manager</p>
+            <p slot="hash" class="jobs__list__item-hash">#Organization #Agile #Scrum #Kanban</p>
+
+          <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/pm/">VIEW MORE</nuxt-link>
+        </JobsListItem> -->
       </div>
     </div>
   </div>

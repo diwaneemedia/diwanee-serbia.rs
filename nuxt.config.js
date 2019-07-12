@@ -8,6 +8,7 @@ module.exports = {
   generate:{
     routes: [
       '/work/php',
+      '/work/js',
       // '/work/fe',
       // '/work/web',
       // '/work/pm'
@@ -106,7 +107,7 @@ module.exports = {
       {
           hid: 'robots',
           name: 'robots',
-          content: "index, nofollow"
+          content: "index, follow"
       },
       {
           hid: 'cannonical',

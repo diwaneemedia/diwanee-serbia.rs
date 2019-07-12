@@ -7,14 +7,14 @@
         <Social class='header__social'/>
       </div>
       <div class="headings">
-        <h1 class="headings__title">We are
+        <!-- <h1 class="headings__title">We are
           <br>Building
           <br>The future of
           <br>Digital media
         </h1>
         <h2
           class="headings__subtitle"
-        >We are gamers, developers, designers, thinkers.</h2>
+        >We are gamers, developers, designers, thinkers.</h2> -->
       </div>
     </div>
     <a href="/game" :class="{ active : ctaActive }" target="_blank" class="cta__game">
@@ -136,6 +136,9 @@ export default {
     // CTA Button
     this.ctaActive = true;
     $(window).on("scroll", this.ctaScrollHandler);
+    let timer = setTimeout(function(){
+      $(".cta__game").addClass("collapsed");
+    }, 3000);
   },
   beforeDestroy(){
     $(window).off("scroll", this.ctaScrollHandler);
@@ -153,9 +156,7 @@ export default {
       if (windowScrollTop + ctaBtnScrollTop > headerHeight) {
         ctaBtn.addClass("collapsed");
          // document.body.scrollTop = 0;
-      } else {
-        ctaBtn.removeClass("collapsed");
-      }
+      } 
     }
   }
 };
@@ -173,7 +174,7 @@ export default {
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.3)
     ),
-    url("~assets/images/header.jpg");
+    url("~assets/images/header.png");
   @include breakpoint(desktop) {
     padding-top: 4rem;
     padding-bottom: 30rem;
@@ -200,7 +201,7 @@ export default {
     -ms-grid-columns: 80% 10% 10%;
     grid-template-columns: 80% 10% 10%;
     grid-template-areas:"a b c";
-    
+
     align-items: center;
     color: $white;
     font-size: 1.8rem;
@@ -247,6 +248,7 @@ export default {
 
   @include breakpoint(desktop) {
     padding-left: 12.6rem;
+    padding-top: 26.4%;
   }
 
   &__title {
@@ -301,7 +303,7 @@ export default {
   background-color: $white;
   align-items: center;
   position: fixed;
-  top: 45%;
+  top: 78%;
   right: -2px;
   border-radius: 2%;
   z-index: 3;

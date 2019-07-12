@@ -35,7 +35,7 @@
 
 <script>
 // import NavigationMini from "~/components/Navigation/NavigationMini";
-
+import s_config from "~/assets/js/config.secret.js";
 export default {
   layout:"contact",
   components: {
@@ -56,8 +56,9 @@ export default {
       script.onload = () => {
        resolve(this.initMap())
       }
-      script.async = true
-      script.src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1UG0y5mDEy-d7BEE7s4MK5OY0Ah1BzAg&callback=initMap"
+      script.async = true;
+      let key = s_config.gMaps;
+      script.src ="https://maps.googleapis.com/maps/api/js?key="+ key +"&callback=initMap";
       document.head.appendChild(script)
    })
 
@@ -110,22 +111,6 @@ export default {
 </script>
 <style lang="scss">
 @import "~/assets/scss/master.scss";
-  // #map {
-  //   width: 523px;
-  //   height: 663px;
-  //   // margin: 100px;
-  // }
-  //
-  // #map2 {
-  //   width: 523px;
-  //   height: 663px;
-  //   // margin: 100px;
-  // }
-  // #map3 {
-  //   width: 523px;
-  //   height: 663px;
-  //   // margin: 100px;
-  // }
   .cont {
     height: 500px;
   }

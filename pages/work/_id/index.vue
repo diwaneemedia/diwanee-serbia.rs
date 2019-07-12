@@ -221,6 +221,51 @@ export default {
                 ]
               },
             ]
+          },
+          {
+          id:"js",
+          title: "JavaScript Developer",
+          work_details:[
+            {
+              title: "Job requirements",
+              list: [
+                 "2+ years’ experience in JS/FE",
+                 "Experience with at least one of the listed frameworks/libraries: VueJS, ReactJS, NuxtJS, AngularJS, EmberJS, BackboneJS",
+                 "Experience with development of both the client application and the server application (SPA / Universal) using JavaScript frameworks/libraries",
+                 "Creating responsive, fluid, and maintainable interfaces",
+                 "Experience with Git, Webpack, package manager (yarn, npm)",
+                 "Knowledge of cross-device compatibility issues and solutions",
+                 "Proficiency in spoken and written English",
+              ]
+            },
+            {
+              title: "Following will be considered as an asset",
+              list: [
+                "Experience with NodeJS",
+                "Experience with ES6",
+                "Genuinely curious and constantly strive to learn.",
+                "Have good communication skills"
+              ]
+            },
+            {
+              title: "We look forward to your aplication, which should include",
+              list: [
+                "CV",
+                "Your start date",
+                "Other interests"
+              ]
+            },
+            {
+              title: "Benefits",
+              list: [
+                "Competitive salary",
+                "Good work/life balance",
+                "Engaging projects",
+                "Friendly atmosphere",
+                "Work from home options"
+                ]
+              },
+            ]
           }
         ].find(el => el.id === context.params.id)
       })

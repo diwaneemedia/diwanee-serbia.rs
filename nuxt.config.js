@@ -191,7 +191,8 @@ module.exports = {
    */
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'cookie-universal-nuxt'
   ],
 
   /*

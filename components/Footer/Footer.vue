@@ -61,15 +61,20 @@
 
         <p class="footer__bottom__item4">COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED</p>
       </div>
+
+      <no-ssr><CookieConsent /></no-ssr>
+
     </div>
   </footer>
 </template>
 
 <script>
 import Social from "~/components/UI/Social";
+import CookieConsent from "~/components/CookieConsent";
 export default {
   components: {
-    Social
+    Social,
+    CookieConsent
   }
 };
 </script>

@@ -146,7 +146,7 @@ module.exports = {
         type: "text/javascript"
       },
       {
-        src:"/head.js",
+        // src:"/head.js",
         // body:true
       },
 
@@ -192,7 +192,7 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    'cookie-universal-nuxt'
+    // 'cookie-universal-nuxt'
   ],
 
   /*

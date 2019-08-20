@@ -83,7 +83,7 @@
         </div>
       </div>
 
-      <no-ssr><CookieConsent /></no-ssr>
+      <!-- <no-ssr><CookieConsent /></no-ssr> -->
 
     </footer>
   </div>
@@ -91,7 +91,7 @@
 <script>
 import NavigationMini from "~/components/Navigation/NavigationMini";
 import JobsNavSticky from "~/components/JobsNavSticky/JobsNavSticky";
-import CookieConsent from "~/components/CookieConsent";
+// import CookieConsent from "~/components/CookieConsent";
 import Social from "~/components/UI/Social";
 
 
@@ -100,7 +100,7 @@ export default {
     NavigationMini,
     JobsNavSticky,
     Social,
-    CookieConsent
+    // CookieConsent
   },
   head(){
     return {

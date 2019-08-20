@@ -62,7 +62,7 @@
         <p class="footer__bottom__item4">COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED</p>
       </div>
 
-      <no-ssr><CookieConsent /></no-ssr>
+      <!-- <no-ssr><CookieConsent /></no-ssr> -->
 
     </div>
   </footer>
@@ -70,11 +70,11 @@
 
 <script>
 import Social from "~/components/UI/Social";
-import CookieConsent from "~/components/CookieConsent";
+// import CookieConsent from "~/components/CookieConsent";
 export default {
   components: {
     Social,
-    CookieConsent
+    // CookieConsent
   }
 };
 </script>

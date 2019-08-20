@@ -1,9 +1,9 @@
 <template>
   <div class="b-cconsent" v-if="visible">
     <p>
-      Diwanee-serbia.rs koristi kolacice (cookies) kako bi poboljsali korisnicko iskustvo. Nastavkom koriscenja ovog sajta slazete se sa upotrebom kolacica. Vise o kolacicima procitajte <nuxt-link to="/cookies" class="link">ovde.</nuxt-link>   
+      Diwanee-serbia.rs uses cookies to ensure you get the best experience on our website. <nuxt-link to="/cookies" class="link">More info</nuxt-link>   
     </p>
-    <button v-on:click="okClick">Prihvatam</button>
+    <button v-on:click="okClick">OK</button>
   </div>
 </template>
 
@@ -54,6 +54,7 @@ export default {
     padding: 8.5px;
     text-align: left;
     letter-spacing: 0;
+    color: #fff;
     @include breakpoint(desktop) {
       text-align: center;
     }

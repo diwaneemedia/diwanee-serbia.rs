@@ -30,12 +30,14 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
 // import NavigationMini from "~/components/Navigation/NavigationMini";
 import s_config from "~/assets/js/config.secret.js";
+
 export default {
   layout:"contact",
   components: {

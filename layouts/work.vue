@@ -82,12 +82,16 @@
           <p class="footer__bottom__item4">COPYRIGHT © DIWANEE ALL RIGHTS RESEREVED</p>
         </div>
       </div>
+
+      <no-ssr><CookieConsent /></no-ssr>
+
     </footer>
   </div>
 </template>
 <script>
 import NavigationMini from "~/components/Navigation/NavigationMini";
 import JobsNavSticky from "~/components/JobsNavSticky/JobsNavSticky";
+import CookieConsent from "~/components/CookieConsent";
 import Social from "~/components/UI/Social";
 
 
@@ -95,7 +99,8 @@ export default {
   components: {
     NavigationMini,
     JobsNavSticky,
-    Social
+    Social,
+    CookieConsent
   },
   head(){
     return {

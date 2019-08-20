@@ -26,13 +26,14 @@
         <a href='mailto:posao@diwanee-serbia.com' class="button">Apply now</a>
       </div>
     </div>
+
   </div>
 </template>
 <script>
 import workDetails from "~/components/work/WorkDetails.vue";
 export default {
   components: {
-    workDetails
+    workDetails    
   },
   layout: "work",
 

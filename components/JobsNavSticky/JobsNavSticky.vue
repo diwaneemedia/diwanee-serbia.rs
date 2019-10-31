@@ -40,12 +40,12 @@ export default {
          {
            id: "php",
            title: "PHP Developer",
-           tags:"#PHP #MySql"
+           tags:"#PHP #Laravel #GraphQL"
          },
          {
            id: "js",
            title: "JS Developer",
-           tags:"#FE #JS #Vue/React/Angular"
+           tags:"#JS #Vue/React"
          }
          // {
          //   id: "web",

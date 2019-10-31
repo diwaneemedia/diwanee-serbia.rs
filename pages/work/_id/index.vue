@@ -90,6 +90,7 @@ export default {
               },
             ]
           },
+          // PHP
           {
             id:"php",
             title: "PHP Developer",
@@ -97,40 +98,33 @@ export default {
               {
                 title: "Job Requirements",
                 list: [
-                   "More than 2 years’ experience with any of listed PHP framework (Laravel, Yii, Symphony, Slim, Lumen)",
-                   "Strong understanding of OOP concepts",
-                   "MySQL",
-                   "Smarty template engine (or state which template you use)",
-                   "Memcached",
-                   "ElasticSearch",
-                   "Git",
-                   "Composer",
-                   "Apache",
-                   "NginX",
-                   "Work on Linux OS (Mac OS X)",
-                   "English language"
+                  "2+ year’s experience in a hands-on role in PHP development",
+                  "Advanced programming skills and a very strong understanding of OOP concepts",
+                  "Experience with common PHP frameworks such as Laravel, Zend, Symphony",
+                  "Strong experience working with relational databases as well as hands-on experience with SQL and database schema design",
+                  "Experience with GraphQL and REST API ",
+                  "Ability to understand project specifications and adapt to various technologies and frameworks",
+                  "Experience with  Git, Composer, Javascript",
+                  "Proficiency in spoken and written English",
                 ]
               },
               {
                 title: "Responsibilites",
                 list: [
-                  "Work as part of team",
-                  "Write'clean and well designed code",
-                  "Contribute in all phases of development lifecycle",
+                  "Work as part of a team",
+                  "Write clean and well-designed code",
+                  "Contribute in all phases of the development lifecycle",
                   "Develop and deploy new features to facilitate related procedures and tools if necessary",
-                  "Produce, update and/or maintain accurate project documentation"
+                  "Produce, update and/or maintain accurate project documentation",
                 ]
               },
               {
                 title: "Following Will Be Considered As An Asset",
                 list: [
-                  "NoSQL databases (Redis, Neo4J ..)",
-                  "Varnish",
-                  "APC",
-                  "JavaScript, jQuery",
-                  "Ext JS",
                   "Other programming languages, please state the level of proficiency",
-                  "Please state which Framework you’ve worked with"
+                  "Strong experience with highly scalable server-side development",
+                  "ElasticSearch ",
+                  "Experience with NoSQL DB (Mongo DB)",
                 ]
               },
               {
@@ -139,9 +133,19 @@ export default {
                   "CV",
                   "Current and desired salary",
                   "Your start date",
-                  "Other interests"
+                  "Other interests",
                 ]
               },
+              {
+                title: "Benefits",
+                list: [
+                  "Competitive salary",
+                  "Good work/life balance",
+                  "Engaging projects",
+                  "Friendly atmosphere",
+                  "Work from home options",
+                ]
+              },              
             ]
           },
           {
@@ -223,37 +227,42 @@ export default {
               },
             ]
           },
+          // JS
           {
           id:"js",
-          title: "JavaScript Developer",
+          title: "REACT JS Developer",
           work_details:[
             {
               title: "Job requirements",
               list: [
-                 "2+ years’ experience in JS/FE",
-                 "Experience with at least one of the listed frameworks/libraries: VueJS, ReactJS, NuxtJS, AngularJS, EmberJS, BackboneJS",
-                 "Experience with development of both the client application and the server application (SPA / Universal) using JavaScript frameworks/libraries",
-                 "Creating responsive, fluid, and maintainable interfaces",
-                 "Experience with Git, Webpack, package manager (yarn, npm)",
-                 "Knowledge of cross-device compatibility issues and solutions",
-                 "Proficiency in spoken and written English",
+                "2+ years’ experience in JS/FE",
+                "Experience with at least one of the listed frameworks/libraries: VueJS, ReactJS, NuxtJS, AngularJS, EmberJS, BackboneJS",
+                "Experience with the development of both the client application and the application (SPA / SSR  / Universal) using JavaScript frameworks/libraries",
+                "Creating responsive, fluid, and maintainable interfaces",
+                "Experience with Git, Webpack, package manager (yarn, npm)",
+                "Knowledge of cross-device compatibility issues and solutions",
+                "Proficiency in spoken and written English",
               ]
             },
             {
               title: "Following will be considered as an asset",
               list: [
                 "Experience with NodeJS",
+                "Experience with Redux, Vuex  ",
                 "Experience with ES6",
                 "Genuinely curious and constantly strive to learn.",
-                "Have good communication skills"
+                "Have good communication skills",
+                "Experience with GraphQL (Apollo client) and REST (Axios)",
+                "Experience with NoSQL DB (Mongo DB)",
               ]
             },
             {
               title: "We look forward to your aplication, which should include",
               list: [
                 "CV",
-                "Your start date",
-                "Other interests"
+                "Current and desired salary",
+                "your start date",
+                "other interests",
               ]
             },
             {
@@ -263,7 +272,7 @@ export default {
                 "Good work/life balance",
                 "Engaging projects",
                 "Friendly atmosphere",
-                "Work from home options"
+                "Work from home options",
                 ]
               },
             ]

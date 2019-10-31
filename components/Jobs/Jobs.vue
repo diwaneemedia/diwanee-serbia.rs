@@ -21,7 +21,7 @@
         <JobsListItem class="jobs__list__item">
 
             <p slot="title" class="jobs__list__item-title">PHP Developer</p>
-            <p slot="hash" class="jobs__list__item-hash">#PHP #MySQL #Git #Apache</p>
+            <p slot="hash" class="jobs__list__item-hash">#PHP #Laravel #GraphQL</p>
 
           <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/php/">VIEW MORE</nuxt-link>
         </JobsListItem>
@@ -43,7 +43,7 @@
         <JobsListItem class="jobs__list__item">
 
             <p slot="title" class="jobs__list__item-title">JS Developer</p>
-            <p slot="hash" class="jobs__list__item-hash">#FE #JS #Vue/React/Angular </p>
+            <p slot="hash" class="jobs__list__item-hash">#JS #Vue/React </p>
 
           <nuxt-link slot="url" class="jobs__list__item-btn" tag="a" to="/work/js/">VIEW MORE</nuxt-link>
         </JobsListItem>
